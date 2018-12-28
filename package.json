@@ -1,0 +1,19 @@
+{
+  "name": "iaguilarmartin.com",
+  "version": "1.0.0",
+  "description": "My personal web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iaguilarmartin/iaguilarmartin.com.git"
+  },
+  "author": "Iván Aguilar Martín",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iaguilarmartin/iaguilarmartin.com/issues"
+  },
+  "homepage": "https://github.com/iaguilarmartin/iaguilarmartin.com#readme"
+}
