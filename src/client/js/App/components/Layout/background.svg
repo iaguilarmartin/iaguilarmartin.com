@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1024" viewBox="0 0 1440 1024">
+    <g fill="none" fill-rule="evenodd" transform="translate(0 -3)">
+        <path fill="#4A4E50" d="M0 3h1440v1024H0z"/>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M3.5 622.5h611.82a20 20 0 0 0 16.17-8.23l15.262-20.97a20 20 0 0 1 16.17-8.23h638.888"/>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M242.5 3.5v354.263a20 20 0 0 1-7.664 15.743L216.723 387.7a20 20 0 0 0-7.664 15.742v340.505c0 11.046 8.954 20 20 20h163.46a20 20 0 0 0 16.7-8.993l9.653-14.647a20 20 0 0 1 16.7-8.993h247.246"/>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M402.5.5v492.019a20 20 0 0 1-9.265 16.875l-10.335 6.574a20 20 0 0 0-9.265 16.875v485.304M1005.5 4.5v145.245a20 20 0 0 1-7.687 15.76l-11.806 9.224a20 20 0 0 0-7.687 15.76v833.63"/>
+        <ellipse cx="431.5" cy="960" fill="#4F5352" rx="14.5" ry="15"/>
+        <ellipse cx="1306.5" cy="980" fill="#4F5352" rx="14.5" ry="15"/>
+        <ellipse cx="1301.5" cy="585" fill="#4F5352" rx="14.5" ry="15"/>
+        <ellipse cx="682.5" cy="732" fill="#4F5352" rx="14.5" ry="15"/>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M1099.5 3.5v150.681a20 20 0 0 1-11.002 17.861l-5.185 2.613a20 20 0 0 0-11.002 17.861V313.2c0 11.046 8.954 20 20 20h349.448M3.473 345.258H462.68a20 20 0 0 1 17.861 11.002l2.613 5.185a20 20 0 0 0 17.861 11.002H621.7c11.046 0 20-8.954 20-20V3"/>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M1182.5 4.5v187.075a20 20 0 0 1-6.776 15.003l-9.14 8.056a20 20 0 0 0-6.775 15.004v740.114c0 11.046-8.954 20-20 20h-107.622a20 20 0 0 1-16.326-8.447l-11.216-15.849a20 20 0 0 0-16.326-8.446H445.61"/>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M799.5 4l-4.142 249.465a24 24 0 0 1-2.563 10.4l-18.656 37.031a20 20 0 0 0-2.139 8.999V1027.5M133 1027.5l4.142-249.465a24 24 0 0 1 2.563-10.4l18.656-37.031a20 20 0 0 0 2.139-8.999V4"/>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M1442.722 855.5H1283.5l-249.465-4.142a24 24 0 0 1-10.4-2.563l-37.031-18.656a20 20 0 0 0-8.999-2.139H.337"/>
+        <g transform="translate(508 3)">
+            <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M14.5.465V509.5"/>
+            <ellipse cx="14.5" cy="525" fill="#4F5352" rx="14.5" ry="15"/>
+        </g>
+        <g transform="rotate(-180 442 513.5)">
+            <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M14.5.5v874"/>
+            <ellipse cx="14.5" cy="890" fill="#4F5352" rx="14.5" ry="15"/>
+        </g>
+        <g transform="rotate(180 170.5 513.5)">
+            <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M14.5.5v562"/>
+            <ellipse cx="14.5" cy="578" fill="#4F5352" rx="14.5" ry="15"/>
+        </g>
+        <g transform="translate(1215 3)">
+            <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M14.5.5v207"/>
+            <ellipse cx="14.5" cy="223" fill="#4F5352" rx="14.5" ry="15"/>
+        </g>
+        <path stroke="#4F5352" stroke-linecap="square" stroke-width="9" d="M1305.5 983.5v-298c0-11.046-8.954-20-20-20h-216.976c-11.046 0-20-8.954-20-20V405.426h165.943a20 20 0 0 1 14.378 6.097l6.962 7.2a20 20 0 0 0 14.377 6.097h163.965c11.046 0 20 8.954 20 20a20 20 0 0 1-.551 4.665"/>
+    </g>
+</svg>

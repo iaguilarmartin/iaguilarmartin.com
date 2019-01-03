@@ -11,7 +11,8 @@ const theme = {
   primaryColor: colors.gold,
   secondaryColor: colors.blueLight,
   menuBgColor: colors.blackMenu,
-  menuIconColor: colors.white
+  menuIconColor: colors.white,
+  menuWidth: '60px'
 };
 
 export default theme;

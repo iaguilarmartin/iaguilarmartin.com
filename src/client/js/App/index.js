@@ -5,12 +5,17 @@ import { ThemeProvider } from 'emotion-theming';
 import globalStyles from 'ui/shared/global';
 import theme from 'ui/shared/theme';
 
+import Layout from './components/Layout';
+import Menu from './components/Menu';
+import Home from './Home';
+
 const App = () => (
   <ThemeProvider theme={theme}>
     <Global styles={globalStyles} />
-    <div>
-      <h1>Hola mundo!</h1>
-    </div>
+    <Layout>
+      <Menu />
+      <Home />
+    </Layout>
   </ThemeProvider>
 );
 
