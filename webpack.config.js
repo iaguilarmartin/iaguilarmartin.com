@@ -27,6 +27,10 @@ module.exports = {
         exclude: /node_modules/,
         use: [{ loader: 'babel-loader' }],
         include: [path.resolve('./src')]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader']
       }
     ]
   }

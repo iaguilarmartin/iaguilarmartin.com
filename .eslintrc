@@ -1,6 +1,13 @@
 {
   "extends": ["iaguilarmartin/react", "iaguilarmartin/jest"],
   "plugins": ["emotion"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
   "rules": {
     "emotion/jsx-import": "error",
     "emotion/no-vanilla": "error",

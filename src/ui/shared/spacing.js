@@ -35,5 +35,5 @@ export const space = sizes.reduce((result, size) => {
 // Border
 export const border = {
   size: `1px`,
-  radius: `4px`
+  radius: `8px`
 };

@@ -23,13 +23,14 @@ export default css`
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    font-family: ${fonts.Gotham};
+    font-family: ${fonts.ArchitectsDaughter};
     font-size: ${fonts.sizes.m};
-    color: ${colors.greyDark};
-    fill: ${colors.greyDark};
+    color: ${colors.white};
+    fill: ${colors.white};
+    background-color: ${colors.greyBg};
   }
 
-  strong {
-    font-family: ${fonts.GothamMedium};
+  p {
+    margin: 0;
   }
 `;
