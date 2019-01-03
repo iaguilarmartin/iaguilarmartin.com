@@ -1,16 +1,18 @@
 import { css } from '@emotion/core';
 
 import normalize from './normalize';
-import fonts from './fonts';
-import colors from './colors';
+import defaultTheme from './theme';
 
-export default css`
+const getThemeValue = (theme, property) =>
+  (theme && theme[property]) || defaultTheme[property];
+
+export default ({ theme }) => css`
   ${normalize};
-  ${fonts.faces};
+  ${getThemeValue(theme, 'fontFaces')};
 
   html {
     box-sizing: border-box;
-    font-size: ${fonts.sizes.base};
+    font-size: ${getThemeValue(theme, 'fontBase')};
   }
 
   *,
@@ -23,13 +25,19 @@ export default css`
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    font-family: ${fonts.ArchitectsDaughter};
-    font-size: ${fonts.sizes.m};
-    color: ${colors.white};
-    fill: ${colors.white};
-    background-color: ${colors.greyBg};
+    font-family: ${getThemeValue(theme, 'fontFamily')};
+    font-size: ${getThemeValue(theme, 'fontSize')};
+    color: ${getThemeValue(theme, 'fontColor')};
+    fill: ${getThemeValue(theme, 'fontColor')};
+    background-color: ${getThemeValue(theme, 'backgroundColor')};
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   p {
     margin: 0;
   }
