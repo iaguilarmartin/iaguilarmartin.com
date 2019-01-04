@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Page from '../components/Page';
+import Page from '../../components/Page';
 
 const Home = () => (
   <Page>
-    <h1>Hello Worlds</h1>
+    <h1>Home</h1>
   </Page>
 );
 

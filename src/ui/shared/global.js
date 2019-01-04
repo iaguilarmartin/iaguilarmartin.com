@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import normalize from './normalize';
 import defaultTheme from './theme';
 
-const getThemeValue = (theme, property) =>
+export const getThemeValue = (theme, property) =>
   (theme && theme[property]) || defaultTheme[property];
 
 export default ({ theme }) => css`

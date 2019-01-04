@@ -8,7 +8,8 @@ module.exports = {
   entry: './src/client/js/index.js',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -18,6 +19,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
+    publicPath: '/',
     path: path.resolve(__dirname, 'dist')
   },
   module: {

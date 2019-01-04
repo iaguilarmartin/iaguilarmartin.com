@@ -9,6 +9,7 @@ export const animatedHover = color => css`
   &:hover {
     color: ${color};
     fill: ${color};
+    stroke: ${color};
   }
 `;
 
