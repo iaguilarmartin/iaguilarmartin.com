@@ -8,7 +8,7 @@ import fonts from 'ui/shared/fonts';
 import { mediaQueries } from 'ui/shared/breakpoints';
 import DotsList from 'ui/components/DotsList';
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   position: absolute;
   top: ${space.x2};

@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
 
-/* eslint-disable global-require */
 export const languages = [
   {
     code: 'en',
@@ -13,7 +12,7 @@ export const languages = [
 ];
 
 const translations = languages.reduce((result, { code }) => {
-  // eslint-disable-next-line import/no-dynamic-require, no-param-reassign
+  // eslint-disable-next-line import/no-dynamic-require, no-param-reassign, global-require
   result[code] = require(`./languages/${code}.json`);
   return result;
 }, {});
