@@ -2,6 +2,7 @@ import { css } from '@emotion/core';
 
 import ArchitectsDaughterFont from '../resources/ArchitectsDaughter-Regular.ttf';
 import ArchivoBlackFont from '../resources/ArchivoBlack-Regular.ttf';
+import AndaleMonoFont from '../resources/Andale Mono.ttf';
 import DisolveLightFont from '../resources/Disolve_light.ttf';
 import DisolveFont from '../resources/Disolve_regular.ttf';
 import ObliFont from '../resources/Obli.otf';
@@ -15,7 +16,7 @@ const sizes = {
   xs: '1.2rem',
   s: '1.4rem',
   m: '1.6rem',
-  l: '1.7rem',
+  l: '1.8rem',
   xl: '2rem',
   xxl: '2.4rem',
   xxxl: '2.8rem',
@@ -28,11 +29,19 @@ const names = {
   DisolveLight: "'Disolve Light'",
   Obli: "'Obli'",
   ArchivoBlack: "'ArchivoBlack Regular'",
+  AndaleMono: "'Andale Mono'",
   ArchitectsDaughter: "'ArchitectsDaughter Regular'"
 };
 
 // Font faces
 const faces = css`
+  @font-face {
+    font-family: ${names.AndaleMono};
+    src: url('${AndaleMonoFont}') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
   @font-face {
     font-family: ${names.ArchitectsDaughter};
     src: url('${ArchitectsDaughterFont}') format('truetype');

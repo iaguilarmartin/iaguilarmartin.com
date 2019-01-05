@@ -44,7 +44,9 @@ export default ({ theme }) => css`
   h4,
   h5,
   h6,
-  p {
+  p,
+  ul {
     margin: 0;
+    padding: 0;
   }
 `;

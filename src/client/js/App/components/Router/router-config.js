@@ -4,6 +4,7 @@ import Portfolio from '../../pages/Portfolio';
 import Resume from '../../pages/Resume';
 import Blog from '../../pages/Blog';
 import Contact from '../../pages/Contact';
+import { translate } from '../../i18n';
 
 import HomeIcon from './icons/Home';
 import BriefcaseIcon from './icons/Briefcase';
@@ -15,38 +16,38 @@ import EnvelopeIcon from './icons/Envelope';
 const routesConfig = {
   home: {
     path: '/home',
-    label: 'Home',
+    label: translate('menu_routes_home_label'),
     component: Home,
     icon: HomeIcon,
     isDefault: true
   },
   about: {
     path: '/about-me',
-    label: 'About',
+    label: translate('menu_routes_about_label'),
     component: About,
     icon: NameplateIcon
   },
   portfolio: {
     path: '/portfolio',
-    label: 'Portfolio',
+    label: translate('menu_routes_portfolio_label'),
     component: Portfolio,
     icon: BriefcaseIcon
   },
   resume: {
     path: '/resume-and-skills',
-    label: 'Resume',
+    label: translate('menu_routes_resume_label'),
     component: Resume,
     icon: LaptopIcon
   },
   blog: {
     path: '/blog',
-    label: 'Blog',
+    label: translate('menu_routes_blog_label'),
     component: Blog,
     icon: NewspaperIcon
   },
   contact: {
     path: '/contact',
-    label: 'Contact',
+    label: translate('menu_routes_contact_label'),
     component: Contact,
     icon: EnvelopeIcon
   }
