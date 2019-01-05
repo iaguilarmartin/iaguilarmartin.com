@@ -101,6 +101,7 @@ const Logo = styled.span`
   display: none;
 
   ${mediaQueries.md(`
+    display: block;
     position: absolute;
     left: ${space.x2};
     bottom: ${space.x2};
