@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { ClassNames } from '@emotion/core';
+import { ClassNames, css } from '@emotion/core';
 import { NavLink } from 'react-router-dom';
 
 import TextButton from '../TextButton';
 
 import fonts from '../../shared/fonts';
 import { space } from '../../shared/spacing';
+import { mediaQueries } from '../../shared/breakpoints';
 import { themed } from '../../shared/theme';
 import routeShape from '../../shapes/route';
 
@@ -19,13 +20,21 @@ const MenuWrapper = styled.section`
   left: 0;
   top: 0;
   bottom: 0;
-  max-width: ${({ theme, expanded }) => (expanded ? '200px' : theme.menuWidth)};
   background-color: ${themed.menuBgColor};
-  padding: ${space.x15};
   z-index: 10;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: max-width 0.5s ease-out;
+  width: ${({ expanded }) => (expanded ? '100%' : 0)};
+  transition: width 0.5s ease-out;
+
+  ${({ theme, expanded }) =>
+    mediaQueries.md(
+      css`
+        width: auto;
+        max-width: ${expanded ? '200px' : theme.menuWidth};
+        transition: max-width 0.5s ease-out;
+      `
+    )};
 `;
 
 const Navigation = styled.nav`
@@ -33,6 +42,7 @@ const Navigation = styled.nav`
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  margin-left: ${space.x15};
 
   a:not(:last-of-type) {
     margin-bottom: ${space.x05};
@@ -56,22 +66,55 @@ const NavigationItem = styled(TextButton)`
 
 const NavigationItemLabel = styled.span`
   margin: 0 ${space.x3} 0 ${space.x25};
-  opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: opacity 0.5s ease-out;
   font-size: ${fonts.sizes.xl};
+  opacity: 1;
+
+  ${mediaQueries.md(`
+    opacity: ${({ visible }) => (visible ? 1 : 0)};
+  `)};
 `;
 
 const MenuButton = styled(TextButton)`
   position: absolute;
   top: ${space.x2};
+  right: ${space.x2};
+  fill: ${themed.menuIconColor};
+
+  ${mediaQueries.md(`
+    left: ${space.x2};
+  `)}
+`;
+
+const OutsideMenuButton = styled(TextButton)`
+  position: absolute;
+  top: ${space.x2};
   left: ${space.x2};
   fill: ${themed.menuIconColor};
+
+  ${mediaQueries.md(`
+    display: none;
+  `)}
 `;
 
 const Logo = styled.span`
+  display: none;
+
+  ${mediaQueries.md(`
+    position: absolute;
+    left: ${space.x2};
+    bottom: ${space.x2};
+  `)}
+`;
+
+const MobileLogo = styled.span`
   position: absolute;
-  bottom: ${space.x2};
+  top: ${space.x2};
   left: ${space.x2};
+
+  ${mediaQueries.md(`
+    display: none;
+  `)}
 `;
 
 class Menu extends Component {
@@ -87,53 +130,63 @@ class Menu extends Component {
   handleNavigationItemClick = () => this.setState({ expanded: false });
 
   render() {
-    const { renderLogo, routes } = this.props;
+    const { renderLogo, renderLogoOnMobile, routes } = this.props;
     const { expanded } = this.state;
 
     return (
-      <MenuWrapper expanded={expanded}>
-        <ClassNames>
-          {({ css, theme }) => (
-            <>
-              <MenuButton onClick={this.handleMenuButtonClick}>
-                {expanded ? <CloseMenuIcon /> : <OpenMenuIcon />}
-              </MenuButton>
-              <Navigation>
-                {routes.map(({ icon, path, label, name }) => (
-                  <NavigationItem
-                    as={NavLink}
-                    key={name}
-                    to={path}
-                    exact={path === '/'}
-                    onClick={this.handleNavigationItemClick}
-                    activeClassName={css`
+      <>
+        <OutsideMenuButton onClick={this.handleMenuButtonClick}>
+          <OpenMenuIcon />
+        </OutsideMenuButton>
+        <MenuWrapper expanded={expanded}>
+          <ClassNames>
+            {({ css: localCss, theme }) => (
+              <>
+                {renderLogoOnMobile && (
+                  <MobileLogo>{renderLogoOnMobile()}</MobileLogo>
+                )}
+                <MenuButton onClick={this.handleMenuButtonClick}>
+                  {expanded ? <CloseMenuIcon /> : <OpenMenuIcon />}
+                </MenuButton>
+                <Navigation>
+                  {routes.map(({ icon, path, label, name }) => (
+                    <NavigationItem
+                      as={NavLink}
+                      key={name}
+                      to={path}
+                      exact={path === '/'}
+                      onClick={this.handleNavigationItemClick}
+                      activeClassName={localCss`
                       stroke: ${theme.primaryColor} !important;
                       fill: ${theme.primaryColor} !important;
                       color: ${theme.primaryColor} !important;
                     `}
-                  >
-                    {icon()}
-                    <NavigationItemLabel visible={expanded}>
-                      {label}
-                    </NavigationItemLabel>
-                  </NavigationItem>
-                ))}
-              </Navigation>
-              {renderLogo && <Logo>{renderLogo(expanded)}</Logo>}
-            </>
-          )}
-        </ClassNames>
-      </MenuWrapper>
+                    >
+                      {icon()}
+                      <NavigationItemLabel visible={expanded}>
+                        {label}
+                      </NavigationItemLabel>
+                    </NavigationItem>
+                  ))}
+                </Navigation>
+                {renderLogo && <Logo>{renderLogo(expanded)}</Logo>}
+              </>
+            )}
+          </ClassNames>
+        </MenuWrapper>
+      </>
     );
   }
 }
 
 Menu.defaultProps = {
-  renderLogo: null
+  renderLogo: null,
+  renderLogoOnMobile: null
 };
 
 Menu.propTypes = {
   renderLogo: PropTypes.func,
+  renderLogoOnMobile: PropTypes.func,
   routes: PropTypes.arrayOf(routeShape).isRequired
 };
 

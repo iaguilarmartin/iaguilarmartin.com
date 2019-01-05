@@ -19,6 +19,7 @@ const App = () => (
         renderLogo={isMenuExpanded => (
           <MenuLogo isMenuExpanded={isMenuExpanded} />
         )}
+        renderLogoOnMobile={() => <MenuLogo isMenuExpanded />}
       />
       <Router />
     </Layout>
