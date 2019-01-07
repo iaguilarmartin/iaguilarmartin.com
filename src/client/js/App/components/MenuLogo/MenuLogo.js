@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 
 import Image from 'ui/components/Image';
 import { space } from 'ui/shared/spacing';
-import { mediaQueries } from 'ui/shared/breakpoints';
+import { mediaQueries, breakpoints } from 'ui/shared/breakpoints';
 
 import logoImage from './images/i-logo.png';
 import logoImage2x from './images/i-logo@2x.png';
@@ -19,22 +19,31 @@ const StyledImage = styled(Image)`
   height: 107px;
   width: 123px;
 
-  ${({ isMenuExpanded }) => css`
-    ${mediaQueries.md(`
+  ${({ isMenuExpanded }) =>
+    mediaQueries.md(css`
       height: ${isMenuExpanded ? '71px' : '64px'};
       width: ${isMenuExpanded ? '80px' : '18px'};
     `)};
-  `}
 `;
 
 const MenuLogo = ({ isMenuExpanded }) => (
-  <StyledImage
-    alt=""
-    isMenuExpanded={isMenuExpanded}
-    src={isMenuExpanded ? fullLogoImage : logoImage}
-    src2x={isMenuExpanded ? fullLogoImage2x : logoImage2x}
-    src3x={isMenuExpanded ? fullLogoImage3x : logoImage3x}
-  />
+  <picture>
+    <source
+      media={`(min-width: ${breakpoints.md}px)`}
+      srcSet={`
+        ${isMenuExpanded ? fullLogoImage : logoImage},
+        ${isMenuExpanded ? fullLogoImage2x : logoImage2x} 2x,
+        ${isMenuExpanded ? fullLogoImage3x : logoImage3x} 3x
+      `}
+    />
+    <StyledImage
+      alt=""
+      isMenuExpanded={isMenuExpanded}
+      src={fullLogoImage}
+      src2x={fullLogoImage2x}
+      src3x={fullLogoImage3x}
+    />
+  </picture>
 );
 
 MenuLogo.defaultProps = {

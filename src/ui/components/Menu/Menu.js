@@ -70,9 +70,10 @@ const NavigationItemLabel = styled.span`
   font-size: ${fonts.sizes.xl};
   opacity: 1;
 
-  ${mediaQueries.md(`
-    opacity: ${({ visible }) => (visible ? 1 : 0)};
-  `)};
+  ${({ visible }) =>
+    mediaQueries.md(css`
+      opacity: ${visible ? 1 : 0};
+    `)};
 `;
 
 const MenuButton = styled(TextButton)`
@@ -81,7 +82,7 @@ const MenuButton = styled(TextButton)`
   right: ${space.x2};
   fill: ${themed.menuIconColor};
 
-  ${mediaQueries.md(`
+  ${mediaQueries.md(css`
     left: ${space.x2};
   `)}
 `;
@@ -92,29 +93,19 @@ const OutsideMenuButton = styled(TextButton)`
   left: ${space.x2};
   fill: ${themed.menuIconColor};
 
-  ${mediaQueries.md(`
+  ${mediaQueries.md(css`
     display: none;
   `)}
 `;
 
 const Logo = styled.span`
-  display: none;
-
-  ${mediaQueries.md(`
-    display: block;
-    position: absolute;
-    left: ${space.x2};
-    bottom: ${space.x2};
-  `)}
-`;
-
-const MobileLogo = styled.span`
   position: absolute;
-  top: ${space.x2};
   left: ${space.x2};
+  top: ${space.x2};
 
-  ${mediaQueries.md(`
-    display: none;
+  ${mediaQueries.md(css`
+    top: auto;
+    bottom: ${space.x2};
   `)}
 `;
 
@@ -131,7 +122,7 @@ class Menu extends Component {
   handleNavigationItemClick = () => this.setState({ expanded: false });
 
   render() {
-    const { renderLogo, renderLogoOnMobile, routes } = this.props;
+    const { renderLogo, routes } = this.props;
     const { expanded } = this.state;
 
     return (
@@ -143,9 +134,6 @@ class Menu extends Component {
           <ClassNames>
             {({ css: localCss, theme }) => (
               <>
-                {renderLogoOnMobile && (
-                  <MobileLogo>{renderLogoOnMobile()}</MobileLogo>
-                )}
                 <MenuButton onClick={this.handleMenuButtonClick}>
                   {expanded ? <CloseMenuIcon /> : <OpenMenuIcon />}
                 </MenuButton>
@@ -181,13 +169,11 @@ class Menu extends Component {
 }
 
 Menu.defaultProps = {
-  renderLogo: null,
-  renderLogoOnMobile: null
+  renderLogo: null
 };
 
 Menu.propTypes = {
   renderLogo: PropTypes.func,
-  renderLogoOnMobile: PropTypes.func,
   routes: PropTypes.arrayOf(routeShape).isRequired
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import TextButton from 'ui/components/TextButton';
 import { space } from 'ui/shared/spacing';
@@ -14,7 +15,7 @@ const Container = styled.section`
   top: ${space.x2};
   right: ${space.x2};
 
-  ${mediaQueries.md(`
+  ${mediaQueries.md(css`
     top: ${space.x3};
     right: ${space.x3};
   `)}
@@ -25,7 +26,7 @@ const Language = styled(TextButton)`
   font-family: ${fonts.AndaleMono};
   color: ${({ isActive, theme }) => (isActive ? theme.primaryColor : null)};
 
-  ${mediaQueries.md(`
+  ${mediaQueries.md(css`
     font-size: ${fonts.sizes.l};
   `)}
 `;
