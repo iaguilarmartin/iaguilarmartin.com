@@ -27,23 +27,27 @@ const StyledImage = styled(Image)`
 `;
 
 const MenuLogo = ({ isMenuExpanded }) => (
-  <picture>
-    <source
-      media={`(min-width: ${breakpoints.md}px)`}
-      srcSet={`
-        ${isMenuExpanded ? fullLogoImage : logoImage},
-        ${isMenuExpanded ? fullLogoImage2x : logoImage2x} 2x,
-        ${isMenuExpanded ? fullLogoImage3x : logoImage3x} 3x
-      `}
-    />
-    <StyledImage
-      alt=""
-      isMenuExpanded={isMenuExpanded}
-      src={fullLogoImage}
-      src2x={fullLogoImage2x}
-      src3x={fullLogoImage3x}
-    />
-  </picture>
+  <StyledImage
+    alt=""
+    isMenuExpanded={isMenuExpanded}
+    src={[
+      {
+        srcSet: {
+          x1: fullLogoImage,
+          x2: fullLogoImage2x,
+          x3: fullLogoImage3x
+        }
+      },
+      {
+        mediaQuery: breakpoints.md,
+        srcSet: {
+          x1: isMenuExpanded ? fullLogoImage : logoImage,
+          x2: isMenuExpanded ? fullLogoImage2x : logoImage2x,
+          x3: isMenuExpanded ? fullLogoImage3x : logoImage3x
+        }
+      }
+    ]}
+  />
 );
 
 MenuLogo.defaultProps = {

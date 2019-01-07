@@ -15,8 +15,9 @@ const PageWrapper = styled.main`
   `)}
 `;
 
-const Page = ({ children, hideBackground }) => (
+const Page = ({ children, hideBackground, className }) => (
   <PageWrapper
+    className={className}
     bgColor={hideBackground ? 'transparent' : 'rgba(50, 51, 50, 0.6)'}
   >
     {children}
@@ -24,13 +25,15 @@ const Page = ({ children, hideBackground }) => (
 );
 
 Page.defaultProps = {
-  hideBackground: false
+  hideBackground: false,
+  className: null
 };
 
 Page.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.array])
     .isRequired,
-  hideBackground: PropTypes.bool
+  hideBackground: PropTypes.bool,
+  className: PropTypes.string
 };
 
 export default Page;
