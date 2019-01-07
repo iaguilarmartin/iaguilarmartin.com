@@ -7,7 +7,7 @@ import { mediaQueries } from 'ui/shared/breakpoints';
 
 const PageWrapper = styled.main`
   height: 100%;
-  background-color: rgba(50, 51, 50, 0.6);
+  background-color: ${({ bgColor }) => bgColor};
   border-radius: 4px;
 
   ${mediaQueries.xl(css`
@@ -15,10 +15,22 @@ const PageWrapper = styled.main`
   `)}
 `;
 
-const Page = ({ children }) => <PageWrapper>{children}</PageWrapper>;
+const Page = ({ children, hideBackground }) => (
+  <PageWrapper
+    bgColor={hideBackground ? 'transparent' : 'rgba(50, 51, 50, 0.6)'}
+  >
+    {children}
+  </PageWrapper>
+);
+
+Page.defaultProps = {
+  hideBackground: false
+};
 
 Page.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array])
+    .isRequired,
+  hideBackground: PropTypes.bool
 };
 
 export default Page;
