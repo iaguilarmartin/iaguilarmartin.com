@@ -28,27 +28,21 @@ const Content = styled.div`
 
 const Bracket = styled.span`
   color: ${colors.petrol};
+  visibility: ${({ invisible }) => (invisible ? 'hidden' : 'visible')};
 `;
 
 const Accent = styled.span`
   color: ${colors.blueLight};
+  visibility: ${({ invisible }) => (invisible ? 'hidden' : 'visible')};
 `;
 
 const Stringify = ({ children, className, sides }) => (
   <Content className={className}>
-    {(sides === side.START || sides === side.BOTH) && (
-      <>
-        <Bracket>{'{'}</Bracket>
-        <Accent>`</Accent>
-      </>
-    )}
+    <Bracket invisible={sides === side.END}>{'{'}</Bracket>
+    <Accent invisible={sides === side.END}>`</Accent>
     {children}
-    {(sides === side.END || sides === side.BOTH) && (
-      <>
-        <Accent>`</Accent>
-        <Bracket>{'}'}</Bracket>
-      </>
-    )}
+    <Accent invisible={sides === side.START}>`</Accent>
+    <Bracket invisible={sides === side.START}>{'}'}</Bracket>
   </Content>
 );
 
