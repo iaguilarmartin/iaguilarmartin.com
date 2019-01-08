@@ -19,16 +19,18 @@ import mobileLogo2x from '../images/logo-mobile@2x.png';
 import mobileLogo3x from '../images/logo-mobile@3x.png';
 
 const Logo = styled(Image)`
-  margin-bottom: ${space.x8};
+  margin-bottom: ${space.x3};
   height: 84px;
   width: 243px;
 
   ${mediaQueries.md(css`
+    margin-bottom: ${space.x6};
     height: 129px;
     width: 377px;
   `)};
 
   ${mediaQueries.xl(css`
+    margin-bottom: ${space.x8};
     height: 169px;
     width: 492px;
   `)};

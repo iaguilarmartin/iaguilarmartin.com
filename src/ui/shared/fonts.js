@@ -18,9 +18,9 @@ const sizes = {
   m: '1.6rem',
   l: '1.8rem',
   xl: '2rem',
-  xxl: '2.4rem',
-  xxxl: '2.8rem',
-  xxxxl: '5.6rem'
+  xxl: '2.6rem',
+  xxxl: '3.6rem',
+  xxxxl: '5.2rem'
 };
 
 // Font names

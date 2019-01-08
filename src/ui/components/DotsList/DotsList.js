@@ -8,7 +8,7 @@ import colors from 'ui/shared/colors';
 import DotIcon from './DotIcon';
 
 const List = styled.ul`
-  display: flex;
+  display: inline-flex;
   list-style: none;
   align-items: center;
 `;
@@ -34,6 +34,7 @@ const DotsList = ({ items, renderItem, keyProperty, dotColor, dotSize }) => (
 );
 
 DotsList.defaultProps = {
+  keyProperty: 'id',
   dotColor: colors.greyLight,
   dotSize: 5
 };
@@ -41,7 +42,7 @@ DotsList.defaultProps = {
 DotsList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   renderItem: PropTypes.func.isRequired,
-  keyProperty: PropTypes.string.isRequired,
+  keyProperty: PropTypes.string,
   dotSize: PropTypes.number,
   dotColor: PropTypes.string
 };
