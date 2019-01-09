@@ -14,14 +14,10 @@ export const side = {
 };
 
 const Content = styled.div`
-  font-size: ${fonts.sizes.xl};
+  font-size: ${fonts.sizes.xxl};
   font-family: ${fonts.AndaleMono};
 
   ${mediaQueries.md(css`
-    font-size: ${fonts.sizes.xxxl};
-  `)}
-
-  ${mediaQueries.lg(css`
     font-size: ${fonts.sizes.xxxxl};
   `)}
 `;

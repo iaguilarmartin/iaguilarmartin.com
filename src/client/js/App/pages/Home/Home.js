@@ -31,7 +31,7 @@ const H1 = styled.h1`
 
 const Title = styled.span`
   font-family: ${fonts.ArchitectsDaughter};
-  font-size: ${fonts.sizes.xl};
+  font-size: ${fonts.sizes.l};
 
   ${mediaQueries.md(css`
     font-size: ${fonts.sizes.xxxl};

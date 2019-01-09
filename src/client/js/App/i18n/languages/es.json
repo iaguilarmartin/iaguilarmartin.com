@@ -1,3 +1,14 @@
 {
-  "menu_routes_home_label": "Inicio"
+  "menu_routes_home_label": "Inicio",
+  "menu_routes_about_label": "Sobre mi",
+  "menu_routes_portfolio_label": "Portfolio",
+  "menu_routes_resume_label": "Experiencia",
+  "menu_routes_blog_label": "Blog",
+  "menu_routes_contact_label": "Contacto",
+  "home_title_welcome_text": "¡Bienvenid@!, me llamo",
+  "home_title_developer_text": "Soy un full-stack developer",
+  "home_subtitle_frontend_text": "Front-End",
+  "home_subtitle_node_text": "NodeJS",
+  "home_subtitle_mobile_text": "Móvil",
+  "home_button_text": "Ver más"
 }

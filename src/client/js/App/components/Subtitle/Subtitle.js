@@ -17,7 +17,7 @@ const H2 = styled.h2`
   `)}
 
   ${mediaQueries.lg(css`
-    font-size: ${fonts.sizes.xxl};
+    font-size: ${fonts.sizes.xl};
   `)}
 `;
 

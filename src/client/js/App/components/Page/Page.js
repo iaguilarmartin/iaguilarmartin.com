@@ -4,14 +4,21 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { mediaQueries } from 'ui/shared/breakpoints';
+import { space } from 'ui/shared/spacing';
 
 const PageWrapper = styled.main`
   height: 100%;
   background-color: ${({ bgColor }) => bgColor};
   border-radius: 4px;
+  padding: ${space.x25} ${space.x15};
+
+  ${mediaQueries.md(css`
+    padding: ${space.x4} ${space.x3};
+  `)}
 
   ${mediaQueries.xl(css`
     max-height: 812px;
+    padding: ${space.x4} ${space.x5};
   `)}
 `;
 
