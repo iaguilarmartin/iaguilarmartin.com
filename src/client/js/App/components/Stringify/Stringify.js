@@ -21,7 +21,7 @@ const Content = styled.div`
     font-size: ${fonts.sizes.xxxl};
   `)}
 
-  ${mediaQueries.xl(css`
+  ${mediaQueries.lg(css`
     font-size: ${fonts.sizes.xxxxl};
   `)}
 `;

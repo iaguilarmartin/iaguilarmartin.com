@@ -29,7 +29,7 @@ const Logo = styled(Image)`
     width: 377px;
   `)};
 
-  ${mediaQueries.xl(css`
+  ${mediaQueries.lg(css`
     margin-bottom: ${space.x8};
     height: 169px;
     width: 492px;
@@ -56,7 +56,7 @@ const HomeLogo = () => (
         }
       },
       {
-        mediaQuery: breakpoints.xl,
+        mediaQuery: breakpoints.lg,
         srcSet: {
           x1: desktopLogo,
           x2: desktopLogo2x,

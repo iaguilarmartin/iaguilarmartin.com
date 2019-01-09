@@ -16,7 +16,7 @@ const H2 = styled.h2`
     font-size: ${fonts.sizes.l};
   `)}
 
-  ${mediaQueries.xl(css`
+  ${mediaQueries.lg(css`
     font-size: ${fonts.sizes.xxl};
   `)}
 `;

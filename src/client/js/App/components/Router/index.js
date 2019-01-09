@@ -1,5 +1,5 @@
 import Router from './Router';
-import routes from './router-config';
+import routes, { getRoutePath } from './router-config';
 
-export { routes };
+export { routes, getRoutePath };
 export default Router;

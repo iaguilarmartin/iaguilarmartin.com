@@ -4,5 +4,11 @@
   "menu_routes_portfolio_label": "Portfolio",
   "menu_routes_resume_label": "Resume",
   "menu_routes_blog_label": "Blog",
-  "menu_routes_contact_label": "Contact"
+  "menu_routes_contact_label": "Contact",
+  "home_title_welcome_text": "Welcome!, I'm",
+  "home_title_developer_text": "I’m a full-stack developer",
+  "home_subtitle_frontend_text": "Front-End",
+  "home_subtitle_node_text": "NodeJS",
+  "home_subtitle_mobile_text": "Mobile",
+  "home_button_text": "View more"
 }

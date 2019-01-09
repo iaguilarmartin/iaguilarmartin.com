@@ -58,6 +58,9 @@ export const defaultRoute =
     Object.keys(routesConfig).find(routeKey => routesConfig[routeKey].isDefault)
   ];
 
+export const getRoutePath = routeName =>
+  routesConfig[routeName] && routesConfig[routeName].path;
+
 const routes = Object.keys(routesConfig).map(routeKey => ({
   name: routeKey,
   ...routesConfig[routeKey]
