@@ -11,6 +11,8 @@ const PageWrapper = styled.main`
   background-color: ${({ bgColor }) => bgColor};
   border-radius: 4px;
   padding: ${space.x25} ${space.x15};
+  overflow-y: auto;
+  position: relative;
 
   ${mediaQueries.md(css`
     padding: ${space.x4} ${space.x3};
