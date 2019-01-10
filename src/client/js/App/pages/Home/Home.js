@@ -22,6 +22,7 @@ const HomePage = styled(Page)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
 `;
 
 const H1 = styled.h1`

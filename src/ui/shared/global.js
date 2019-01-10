@@ -21,12 +21,6 @@ export default ({ theme }) => css`
     box-sizing: inherit;
   }
 
-  html,
-  body,
-  #root {
-    height: 100%;
-  }
-
   body {
     padding: 0;
     margin: 0;

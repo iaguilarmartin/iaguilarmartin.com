@@ -14,7 +14,7 @@ const LayoutWrapper = styled.div`
   justify-content: center;
   background: url('${backgroundImage}');
   background-size: cover;
-  height: 100%;
+  min-height: 100vh;
   padding: ${space.x7} ${space.x1} ${space.x2};
 
   ${({ theme }) =>

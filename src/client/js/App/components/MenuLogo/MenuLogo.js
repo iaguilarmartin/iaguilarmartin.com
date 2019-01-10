@@ -24,6 +24,10 @@ const StyledImage = styled(Image)`
       height: ${isMenuExpanded ? '71px' : '64px'};
       width: ${isMenuExpanded ? '80px' : '18px'};
     `)};
+
+  @media (max-height: 400px) {
+    display: none;
+  }
 `;
 
 const MenuLogo = ({ isMenuExpanded }) => (
