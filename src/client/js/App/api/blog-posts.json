@@ -1,0 +1,69 @@
+[
+  {
+    "id": "how-to-implement-basic-http-auth-on-nodejs-express-backend",
+    "title": {
+      "en": "How to implement basic HTTP auth on NodeJS & Express backend",
+      "es": "Como implementar autenticación básica en un backend contruido con NodeJS y Express"
+    },
+    "content": {
+      "en": "In order to avoid that anyone can perform requests to your backend it is necessary to implement some type of authentication. It is a must if your backend contains endpoints where data is updated as…",
+      "es": "Todo backend que se precie debe tener implementado algún tipo de autenticación para evitar que cualquier persona puede realizar peticiones sobre el, y más, si dicho backend cuenta con endpoints que realicen modificaciones sobre los datos con…"
+    },
+    "url": {
+      "en": "http://iaguilarmartin.com/blog/how-to-implement-basic-http-auth-on-nodejs-express-backend/",
+      "es": "http://iaguilarmartin.com/es/blog/como-implementar-autenticacion-basica-en-un-backend-contruido-con-nodejs-y-express/"
+    },
+    "publishedOn": "2017-02-27T23:00:00.000Z",
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/02/express_and_nodejs.png"
+  },
+  {
+    "id": "show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs",
+    "title": {
+      "en": "Show browser’s login dialog when performing requests to an API with Basic Authentication enabled using AngularJS",
+      "es": "Mostrar ventana de login del explorador al llamar a un API con autenticación básica usando AngularJS"
+    },
+    "content": {
+      "en": "It is very common when developing a Web site to come up with the requirement of requesting some information to an API that required any type of authentication to be used. Nowadays, we have several ways of…",
+      "es": "Seguramente, mientras desarrollabais un sitio Web, os habéis encontrado con la necesidad de hacer llamadas a un API propia o de terceros que requería de autenticación para poder usarla. Existen varios tipos de autenticación pero…"
+    },
+    "url": {
+      "en": "http://iaguilarmartin.com/blog/show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs/",
+      "es": "http://iaguilarmartin.com/es/blog/mostrar-ventana-de-login-del-explorador-al-llamar-a-un-api-con-autenticacion-basica-usando-angularjs/"
+    },
+    "publishedOn": "2016-10-23T14:25:00.000Z",
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/11/SecurityAngularJS.png"
+  },
+  {
+    "id": "uploading-file-with-a-multipartform-data-request-using-angularjs",
+    "title": {
+      "en": "Uploading files with a multipart/form-data request using AngularJS",
+      "es": "Creando peticiones de tipo multipart/form-data usando AngularJS"
+    },
+    "content": {
+      "en": "In this post I pretend to explain how to upload a file to a server using a multipart/form-data request in AngularJS. Last week, while I was trying to implement a functionality to load a CSV file into a GIS…",
+      "es": "En este post voy a explicar como subir ficheros a un servidor usando peticiones multipart/form-data con AngularJS. La semana pasada, mientras intentaba implementar una funcionalidad para poder visualizar ficheros CSV en el visor GIS que estoy…"
+    },
+    "url": {
+      "en": "http://iaguilarmartin.com/blog/uploading-file-with-a-multipartform-data-request-using-angularjs/",
+      "es": "http://iaguilarmartin.com/es/blog/creando-peticiones-de-tipo-multipartform-data-usando-angularjs/"
+    },
+    "publishedOn": "2016-07-08T10:00:00.000Z"
+  },
+  {
+    "id": "alertmessage_angularjs_bootstrap",
+    "title": {
+      "en": "Displaying alert messages with AngularJS & Bootstrap",
+      "es": "Mostrar mensajes de alerta usando AngularJS y Bootstrap"
+    },
+    "content": {
+      "en": "In this post I am going to explain how to implement an AngularJS directive to display alert messages inside one of your website containers. Alert messages are becoming in a very popular way of giving…",
+      "es": "En este post voy a explicar como implementar una directiva de AngularJS que muestre mensajes de alerta dentro de uno de los controladores de tu web. Los mensajes de alerta o información se están convirtiendo…"
+    },
+    "url": {
+      "en": "http://iaguilarmartin.com/blog/alertmessage_angularjs_bootstrap/",
+      "es": "http://iaguilarmartin.com/es/blog/mostrar-mensajes-de-alerta-usando-angularjs-y-bootstrap/"
+    },
+    "publishedOn": "2016-05-17T21:05:00.000Z",
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/06/alertMessage.png"
+  }
+]

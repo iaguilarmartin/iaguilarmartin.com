@@ -10,5 +10,11 @@
   "home_subtitle_frontend_text": "Front-End",
   "home_subtitle_node_text": "NodeJS",
   "home_subtitle_mobile_text": "Móvil",
-  "home_button_text": "Ver más"
+  "home_button_text": "Ver más",
+  "about_header_text": "Sobre mi",
+  "about_paragraph_1_text": "¡Hola! Mi nombre es Ivan, soy Senior Front-End Developer aunque también tengo experiencia desarrollando aplicaciones móviles nativas y soluciones Back-end utilizando NodeJS.",
+  "about_paragraph_2_text": "Nací en Bilbao (España) hace 34 años y he vivido allí toda mi vida hasta que en febrero de 2019 me mudé a Nueva York en busca de nuevos desafíos.",
+  "about_paragraph_3_text": "Soy licenciado en Ingeniería Informática por la Universidad de Deusto. Pasé 9 años trabajando para una empresa de TI ubicada en Madrid y participé en proyectos interesantes para grandes empresas españolas como Movistar, Euskaltel o Canal de Isabel II. Despues de tanto tiempo acabé perdiendo la motivación, así que decidí dejar la empresa y comencé a trabajar exclusivamente como freelance. Durante mi último trabajo en España trabajé de forma remota para una startup llamada Spotahome. Allí conseguí darle un empujón a mi carrera aprendiendo muchas cosas nuevas y trabajando dentro de un equipo con grandes desarrolladores.",
+  "about_paragraph_4_text": "Además de mi trabajo, me encanta estar al día con las últimas tecnologías, viajar por todo el mundo y, por supuesto, me encanta pasar tiempo con mi familia.",
+  "about_contact_button_text": "Contacta conmigo"
 }

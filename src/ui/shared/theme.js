@@ -12,7 +12,9 @@ const defaultTheme = {
   secondaryColor: colors.blueLight,
   menuBgColor: colors.blackMenu,
   menuIconColor: colors.greyLight,
-  menuWidth: '60px'
+  menuWidth: '60px',
+  articlesTitleColor: colors.beige,
+  articlesTitleFontFamily: fonts.ArchivoBlack
 };
 
 export const themed = Object.keys(defaultTheme).reduce((result, property) => {

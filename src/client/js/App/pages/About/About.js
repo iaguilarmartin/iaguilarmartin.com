@@ -73,35 +73,17 @@ const ButtonContainer = styled.div`
 
 const About = () => (
   <AboutPage>
-    <PageTitle>About me</PageTitle>
+    <PageTitle>{translate('about_header_text')}</PageTitle>
     <Photo />
     <Description>
-      <p>
-        Hello!, My name is Ivan, I’m a Senior Front-End Developer but I have
-        also experience building native mobile applications and Back-end
-        solutions using NodeJS.
-      </p>
-      <p>
-        I was born in Bilbao (Spain) 34 years ago and lived there my whole life,
-        but in February 2019 I moved to New York looking for new challenges.
-      </p>
-      <p>
-        I completed my Computer Engineering Bachelor’s degree at Deusto
-        University. I spent 9 years working for an IT company sited in Madrid
-        and I was involved in awesome projects for big Spanish corporations like
-        Movistar, Euskaltel or Canal de Isabel II. Over time I lost my
-        motivation, so I decided to quit my job and started working exclusively
-        as a Freelance. During my last job in Spain I was working remotely for a
-        startup called Spotahome. There I enhance my career as a developer
-        learning many new things and working within a super talented team.
-      </p>
-      <p>
-        In addition to my work, I love being up to date with the latest
-        technologies, traveling all over the world and, of course, I love
-        spending time with my family.
-      </p>
+      <p>{translate('about_paragraph_1_text')}</p>
+      <p>{translate('about_paragraph_2_text')}</p>
+      <p>{translate('about_paragraph_3_text')}</p>
+      <p>{translate('about_paragraph_4_text')}</p>
       <ButtonContainer>
-        <Button url={getRoutePath('contact')}>Contact me</Button>
+        <Button url={getRoutePath('contact')}>
+          {translate('about_contact_button_text')}
+        </Button>
       </ButtonContainer>
     </Description>
   </AboutPage>
