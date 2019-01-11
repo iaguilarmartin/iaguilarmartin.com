@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import format from 'date-fns/format';
 
 import { space } from 'ui/shared/spacing';
+import { mediaQueries } from 'ui/shared/breakpoints';
 
 import PageTitle from '../../components/PageTitle';
 import Page from '../../components/Page';
@@ -14,16 +16,27 @@ import BlogPost from './components/BlogPost';
 
 const Posts = styled.section`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+
+  ${mediaQueries.lg(css`
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  `)}
 `;
 
 const BlogPostWrapper = styled.div`
-  width: 49%;
-  margin-top: ${space.x4};
+  margin: ${space.x4} 0 ${space.x2};
+
+  ${mediaQueries.lg(css`
+    width: 49%;
+    margin-bottom: 0;
+  `)}
 `;
 
 const currentLanguage = getCurrentLanguage();
+// eslint-disable-next-line import/no-dynamic-require
+const locale = require(`date-fns/locale/${currentLanguage}`);
 
 const Blog = () => (
   <Page>
@@ -34,7 +47,9 @@ const Blog = () => (
           <BlogPost
             title={title[currentLanguage]}
             content={content[currentLanguage]}
-            publicationDate={new Date(publishedOn)}
+            publicationDate={format(new Date(publishedOn), 'D MMMM YYYY', {
+              locale
+            })}
             image={image}
             url={url[currentLanguage]}
           />

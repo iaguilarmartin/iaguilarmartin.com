@@ -8,9 +8,10 @@ import Image from 'ui/components/Image';
 import fonts from 'ui/shared/fonts';
 import { space } from 'ui/shared/spacing';
 import colors from 'ui/shared/colors';
+import Button from 'ui/components/Button';
+import { mediaQueries } from 'ui/shared/breakpoints';
 
 import { translate } from '../../../i18n';
-import Button from 'ui/components/Button';
 
 const Article = styled.article`
   width: 100%;
@@ -27,20 +28,32 @@ const Header = styled.h2`
 
 const PostInfo = styled.section`
   display: flex;
+  flex-direction: column;
   margin-top: ${space.x15};
+
+  ${mediaQueries.xl(css`
+    flex-direction: row;
+  `)}
 `;
 
 const PostImage = styled(Image)`
-  width: 35%;
-  height: 35%;
-  margin-right: ${space.x2};
+  width: 100%;
+  margin-bottom: ${space.x2};
+
+  ${mediaQueries.xl(css`
+    margin-bottom: 0;
+    margin-right: ${space.x2};
+    width: 40%;
+    height: 40%;
+  `)}
 `;
 
 const PublicationDate = styled.span`
+  font-size: ${fonts.sizes.l};
   font-family: ${fonts.Obli};
   color: ${colors.greyLight};
   display: block;
-  margin-bottom: ${space.x05};
+  margin-bottom: ${space.x1};
 `;
 
 const Container = styled.div`
@@ -53,7 +66,15 @@ const Content = styled.p`
 `;
 
 const ReadMoreButton = styled(Button)`
+  margin-top: ${space.x2};
+  text-transform: uppercase;
+  padding: ${space.x1} ${space.x25} !important;
+  min-height: 30px !important;
   align-self: center;
+
+  ${mediaQueries.xl(css`
+    align-self: flex-start;
+  `)}
 `;
 
 const BlogPost = ({ title, content, url, publicationDate, image }) => (
@@ -62,9 +83,9 @@ const BlogPost = ({ title, content, url, publicationDate, image }) => (
     <PostInfo>
       {image && <PostImage src={image} alt="" />}
       <Container>
-        <PublicationDate>{publicationDate.toISOString()}</PublicationDate>
+        <PublicationDate>{publicationDate}</PublicationDate>
         <Content>{content}</Content>
-        <ReadMoreButton url={url}>
+        <ReadMoreButton url={url} target="_blank">
           {translate('blog_more_button_text')}
         </ReadMoreButton>
       </Container>
@@ -80,7 +101,7 @@ BlogPost.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  publicationDate: PropTypes.objectOf(Date).isRequired,
+  publicationDate: PropTypes.string.isRequired,
   image: PropTypes.string
 };
 

@@ -18,7 +18,7 @@ const PageWrapper = styled.main`
   `)}
 
   ${mediaQueries.xl(css`
-    max-height: 812px;
+    max-height: 875px;
     padding: ${space.x4} ${space.x5};
   `)}
 `;

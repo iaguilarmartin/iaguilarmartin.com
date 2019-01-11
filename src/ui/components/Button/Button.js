@@ -84,7 +84,7 @@ const isExternal = url =>
   url.startsWith('https:') ||
   url.startsWith('mailto:');
 
-const Button = ({ children, className, onClick, url }) =>
+const Button = ({ children, className, onClick, url, ...htmlProps }) =>
   url ? (
     <StyledButton
       as={isExternal(url) ? 'a' : Link}
@@ -92,11 +92,12 @@ const Button = ({ children, className, onClick, url }) =>
       href={url}
       className={className}
       onClick={onClick}
+      {...htmlProps}
     >
       <span>{children}</span>
     </StyledButton>
   ) : (
-    <StyledButton className={className} onClick={onClick}>
+    <StyledButton className={className} onClick={onClick} {...htmlProps}>
       <span>{children}</span>
     </StyledButton>
   );
