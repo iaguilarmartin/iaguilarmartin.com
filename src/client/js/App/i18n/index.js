@@ -18,7 +18,7 @@ const translations = languages.reduce((result, { code }) => {
 }, {});
 
 const LANGUAGE_COOKIE_NAME = 'currentLanguage';
-const DEFAULT_LANGUAGE = 'en';
+export const DEFAULT_LANGUAGE = 'en';
 
 export const getCurrentLanguage = () =>
   Cookies.get(LANGUAGE_COOKIE_NAME) || DEFAULT_LANGUAGE;
@@ -29,11 +29,19 @@ export const setCurrentLanguage = language =>
 const getTranslation = (textKey, language) =>
   translations[language] && translations[language][textKey];
 
-export const translate = (textKey, language) => {
+export const translateInto = (textKey, language, ...params) => {
   const lang = language || getCurrentLanguage();
-  return (
+  let translatedText =
     getTranslation(textKey, lang) ||
     getTranslation(textKey, DEFAULT_LANGUAGE) ||
-    textKey
-  );
+    textKey;
+
+  params.forEach((param, index) => {
+    translatedText = translatedText.replace(`{${index}}`, param);
+  });
+
+  return translatedText;
 };
+
+export const translate = (textKey, ...params) =>
+  translateInto(textKey, null, ...params);

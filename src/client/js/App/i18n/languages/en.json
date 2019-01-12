@@ -18,5 +18,6 @@
   "about_paragraph_4_text": "In addition to my work, I love being up to date with the latest technologies, traveling all over the world and, of course, I love spending time with my family.",
   "about_contact_button_text": "Contact me",
   "blog_header_text": "Blog",
-  "blog_more_button_text": "Read more"
+  "blog_more_button_text": "Read more",
+  "blog_pagination_text": "Page {0} of {1}"
 }

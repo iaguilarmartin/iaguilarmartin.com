@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import { space } from 'ui/shared/spacing';
-import colors from 'ui/shared/colors';
+import { space } from '../../shared/spacing';
+import colors from '../../shared/colors';
 
 import DotIcon from './DotIcon';
 

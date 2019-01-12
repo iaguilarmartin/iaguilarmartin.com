@@ -10,6 +10,7 @@ const defaultTheme = {
   backgroundColor: colors.greyBg,
   primaryColor: colors.gold,
   secondaryColor: colors.blueLight,
+  disabledColor: colors.greyBgLines,
   menuBgColor: colors.blackMenu,
   menuIconColor: colors.greyLight,
   menuWidth: '60px',

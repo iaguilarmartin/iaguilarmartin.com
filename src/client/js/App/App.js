@@ -11,8 +11,7 @@ import Layout from './components/Layout';
 import MenuLogo from './components/MenuLogo';
 import Router, { routes } from './components/Router';
 import LanguageSelector from './components/LanguageSelector';
-
-const currentLanguage = getCurrentLanguage();
+import languageContext from './i18n/language-context';
 
 const handleSelectLanguage = language => {
   setCurrentLanguage(language);
@@ -22,20 +21,21 @@ const handleSelectLanguage = language => {
 const App = () => (
   <ThemeProvider theme={theme}>
     <Global styles={globalStyles} />
-    <Layout>
-      <Menu
-        routes={routes}
-        renderLogo={isMenuExpanded => (
-          <MenuLogo isMenuExpanded={isMenuExpanded} />
-        )}
-      />
-      <LanguageSelector
-        languages={languages}
-        onSelectLanguage={handleSelectLanguage}
-        selectedLanguage={currentLanguage}
-      />
-      <Router />
-    </Layout>
+    <languageContext.Provider value={{ language: getCurrentLanguage() }}>
+      <Layout>
+        <Menu
+          routes={routes}
+          renderLogo={isMenuExpanded => (
+            <MenuLogo isMenuExpanded={isMenuExpanded} />
+          )}
+        />
+        <LanguageSelector
+          languages={languages}
+          onSelectLanguage={handleSelectLanguage}
+        />
+        <Router />
+      </Layout>
+    </languageContext.Provider>
   </ThemeProvider>
 );
 

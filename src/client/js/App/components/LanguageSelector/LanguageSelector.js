@@ -9,6 +9,8 @@ import fonts from 'ui/shared/fonts';
 import { mediaQueries } from 'ui/shared/breakpoints';
 import DotsList from 'ui/components/DotsList';
 
+import LanguageContext from '../../i18n/language-context';
+
 const Container = styled.section`
   display: flex;
   position: absolute;
@@ -31,25 +33,25 @@ const Language = styled(TextButton)`
   `)}
 `;
 
-const LanguageSelector = ({
-  languages,
-  selectedLanguage,
-  onSelectLanguage
-}) => (
-  <Container>
-    <DotsList
-      items={languages}
-      keyProperty="name"
-      renderItem={({ code }) => (
-        <Language
-          isActive={selectedLanguage === code}
-          onClick={() => onSelectLanguage(code)}
-        >
-          {code.toUpperCase()}
-        </Language>
-      )}
-    />
-  </Container>
+const LanguageSelector = ({ languages, onSelectLanguage }) => (
+  <LanguageContext.Consumer>
+    {({ language }) => (
+      <Container>
+        <DotsList
+          items={languages}
+          keyProperty="name"
+          renderItem={({ code }) => (
+            <Language
+              isActive={language === code}
+              onClick={() => onSelectLanguage(code)}
+            >
+              {code.toUpperCase()}
+            </Language>
+          )}
+        />
+      </Container>
+    )}
+  </LanguageContext.Consumer>
 );
 
 LanguageSelector.propTypes = {
@@ -59,7 +61,6 @@ LanguageSelector.propTypes = {
       name: PropTypes.string.isRequired
     })
   ).isRequired,
-  selectedLanguage: PropTypes.string.isRequired,
   onSelectLanguage: PropTypes.func.isRequired
 };
 

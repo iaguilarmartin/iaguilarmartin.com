@@ -1,21 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import theme from '../../shared/theme';
 import { animatedHover } from '../../shared/mixins';
+
+const buttonColorStyle = ({ color, disabled, hovercolor }) => {
+  const buttonColor = disabled ? theme.disabledColor : color;
+  return css`
+    color: ${buttonColor};
+    stroke: ${buttonColor};
+    fill: ${buttonColor};
+
+    ${disabled ? 'pointer-events: none;' : animatedHover(hovercolor)};
+  `;
+};
 
 const Button = styled.button`
   background-color: transparent;
   cursor: pointer;
   border: none;
   outline: none;
-  color: ${props => props.color};
-  stroke: ${props => props.color};
-  fill: ${props => props.color};
   padding: 0;
-
-  ${props => animatedHover(props.hovercolor)};
+  ${buttonColorStyle};
 `;
 
 const TextButton = ({ color, hoverColor, children, onClick, ...htmlProps }) => (
