@@ -1,0 +1,12 @@
+[
+  {
+    "id": "receiptprinter-ios-app",
+    "name": {
+      "en": "ReceiptPrinter – iOS App",
+      "es": "ReceiptPrinter – iOS App"
+    },
+    "categories": ["mobile"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/09/ReceiptPrinter-1.png",
+    "technologies": ["Swift 3", "iOS Native app"]
+  }
+]
