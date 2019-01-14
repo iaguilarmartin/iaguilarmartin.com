@@ -1,12 +1,268 @@
 [
   {
-    "id": "receiptprinter-ios-app",
+    "id": {
+      "en": "receiptprinter-ios-app-2",
+      "es": "receiptprinter-ios-app"
+    },
     "name": {
       "en": "ReceiptPrinter – iOS App",
       "es": "ReceiptPrinter – iOS App"
     },
+    "publishedOn": "2017-08-01T23:00:00.000Z",
+    "subtitle": {
+      "en": "Print easily on EPSON printers",
+      "es": "Impresión de tickets sencilla"
+    },
+    "description": {
+      "en": "This application allows you printing receipts on EPSON POS printers from a JSON file. If you are a developer and your client needs to print receipts over one of those printers, don’t waste your time trying to learn how to use EPSON’s API, just invoke this app from your web page or another iOS app and problem solved!\n\nTo learn more details about receipts file format or how to invoke this application form another one just visit support Web page or download the app and click on About section link.",
+      "es": "ReceiptPrinter es una app de iOS para imprimir tickets en las impresoras de la marca EPSON a partir de ficheros JSON. Si eres un desarrollador y tu cliente tiene la necesidad de imprimir tickets de venta, no pierdas el tiempo tratando de entender el API de EPSON, simplemente instálale esta app y genérale directamente los tickets que necesita en un tiempo record.\n\nPara conocer más detalles acerca del formato del fichero o las diferentes formas de invocación que esta aplicación proporciona, visite la página de soporte o bien descárgate la app y pulsa en el enlace que se encuentra en la sección de Ayuda."
+    },
     "categories": ["mobile"],
     "image": "http://iaguilarmartin.com/wp-content/uploads/2017/09/ReceiptPrinter-1.png",
-    "technologies": ["Swift 3", "iOS Native app"]
+    "technologies": [
+      {
+        "en": "Swift 3",
+        "es": "Swift 3"
+      },
+      {
+        "en": "UIKit",
+        "es": "UIKit"
+      },
+      {
+        "en": "In-App purchases",
+        "es": "Compras In-App"
+      },
+      {
+        "en": "iCloud sync",
+        "es": "iCloud sync"
+      },
+      {
+        "en": "i18n",
+        "es": "i18n"
+      }
+    ],
+    "resources": {
+      "AppStore": {
+        "en": "https://itunes.apple.com/us/app/receiptprinter-print-easily-on-epson-printers/id1186014752?mt=8",
+        "es": "https://itunes.apple.com/es/app/receiptprinter-impresi%C3%B3n-de-tickets-sencilla/id1186014752?mt=8"
+      },
+      "web": {
+        "en": "http://iaguilarmartin.com/receiptprinter/",
+        "es": "http://iaguilarmartin.com/es/receiptprinter-es/"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "restaurante-landatxueta-jquery-web-site",
+      "es": "restaurante-landatxueta-sitio-web-con-jquery"
+    },
+    "name": {
+      "en": "Landatxueta Restaurant",
+      "es": "Restaurante Landatxueta"
+    },
+    "publishedOn": "2016-05-25T23:00:00.000Z",
+    "subtitle": {
+      "en": "JQuery Web Site",
+      "es": "Sitio Web con JQuery"
+    },
+    "description": {
+      "en": "This modern web site was made using JQuery framework and several plugins. It is just a frontend design but it includes some innovative aspects like 360º views of the restaurant’s living rooms or the wedding menus section that embeds the different menus inside an old book.",
+      "es": "Se trata de un moderno sitio web desarrollado usando el framework Javascript JQuery. No se ha hecho ningún desarrollo del lado del servidor, sin embargo, incluye algunas características innovadoras como vistas de 360 grados de los comedores y la entrada del restaurante o una sección de menú de bodas donde se podrá consultar la carta como si de un libro se tratara."
+    },
+    "categories": ["web"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/landatxueta.png",
+    "technologies": [
+      {
+        "en": "JQuery",
+        "es": "JQuery"
+      },
+      {
+        "en": "HTML5",
+        "es": "HTML5"
+      },
+      {
+        "en": "CSS3",
+        "es": "CSS3"
+      },
+      {
+        "en": "ASP.NET",
+        "es": "ASP.NET"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://www.landatxuetarestaurante.com/",
+        "es": "http://www.landatxuetarestaurante.com/"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "campus-dehbi-wordpress-site",
+      "es": "campus-dehbi-sitio-web-en-wordpress"
+    },
+    "name": {
+      "en": "Campus Dehbi",
+      "es": "Campus Dehbi"
+    },
+    "publishedOn": "2016-05-23T23:00:00.000Z",
+    "subtitle": {
+      "en": "WordPress Site",
+      "es": "Sitio Web en WordPress"
+    },
+    "description": {
+      "en": "A really small WordPress web site that provides information about campus organizers and activity dates. It also includes a photo gallery. Moreover you can also find a form where people can register for the next summer campus edition.",
+      "es": "Sencilla página web WordPress que proporciona información sobre el campus, sus organizadores y las fechas de las actividades realizadas en el. También incluye una galería de fotos. Además se ha incluido un formulario donde la gente puede inscribirse para las próximas ediciones del campus."
+    },
+    "categories": ["web"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/campus_web.png",
+    "technologies": [
+      {
+        "en": "WordPress",
+        "es": "WordPress"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://www.campusdehbi.com/",
+        "es": "http://www.campusdehbi.com/"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "guia-deportes-tv-app",
+      "es": "aplicacion-guia-deportes-tv"
+    },
+    "name": {
+      "en": "Guia Deportes TV App",
+      "es": "Aplicación Guia Deportes TV"
+    },
+    "publishedOn": "2016-05-23T23:00:00.000Z",
+    "subtitle": {
+      "en": "Windows Phone and Android native mobile apps",
+      "es": "Aplicación movil nativa para dispositivos Windows Phone y Android"
+    },
+    "description": {
+      "en": "Guia Deportes TV is a mobile app created by me and two of my colleagues. It was available in Window Phone Store and Google Play.\n\nThe main goal of this app was to provide users with a TV guide focused on sport events. It allowed users to filter the events by sport and it also set reminders for a particular event in which the user was interested.\n\nUnfortunately, due to lack of time we had to discontinue the project and it is not available anymore.",
+      "es": "Guia Deportes TV fue una aplicación movil creada por dos de mis amigos y yo. Estaba disponible para las tiendas de aplicaciones de Window Phone y Google Play.\n\nDesde esta aplicación los usuarios tenían siempre al alcance de su mano una completa guía de televisión enfocada a eventos deportivos. Permitía a los usuarios filtrar eventos de un determinado deporte y añadir recordatorios para un evento en concreto de modo que cinco minutos antes de que este empezará les llegara una notificación.\n\nDesgraciadamente, por falta de de tiempo tuvimos que abandonar el proyecto y ya no está disponible para su descarga."
+    },
+    "categories": ["mobile"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/Inyasiv.png",
+    "technologies": [
+      {
+        "en": "Android SDK",
+        "es": "Android SDK"
+      },
+      {
+        "en": "Windows Phone SDK",
+        "es": "Windows Phone SDK"
+      },
+      {
+        "en": "ASP.NET Rest API",
+        "es": "API Rest ASP.NET"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://desarrollo.fruteriaaguimar.com/Inyasiv/GuiaDeportesTv.aspx",
+        "es": "http://desarrollo.fruteriaaguimar.com/Inyasiv/GuiaDeportesTv.aspx"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "gorafs-html5-net-web-site",
+      "es": "gorafs-sitio-web-con-html5-y-net"
+    },
+    "name": {
+      "en": "GoraFS.com",
+      "es": "GoraFS.com"
+    },
+    "publishedOn": "2016-05-23T23:00:00.000Z",
+    "subtitle": {
+      "en": "Windows Phone and Android native mobile apps",
+      "es": "Aplicación movil nativa para dispositivos Windows Phone y Android"
+    },
+    "description": {
+      "es": "A full web site designed for a local Indoor Football Club where their supporters can review its latest news, scores, schedules, statistics, standings and more. It also includes an administration area to make the web site management easier.\n\nThe front end of this web site is designed using HTML5 and CSS3 with JQuery framework support. However, the backend is built using Microsoft ASP.NET technology. All the information shown is stored in a local MySQL database.",
+      "en": "Sitio Web diseñado para un club local de Futbol-Sala. En él, sus seguidores pueden estar al tanto de las ultimas noticias del club y consultar los últimos resultados, calendarios, clasificaciones y estadísticas. También incluye una zona de administración para hacer mas sencilla la gestión del contenido de la página.\n\nPara el diseño de la interfaz gráfica se ha utilizado HTML5, CSS3 y el framework Javascript JQuery. La comunicación del lado del servidor se ha llevado a cabo gracias a la tecnología ASP.NET de Microsoft. Para almacenar todo la información mostrada en la página se ha usado el sistema de base de datos MySQL."
+    },
+    "categories": ["web"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/gora_web.png",
+    "technologies": [
+      {
+        "en": "HTML5",
+        "es": "HTML5"
+      },
+      {
+        "en": "CSS3",
+        "es": "CSS3"
+      },
+      {
+        "en": "JQuery",
+        "es": "JQuery"
+      },
+      {
+        "en": "ASP.NET",
+        "es": "ASP.NET"
+      },
+      {
+        "en": "MySQL",
+        "es": "MySQL"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://www.gorafs.com/",
+        "es": "http://www.gorafs.com/"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "fruteria-aguimar-javascript-net-web-site",
+      "es": "fruteria-aguimar-sitio-web-asp-net"
+    },
+    "name": {
+      "en": "Fruteria Aguimar",
+      "es": "Fruteria Aguimar"
+    },
+    "publishedOn": "2016-05-25T23:00:00.000Z",
+    "subtitle": {
+      "en": "ASP.NET Web site",
+      "es": "Sitio Web ASP.NET"
+    },
+    "description": {
+      "es": "This is the web site I created many years ago for my family’s business. It was created using ASP.NET technology. I am currently bringing it up to date in my spare time.",
+      "en": "Esta es la página web que creé hace muchos años para el negocio familiar. Está creada usando tecnología ASP.NET. Actualmente, estoy intentando darle un buen lavado de cara en mis ratos libres."
+    },
+    "categories": ["web"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/fruteria_web.png",
+    "technologies": [
+      {
+        "en": "HTML5",
+        "es": "HTML5"
+      },
+      {
+        "en": "CSS3",
+        "es": "CSS3"
+      },
+      {
+        "en": "ASP.NET",
+        "es": "ASP.NET"
+      },
+      {
+        "en": "SQL Server",
+        "es": "SQL Server"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://www.fruteriaaguimar.com/",
+        "es": "http://www.fruteriaaguimar.com/"
+      }
+    }
   }
 ]
