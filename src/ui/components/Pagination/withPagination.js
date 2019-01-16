@@ -31,13 +31,21 @@ const withPagination = (WrappedComponent, itemsPerPage) =>
     }
 
     handlePageChange = page => {
+      this.navigateToPage(page);
+    };
+
+    navigateToPage(page) {
       const { history, location } = this.props;
       history.push(`${location.pathname}?page=${page}`);
       scrollToTop();
-    };
+    }
 
     renderPagination = (totalItems, generateText) => {
       const totalPages = Math.ceil(totalItems / itemsPerPage);
+      if (totalPages > 0 && totalPages < this.currentPage) {
+        this.navigateToPage(totalPages);
+        return null;
+      }
 
       return (
         <Pagination

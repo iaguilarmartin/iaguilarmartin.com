@@ -1,0 +1,317 @@
+[
+  {
+    "id": {
+      "en": "reacttr-a-simplified-version-of-twitter",
+      "es": "reacttr-clon-simplificado-de-twitter"
+    },
+    "name": {
+      "en": "Reacttr",
+      "es": "Reacttr"
+    },
+    "publishedOn": "2017-10-02T23:00:00.000Z",
+    "subtitle": {
+      "en": "A simplified version of Twitter",
+      "es": "Clon simplificado de Twitter"
+    },
+    "description": {
+      "en": "This is the first project I built using ReactJS. Mainly it is a reduced version of Twitter web page. If you want to try the application you must have a GitHub account because is the only way of getting logged in.\n\nOnce inside the web page users will come up with the classic twitter timeline and are able to publish new tweets, retweet existing tweets, reply to them or just set as favorite.\n\nApplication data is stored in a Firebase real time database. So, whenever a user post a tweet or interact with one of the existing tweets the user interface of other users will be updated automatically without the need of refreshing the browser.\n\nAs always source code of this application is available on my GitHub account.",
+      "es": "Este es el primer proyecto que creé usando ReactJS. Principalmente, se trata de una versión reducida de la página Web de Twitter. Si quieres probar esta aplicación es necesario que tengas una cuenta de GitHub porque es la única forma que hay actualmente de iniciar sesión en ella.\n\nUna vez dentro de la página, los usuarios se encuentran con el clásico timeline de Twitter. En ella se podrá publicar nuevos tweets, hacer retweet de los ya existentes, contestar al resto de usuario o marcar un tweet como favorito.\n\nToda la información que maneja la aplicación está almacenada en una base de datos en tiempo real de Firebase. De este modo, cuando un usuario publique un nuevo tweet o interactue con alguno de los ya existentes la interfaz del resto de usuarios se actualizará de manera automática sin necesidad de tener que refrescar la página.\n\nComo siempre si estás interesado en ver el código fuente de este proyecto lo tienes disponible en mi cuenta de GitHub."
+    },
+    "categories": ["web"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/12/reacttr.png",
+    "technologies": [
+      {
+        "en": "ReactJS",
+        "es": "ReactJS"
+      },
+      {
+        "en": "Firebase",
+        "es": "Firebase"
+      },
+      {
+        "en": "GitHub Login",
+        "es": "GitNub Login"
+      }
+    ],
+    "resources": {
+      "github": {
+        "en": "https://github.com/iaguilarmartin/Reacttr",
+        "es": "https://github.com/iaguilarmartin/Reacttr"
+      },
+      "web": {
+        "en": "https://reacttr.iaguilarmartin.com/",
+        "es": "https://reacttr.iaguilarmartin.com/"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "nodejs-map-tile-server",
+      "es": "servidor-de-map-tiles-nodejs"
+    },
+    "name": {
+      "en": "Map Tile Server",
+      "es": "Servidor de Map Tiles"
+    },
+    "publishedOn": "2017-11-27T23:00:00.000Z",
+    "subtitle": {
+      "en": "NodeJS",
+      "es": "NodeJS"
+    },
+    "description": {
+      "en": "A Tile Server built using Mapnik and NodeJS. This simple server is the result of a challenge I did in order to apply for a job position as Back-end developer at Carto.\n\nUnfortunately I could not get the job but I am proud of the test’s result so I decided to include it on my portfolio.\n\nThis server has built in unit tests and is fully documented using jsdoc. Visit my GitHub profile to download project source code.",
+      "es": "Se trata de un servidor de teselas de mapa construido usando Mapnik y NodeJS. Este sencillo servidor es el resultado de un reto que tuve que desarrollar para poder optar a un puesto de trabajo como desarrollador back-end en Carto.\n\nDesafortunadamente no pude conseguir el puesto pero me quedé satisfecho con el resultado de la prueba y por eso he decidido incluirlo en mi portfolio.\n\nEste servidor lleva incorporadas pruebas unitarias y está completamente documentado por medio de jsdoc. Visita mi perfil de GitHub para descargar el código fuente del servidor."
+    },
+    "categories": ["backend"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/11/tile.png",
+    "technologies": [
+      {
+        "en": "NodeJS",
+        "es": "NodeJS"
+      },
+      {
+        "en": "Mapnik",
+        "es": "Mapnik"
+      },
+      {
+        "en": "Jsdoc",
+        "es": "Jsdoc"
+      },
+      {
+        "en": "Mocha",
+        "es": "Mocha"
+      }
+    ],
+    "resources": {
+      "doc": {
+        "en": "http://tserver.iaguilarmartin.com/",
+        "es": "http://tserver.iaguilarmartin.com/"
+      },
+      "github": {
+        "en": "https://github.com/iaguilarmartin/Reacttr",
+        "es": "https://github.com/iaguilarmartin/Reacttr"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "readable-reactjs-posts-reader-web-page",
+      "es": "readable-web-en-react-para-leer-posts"
+    },
+    "name": {
+      "en": "Readable",
+      "es": "Readable"
+    },
+    "publishedOn": "2017-10-24T23:00:00.000Z",
+    "subtitle": {
+      "en": "ReactJS posts reader Web page",
+      "es": "Web en React para leer posts"
+    },
+    "description": {
+      "en": "A ReactJS + Redux + Materialize web app where users are able to post content to predefined categories, comment on their posts and other users posts, and vote on posts and comments. Of course, they also are able to edit and delete posts and comments.\n\nReadable get posts and categories data from a very simple NodeJS server and as it user interface is responsive it can be visited from any device.\n\nThe source code of this Web page is available on my GitHub account just in case you are interested in how it is done. This project is the result of my second React Nanodegree Program practice.",
+      "es": "Aplicación Web construida con ReactJS + Redux + Materialize donde los usuarios pueden escribir posts dentro de las categorías que hay predefinidas, dejar comentarios y votar, así como también escribir y editar los posts o comentarios que hayan hecho previamente.\n\nReadable obtiene y almacena la información de los posts en servidor muy sencillo construido usando NodeJS y como su interfaz de usuario es responsiva, esta web puede ser visitada desde cualquier tipo de dispositivo.\n\nSi está interesado/a en ver el código fuente de esta aplicación lo puedes consultar en mi cuenta de GitHub. Este proyecto es el resultado de mi segunda practica del React Nanodegree Program de Udacity."
+    },
+    "categories": ["web"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/11/readable.png",
+    "technologies": [
+      {
+        "en": "ReactJS",
+        "es": "ReactJS"
+      },
+      {
+        "en": "Redux",
+        "es": "Redux"
+      },
+      {
+        "en": "Materialize",
+        "es": "Materialize"
+      },
+      {
+        "en": "Responsive",
+        "es": "Responsive"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://readable.iaguilarmartin.com/",
+        "es": "http://readable.iaguilarmartin.com/"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "commandspicker-android-app",
+      "es": "tomador-de-comandas-android-app"
+    },
+    "name": {
+      "en": "CommandsPicker",
+      "es": "Tomador de comandas"
+    },
+    "publishedOn": "2016-11-22T23:00:00.000Z",
+    "subtitle": {
+      "en": "Android App",
+      "es": "Android App"
+    },
+    "description": {
+      "en": "CommandsPicker is a extremely simple Android application. It just pretend to be a demo app on how could be a real commands picker solution for restaurants. This application allows you to configure the number of tables available, navigate trough the list of courses included on the restaurant’s menu, add them to a concrete table including any suggestion made by the customer about course cooking. And at the end, when everybody has finished their meal, it allows you to generate a receipt and leave its table empty for future clients.\n\nAs CommandsPicker is not a commercial app its source code is available on my Github profile for anyone who want to know how it is implemented and what Android SDK features are included.\n\nTo install this app on your Android device click on the following button:",
+      "es": "Tomador de comandas es una aplicación Android muy sencilla. Se trata de una app de demostración para hacerse una idea de como podría ser una solución completa de gestión de comandas para un restaurante. Esta aplicación te permite configurar el número de mesas disponibles, navegar entre los diferentes platos del menú, añadir dichos platos a una mesa incluyendo las sugerencias de los clientes sobre la preparación del plato en cocina. Y además, cuando los comensales están listos para abandonar el restaurante se puede generar el ticket dejando así la mesa libre para futuros clientes.\n\nNo se trata de una aplicación comercial o de uso real y por tanto, su código fuente se encuentra disponible en mi perfil de Github para que cualquiera que esté interesado pueda ver como esta implementada y que capacidades el SDK de Android utiliza.\n\nPara intalar está app en su dispositivo Android pulse el siguiente botón:"
+    },
+    "categories": ["mobile"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/12/commandspicker.png",
+    "technologies": [
+      {
+        "en": "Android SDK",
+        "es": "Android SDK"
+      },
+      {
+        "en": "Tablet layout",
+        "es": "Interfaz tablet"
+      }
+    ],
+    "resources": {
+      "GooglePlay": {
+        "en": "https://play.google.com/store/apps/details?id=com.iaguilarmartin.commandspicker&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+        "es": "https://play.google.com/store/apps/details?id=com.iaguilarmartin.commandspicker&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "wallapopdesign",
+      "es": "wallapopdesign-2"
+    },
+    "name": {
+      "en": "WallapopDesign",
+      "es": "WallapopDesign"
+    },
+    "publishedOn": "2016-11-04T23:00:00.000Z",
+    "description": {
+      "es": "A mobile App design made with Sketch. It replicates some of the screens you can find in one of the most important shopping apps here in Spain. Which name is Wallapop.\n\nNavigate to my Github repository and download the .sketch file included on it so you can check that every item found in the screens is entirely designed by me. They are also included all the assets needed to apply this design to a mobile application whether it is an iOS app or an Android app.\n\nIf you want to see this design in action visit the prototype project that I have created on Marvel.\n\nTo inspect all the design details easily from your browser just click the following button. This web page has been generated using “Spec Export” function included in Sketch Measure plugin.",
+      "en": "Demostración de diseño de aplicación móvil creado con Sketch. Es una replica de algunas de las pantallas que se pueden encontrar en una de las aplicaciones de compra-venta más importantes de España. Cuyo nombre es Wallapop.\n\nEcha un vistazo a mi repositorio de Github y descarga el fichero .sketch que incluye. En él podras comprobar que todos y cada uno de los elementos que este diseño contiene ha sido creado por mi. Tambien se incluyen en él, todos los assets necesarios para aplicar este diseño a una aplicación móvil, independientemente de si es para dispositivos Android o iOS.\n\nSi quieres ver como se comportaría este diseño en la vida real visita el prototipo que he creado usando Marvel.\n\nPara revisar todos los detalles del diseño pulsa en el siguiente botón. Esta Web ha sido creada usando la funcionalidad “Spec Export” incluida en el Sketch Measure plugin."
+    },
+    "categories": ["design"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/12/wallapop_design.png",
+    "technologies": [
+      {
+        "en": "Sketch",
+        "es": "Sketch"
+      },
+      {
+        "en": "Marvel",
+        "es": "Marvel"
+      },
+      {
+        "en": "Measure plugin",
+        "es": "Measure plugin"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://wallapopdesign.iaguilarmartin.com",
+        "es": "http://wallapopdesign.iaguilarmartin.com"
+      },
+      "marvel": {
+        "en": "https://marvelapp.com/19e8ac6",
+        "es": "https://marvelapp.com/19e8ac6"
+      },
+      "github": {
+        "en": "https://github.com/iaguilarmartin/WallapopDesign",
+        "es": "https://github.com/iaguilarmartin/WallapopDesign"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "whatapop-angularjs-products-marketplace-web-site",
+      "es": "whatapop-web-de-venta-de-productos-en-angularjs"
+    },
+    "name": {
+      "en": "Whatapop",
+      "es": "Whatapop"
+    },
+    "publishedOn": "2016-06-01T23:00:00.000Z",
+    "subtitle": {
+      "en": "AngularJS products marketplace Web Site",
+      "es": "Web de venta de productos en AngularJS"
+    },
+    "description": {
+      "es": "Whatapop is a reduced version of a products marketplace, similar to Wallapop. I created this web site during the KeepCoding Startup Engineering Master Bootcamp and it is built combining AngularJS framework with HTML5 and CSS3.\n\nIf you want to take a look at the source code of this marketplace just navigate to my GitHub profile.\n\nIt is also published online at this URL:",
+      "en": "Whatapop es una versión muy reducida de lo que sería una Web de compra-venta de productos online. Algo parecido a Wallapop (de ahí el nombre..). Esta Web la creé durante el KeepCoding Startup Engineering Master Bootcamp y está desarrollada usando el framework JavaScript de AngularJS, HTML5 y CSS3.\n\nSi quieres echar un vistazo al código fuente de la página, accede a mi perfil de GitHub.\n\nTambién se puede ver la Web funcionando en la siguiente URL:"
+    },
+    "categories": ["web"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/07/whatapop_preview-1.jpg",
+    "technologies": [
+      {
+        "en": "AngujarJS",
+        "es": "AngujarJS"
+      },
+      {
+        "en": "Bootstrap",
+        "es": "Bootstrap"
+      },
+      {
+        "en": "SPA",
+        "es": "SPA"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "http://whatapop.iaguilarmartin.com/",
+        "es": "http://whatapop.iaguilarmartin.com/"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "nodepop-nodejs-products-marketplace-api",
+      "es": "whatapop-web-de-venta-de-productos-en-angularjs"
+    },
+    "name": {
+      "en": "Whatapop",
+      "es": "Whatapop"
+    },
+    "publishedOn": "2016-05-08T23:00:00.000Z",
+    "subtitle": {
+      "en": "NodeJS Products Marketplace API",
+      "es": "API para web de venta de productos"
+    },
+    "description": {
+      "es": "This is a NodeJS project that I developed during the KeepCoding Startup Engineering Master Bootcamp. It’s purpose is to provide front-end developers an API to built a mobile or Web application similar to Wallapop. Of course it is not a complete solution but it includes some interesting features like registering and authenticating users, searching for adverts or serving static images.\n\nIf you want to take a look to the source code of the API it is available on GitHub. But if what you want to do is testing the API just navigate to the documentation page and try the methods described there. The API is deployed on an Amazon EC2 Ubuntu instance that I manage.",
+      "en": "Esto es un proyecto NodeJS desarrollado durante el KeepCoding Startup Engineering Master Bootcamp. Su finalidad es proporcionar a los desarrolladores de front-end un API para construir un sitio web o una aplicación móvil estilo Wallapop. Por supuesto esta no es una solución completamente terminada pero permite hacer algunas acciones muy comunes como: gestionar el registro y autenticación de usuarios, realizar búsquedas de anuncios, obtener imágenes estáticas, etc.\n\nSi quieres echar un vistazo al código fuente del API, lo tienes disponible en GitHub. Si por el contrario, prefieres testear por ti mismo el API accede directamente a la documentación y prueba los métodos explicados ahí. El API se encuentra desplegado en una instancia Ubuntu de Amazon EC2 que yo mismo gestiono."
+    },
+    "categories": ["backend"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/06/Nodepop.jpg",
+    "technologies": [
+      {
+        "en": "NodeJS",
+        "es": "NodeJS"
+      },
+      {
+        "en": "Express Framework",
+        "es": "Express Framework"
+      },
+      {
+        "en": "MongoDB",
+        "es": "MongoDB"
+      },
+      {
+        "en": "APIDoc",
+        "es": "APIDoc"
+      },
+      {
+        "en": "JSHint",
+        "es": "JSHint"
+      }
+    ],
+    "resources": {
+      "github": {
+        "en": "https://github.com/iaguilarmartin/Nodepop",
+        "es": "https://github.com/iaguilarmartin/Nodepop"
+      },
+      "doc": {
+        "en": "http://nodepop.iaguilarmartin.com/",
+        "es": "http://nodepop.iaguilarmartin.com/"
+      }
+    }
+  }
+]

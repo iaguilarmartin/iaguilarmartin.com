@@ -1,15 +1,12 @@
 import React from 'react';
-import createBrowserHistory from 'history/createBrowserHistory';
-import { Router } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 
-const history = createBrowserHistory();
-
 const AppWithRouter = () => (
-  <Router history={history}>
+  <BrowserRouter>
     <App />
-  </Router>
+  </BrowserRouter>
 );
 
 export default AppWithRouter;
