@@ -12,7 +12,7 @@ import Page from '../../components/Page';
 import { format } from '../../libs/dates';
 import LanguageContext from '../../i18n/language-context';
 import { translate } from '../../i18n';
-import blogPosts from '../../api/blog-posts.json';
+import { getBlogPosts } from '../../api/client';
 
 import BlogPost from './components/BlogPost';
 
@@ -66,10 +66,12 @@ class Blog extends Component {
 
   requestPosts() {
     const { page } = this.props;
-    const lastPosition = page * ITEMS_PER_PAGE;
-    const firstPosition = lastPosition - ITEMS_PER_PAGE;
-    const posts = blogPosts.slice(firstPosition, lastPosition);
-    this.setState({ posts, totalPosts: blogPosts.length });
+
+    const { posts, total } = getBlogPosts(
+      (page - 1) * ITEMS_PER_PAGE,
+      ITEMS_PER_PAGE
+    );
+    this.setState({ posts, totalPosts: total });
   }
 
   render() {

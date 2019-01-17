@@ -19,5 +19,13 @@
   "about_contact_button_text": "Contact me",
   "blog_header_text": "Blog",
   "blog_more_button_text": "Read more",
-  "blog_pagination_text": "Page {0} of {1}"
+  "blog_pagination_text": "Page {0} of {1}",
+  "portfolio_header_text": "Portfolio",
+  "portfolio_more_button_text": "More",
+  "portfolio_pagination_text": "Page {0} of {1}",
+  "portfolio_categories_web": "Web",
+  "portfolio_categories_mobile": "Mobile",
+  "portfolio_categories_backend": "Backend",
+  "portfolio_categories_design": "Web",
+  "portfolio_categories_all": "All"
 }

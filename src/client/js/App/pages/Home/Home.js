@@ -86,7 +86,11 @@ const Home = () => (
       </Stringify>
     </H1>
     <Subtitle>
-      <DotsList items={specialities} renderItem={renderSpeciality} />
+      <DotsList
+        keyProperty="id"
+        items={specialities}
+        renderItem={renderSpeciality}
+      />
     </Subtitle>
     <ViewMoreButton url={getRoutePath('about')}>
       {translate('home_button_text')}

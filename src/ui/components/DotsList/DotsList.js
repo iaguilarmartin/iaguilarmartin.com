@@ -21,7 +21,7 @@ const Separator = styled.span`
 const DotsList = ({ items, renderItem, keyProperty, dotColor, dotSize }) => (
   <List>
     {items.map((item, index) => (
-      <Fragment key={item[keyProperty]}>
+      <Fragment key={keyProperty ? item[keyProperty] : item}>
         {index > 0 && (
           <Separator>
             <DotIcon size={dotSize} color={dotColor} />
@@ -34,13 +34,15 @@ const DotsList = ({ items, renderItem, keyProperty, dotColor, dotSize }) => (
 );
 
 DotsList.defaultProps = {
-  keyProperty: 'id',
+  keyProperty: null,
   dotColor: colors.greyLight,
   dotSize: 5
 };
 
 DotsList.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+  ).isRequired,
   renderItem: PropTypes.func.isRequired,
   keyProperty: PropTypes.string,
   dotSize: PropTypes.number,
