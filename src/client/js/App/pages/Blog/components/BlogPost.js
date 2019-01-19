@@ -70,6 +70,7 @@ const ReadMoreButton = styled(Button)`
   text-transform: uppercase;
   padding: ${space.x1} ${space.x25} !important;
   min-height: 30px !important;
+  font-size: ${fonts.sizes.s} !important;
   align-self: center;
 
   ${mediaQueries.xl(css`

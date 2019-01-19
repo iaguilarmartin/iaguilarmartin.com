@@ -142,7 +142,7 @@ const Button = ({
       className={className}
       onClick={onClick}
       borders={borders}
-      inverted={inverted}
+      inverted={inverted ? 1 : 0}
       {...htmlProps}
     >
       <span>{children}</span>
@@ -152,7 +152,7 @@ const Button = ({
       borders={borders}
       className={className}
       onClick={onClick}
-      inverted={inverted}
+      inverted={inverted ? 1 : 0}
       {...htmlProps}
     >
       <span>{children}</span>
