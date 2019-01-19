@@ -19,5 +19,15 @@
   "about_contact_button_text": "Contacta conmigo",
   "blog_header_text": "Blog",
   "blog_more_button_text": "Leer más",
-  "blog_pagination_text": "Página {0} de {1}"
+  "blog_pagination_text": "Página {0} de {1}",
+  "portfolio_header_text": "Portfolio",
+  "portfolio_more_button_text": "Ver más",
+  "portfolio_pagination_text": "Página {0} de {1}",
+  "portfolio_categories_web": "Web",
+  "portfolio_categories_mobile": "Movil",
+  "portfolio_categories_backend": "Backend",
+  "portfolio_categories_design": "Diseño",
+  "portfolio_categories_all": "Todos",
+  "portfolio_project_types_real": "Projectos reales",
+  "portfolio_project_types_side": "Otros projectos"
 }

@@ -5,16 +5,58 @@ import { css } from '@emotion/core';
 import { Link } from 'react-router-dom';
 
 import { space, border } from 'ui/shared/spacing';
-import { themed } from 'ui/shared/theme';
 import { mediaQueries } from 'ui/shared/breakpoints';
 import fonts from 'ui/shared/fonts';
+
+export const buttonBorderRadius = {
+  BOTH: 'both',
+  RIGHT: 'right',
+  LEFT: 'left',
+  NONE: 'none'
+};
+
+const getBorderRadiusStyle = ({ borders }) => css`
+  border-top-left-radius: ${borders === buttonBorderRadius.BOTH ||
+  borders === buttonBorderRadius.LEFT
+    ? border.radius
+    : 0};
+  border-bottom-left-radius: ${borders === buttonBorderRadius.BOTH ||
+  borders === buttonBorderRadius.LEFT
+    ? border.radius
+    : 0};
+  border-top-right-radius: ${borders === buttonBorderRadius.BOTH ||
+  borders === buttonBorderRadius.RIGHT
+    ? border.radius
+    : 0};
+  border-bottom-right-radius: ${borders === buttonBorderRadius.BOTH ||
+  borders === buttonBorderRadius.RIGHT
+    ? border.radius
+    : 0};
+`;
+
+const getColorsStyle = ({ theme, inverted }) => css`
+  color: ${inverted ? theme.primaryColor : theme.backgroundColor};
+
+  &::before {
+    background-color: ${inverted ? 'transparent' : theme.primaryColor};
+    border: 1px solid ${inverted ? theme.primaryColor : 'transparent'};
+  }
+
+  &::after {
+    background-color: ${inverted ? theme.primaryColor : 'transparent'};
+    border: 1px solid ${inverted ? 'transparent' : theme.primaryColor};
+  }
+
+  &:hover {
+    color: ${inverted ? theme.backgroundColor : theme.primaryColor};
+  }
+`;
 
 const StyledButton = styled.button`
   background-color: transparent;
   padding: ${space.x125} ${space.x2};
-  color: ${themed.backgroundColor};
   font-family: ${fonts.AndaleMono};
-  font-size: ${fonts.sizes.md};
+  font-size: ${fonts.sizes.m};
   border: none;
   cursor: pointer;
   outline: none;
@@ -22,9 +64,12 @@ const StyledButton = styled.button`
   position: relative;
   text-decoration: none;
   min-height: 40px;
+  ${({ disabled }) => disabled && 'pointer-events: none'};
+  ${getColorsStyle};
 
   span {
     position: relative;
+    z-index: 1;
   }
 
   ${mediaQueries.md(css`
@@ -40,9 +85,8 @@ const StyledButton = styled.button`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ${themed.primaryColor};
-    border-radius: ${border.radius};
     transition: all 0.3s;
+    ${getBorderRadiusStyle};
   }
 
   &::after {
@@ -54,14 +98,11 @@ const StyledButton = styled.button`
     height: 100%;
     opacity: 0;
     transition: all 0.3s;
-    border: 1px solid ${themed.primaryColor};
-    border-radius: ${border.radius};
     transform: scale(1.2, 1.2);
+    ${getBorderRadiusStyle};
   }
 
   &:hover {
-    color: ${themed.primaryColor};
-
     &::before {
       opacity: 0;
       transform: scale(0.5, 0.5);
@@ -84,7 +125,15 @@ const isExternal = url =>
   url.startsWith('https:') ||
   url.startsWith('mailto:');
 
-const Button = ({ children, className, onClick, url, ...htmlProps }) =>
+const Button = ({
+  children,
+  className,
+  onClick,
+  borders,
+  inverted,
+  url,
+  ...htmlProps
+}) =>
   url ? (
     <StyledButton
       as={isExternal(url) ? 'a' : Link}
@@ -92,12 +141,20 @@ const Button = ({ children, className, onClick, url, ...htmlProps }) =>
       href={url}
       className={className}
       onClick={onClick}
+      borders={borders}
+      inverted={inverted}
       {...htmlProps}
     >
       <span>{children}</span>
     </StyledButton>
   ) : (
-    <StyledButton className={className} onClick={onClick} {...htmlProps}>
+    <StyledButton
+      borders={borders}
+      className={className}
+      onClick={onClick}
+      inverted={inverted}
+      {...htmlProps}
+    >
       <span>{children}</span>
     </StyledButton>
   );
@@ -105,14 +162,22 @@ const Button = ({ children, className, onClick, url, ...htmlProps }) =>
 Button.defaultProps = {
   className: null,
   url: null,
-  onClick: () => {}
+  onClick: () => {},
+  borders: buttonBorderRadius.BOTH,
+  inverted: false,
+  disabled: false
 };
 
 Button.propTypes = {
+  borders: PropTypes.oneOf(
+    Object.keys(buttonBorderRadius).map(key => buttonBorderRadius[key])
+  ),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   onClick: PropTypes.func,
-  url: PropTypes.string
+  url: PropTypes.string,
+  inverted: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 export default Button;

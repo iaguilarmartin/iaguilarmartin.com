@@ -16,8 +16,12 @@ export function getBlogPosts(skip, limit) {
   };
 }
 
-export function getRealProjects(skip, limit) {
-  const sortedProjects = realProjects.sort((project1, project2) => {
+export function getRealProjects(category, skip, limit) {
+  const filteredProjects = realProjects.filter(
+    project => category === 'all' || project.categories.includes(category)
+  );
+
+  const sortedProjects = filteredProjects.sort((project1, project2) => {
     const time1 = new Date(project1.publishedOn).getTime();
     const time2 = new Date(project2.publishedOn).getTime();
     return time2 - time1;
@@ -25,13 +29,17 @@ export function getRealProjects(skip, limit) {
 
   const projects = sortedProjects.slice(skip, skip + limit);
   return {
-    total: realProjects.length,
+    total: filteredProjects.length,
     projects
   };
 }
 
-export function getSideProjects(skip, limit) {
-  const sortedProjects = sideProjects.sort((project1, project2) => {
+export function getSideProjects(category, skip, limit) {
+  const filteredProjects = sideProjects.filter(
+    project => category === 'all' || project.categories.includes(category)
+  );
+
+  const sortedProjects = filteredProjects.sort((project1, project2) => {
     const time1 = new Date(project1.publishedOn).getTime();
     const time2 = new Date(project2.publishedOn).getTime();
     return time2 - time1;
@@ -39,7 +47,7 @@ export function getSideProjects(skip, limit) {
 
   const projects = sortedProjects.slice(skip, skip + limit);
   return {
-    total: sideProjects.length,
+    total: filteredProjects.length,
     projects
   };
 }

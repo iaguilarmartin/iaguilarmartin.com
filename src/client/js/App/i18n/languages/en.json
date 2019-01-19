@@ -26,6 +26,8 @@
   "portfolio_categories_web": "Web",
   "portfolio_categories_mobile": "Mobile",
   "portfolio_categories_backend": "Backend",
-  "portfolio_categories_design": "Web",
-  "portfolio_categories_all": "All"
+  "portfolio_categories_design": "Design",
+  "portfolio_categories_all": "All",
+  "portfolio_project_types_real": "Real projects",
+  "portfolio_project_types_side": "Side projects"
 }

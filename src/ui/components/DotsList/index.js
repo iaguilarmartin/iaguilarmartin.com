@@ -1,3 +1,4 @@
-import DotsList from './DotsList';
+import DotsList, { Separator } from './DotsList';
 
+export { Separator };
 export default DotsList;

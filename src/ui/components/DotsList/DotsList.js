@@ -13,13 +13,20 @@ const List = styled.ul`
   align-items: center;
 `;
 
-const Separator = styled.span`
+export const Separator = styled.span`
   margin: 0 ${space.x1};
   line-height: 0;
 `;
 
-const DotsList = ({ items, renderItem, keyProperty, dotColor, dotSize }) => (
-  <List>
+const DotsList = ({
+  items,
+  renderItem,
+  keyProperty,
+  dotColor,
+  dotSize,
+  className
+}) => (
+  <List className={className}>
     {items.map((item, index) => (
       <Fragment key={keyProperty ? item[keyProperty] : item}>
         {index > 0 && (
@@ -35,6 +42,7 @@ const DotsList = ({ items, renderItem, keyProperty, dotColor, dotSize }) => (
 
 DotsList.defaultProps = {
   keyProperty: null,
+  className: null,
   dotColor: colors.greyLight,
   dotSize: 5
 };
@@ -45,6 +53,7 @@ DotsList.propTypes = {
   ).isRequired,
   renderItem: PropTypes.func.isRequired,
   keyProperty: PropTypes.string,
+  className: PropTypes.string,
   dotSize: PropTypes.number,
   dotColor: PropTypes.string
 };

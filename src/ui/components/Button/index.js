@@ -1,3 +1,4 @@
-import Button from './Button';
+import Button, { buttonBorderRadius } from './Button';
 
+export { buttonBorderRadius };
 export default Button;
