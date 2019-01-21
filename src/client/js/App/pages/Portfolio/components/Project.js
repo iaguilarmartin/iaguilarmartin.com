@@ -11,12 +11,9 @@ import { themed } from 'ui/shared/theme';
 
 import { translate } from '../../../i18n';
 
-const Container = styled.article`
-  position: relative;
-`;
-
-const ProjectInfo = styled.div`
-  display: ${({ visible }) => (visible ? 'flex' : 'none')};
+const ProjectInfo = styled.section`
+  opacity: 0;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: ${space.x25};
@@ -26,6 +23,21 @@ const ProjectInfo = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-out;
+`;
+
+const Container = styled.article`
+  position: relative;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    ${ProjectInfo} {
+      opacity: 1;
+      border: 1px solid ${colors.petrol};
+    }
+  }
 `;
 
 const Title = styled.h2`
@@ -74,45 +86,23 @@ const formatCategories = categories =>
     .map(category => translate(`portfolio_categories_${category}`))
     .join(' - ');
 
-class Project extends Component {
-  state = {
-    isActive: false
-  };
-
-  hanldeContainerFocus = () => {
-    this.setState({ isActive: true });
-  };
-
-  hanldeContainerBlur = () => {
-    this.setState({ isActive: false });
-  };
-
-  render() {
-    const { id, image, name, categories, technologies } = this.props;
-    const { isActive } = this.state;
-
-    return (
-      <Container
-        onMouseOver={this.hanldeContainerFocus}
-        onMouseOut={this.hanldeContainerBlur}
-      >
-        <Image width="100%" alt={name} src={image} />
-        <ProjectInfo visible={isActive}>
-          <Title>{name}</Title>
-          <Categories>{formatCategories(categories)}</Categories>
-          <TechnologiesList>
-            {technologies.map(technology => (
-              <Technology key={technology}>{technology}</Technology>
-            ))}
-          </TechnologiesList>
-          <MoreButton url={`/portfolio/${id}`}>
-            {translate('portfolio_more_button_text')}
-          </MoreButton>
-        </ProjectInfo>
-      </Container>
-    );
-  }
-}
+const Project = ({ id, image, name, categories, technologies }) => (
+  <Container tabIndex="0">
+    <Image width="100%" alt={name} src={image} />
+    <ProjectInfo>
+      <Title>{name}</Title>
+      <Categories>{formatCategories(categories)}</Categories>
+      <TechnologiesList>
+        {technologies.map(technology => (
+          <Technology key={technology}>{technology}</Technology>
+        ))}
+      </TechnologiesList>
+      <MoreButton url={`/portfolio/${id}`}>
+        {translate('portfolio_more_button_text')}
+      </MoreButton>
+    </ProjectInfo>
+  </Container>
+);
 
 Project.propTypes = {
   id: PropTypes.string.isRequired,
