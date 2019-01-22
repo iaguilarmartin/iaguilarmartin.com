@@ -148,7 +148,7 @@
       "en": "Guia Deportes TV is a mobile app created by me and two of my colleagues. It was available in Window Phone Store and Google Play.\n\nThe main goal of this app was to provide users with a TV guide focused on sport events. It allowed users to filter the events by sport and it also set reminders for a particular event in which the user was interested.\n\nUnfortunately, due to lack of time we had to discontinue the project and it is not available anymore.",
       "es": "Guia Deportes TV fue una aplicación movil creada por dos de mis amigos y yo. Estaba disponible para las tiendas de aplicaciones de Window Phone y Google Play.\n\nDesde esta aplicación los usuarios tenían siempre al alcance de su mano una completa guía de televisión enfocada a eventos deportivos. Permitía a los usuarios filtrar eventos de un determinado deporte y añadir recordatorios para un evento en concreto de modo que cinco minutos antes de que este empezará les llegara una notificación.\n\nDesgraciadamente, por falta de de tiempo tuvimos que abandonar el proyecto y ya no está disponible para su descarga."
     },
-    "categories": ["mobile"],
+    "categories": ["mobile", "backend"],
     "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/Inyasiv.png",
     "technologies": [
       {
@@ -189,7 +189,7 @@
       "es": "A full web site designed for a local Indoor Football Club where their supporters can review its latest news, scores, schedules, statistics, standings and more. It also includes an administration area to make the web site management easier.\n\nThe front end of this web site is designed using HTML5 and CSS3 with JQuery framework support. However, the backend is built using Microsoft ASP.NET technology. All the information shown is stored in a local MySQL database.",
       "en": "Sitio Web diseñado para un club local de Futbol-Sala. En él, sus seguidores pueden estar al tanto de las ultimas noticias del club y consultar los últimos resultados, calendarios, clasificaciones y estadísticas. También incluye una zona de administración para hacer mas sencilla la gestión del contenido de la página.\n\nPara el diseño de la interfaz gráfica se ha utilizado HTML5, CSS3 y el framework Javascript JQuery. La comunicación del lado del servidor se ha llevado a cabo gracias a la tecnología ASP.NET de Microsoft. Para almacenar todo la información mostrada en la página se ha usado el sistema de base de datos MySQL."
     },
-    "categories": ["web"],
+    "categories": ["web", "backend"],
     "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/gora_web.png",
     "technologies": [
       {

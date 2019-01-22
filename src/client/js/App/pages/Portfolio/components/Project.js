@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import Image from 'ui/components/Image';
 import Button from 'ui/components/Button';
+import { mediaQueries } from 'ui/shared/breakpoints';
 import fonts from 'ui/shared/fonts';
 import { space, border } from 'ui/shared/spacing';
 import colors from 'ui/shared/colors';
@@ -12,48 +14,66 @@ import { themed } from 'ui/shared/theme';
 import { translate } from '../../../i18n';
 
 const ProjectInfo = styled.section`
-  opacity: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: ${space.x25};
-  position: absolute;
-  background-color: rgba(50, 51, 50, 0.95);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid transparent;
-  transition: all 0.3s ease-out;
+  margin: ${space.x2} ${space.x1};
+  transition: opacity 0.3s ease-out;
+  position: relative;
+
+  ${mediaQueries.xl(css`
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(50, 51, 50, 0.95);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: ${space.x25};
+    margin: 0;
+    border: 1px solid transparent;
+  `)}
 `;
 
 const Container = styled.article`
   position: relative;
   outline: none;
 
-  &:focus,
-  &:hover {
-    ${ProjectInfo} {
-      opacity: 1;
-      border: 1px solid ${colors.petrol};
+  ${mediaQueries.xl(css`
+    &:focus,
+    &:hover {
+      ${ProjectInfo} {
+        opacity: 1;
+        border: 1px solid ${colors.petrol};
+      }
     }
-  }
+  `)}
 `;
 
 const Title = styled.h2`
   font-family: ${fonts.ArchivoBlack};
-  font-size: ${fonts.sizes.l};
+  font-size: ${fonts.sizes.m};
   text-transform: uppercase;
-  text-align: center;
   letter-spacing: 1px;
+  margin-right: 80px;
   margin-bottom: ${space.x05};
+
+  ${mediaQueries.xl(css`
+    margin-right: 0;
+    font-size: ${fonts.sizes.l};
+    text-align: center;
+  `)}
 `;
 
 const Categories = styled.h3`
-  font-size: ${fonts.sizes.m};
+  font-size: ${fonts.sizes.xs};
   font-family: ${fonts.Obli};
   text-transform: uppercase;
   color: ${themed.secondaryColor};
+
+  ${mediaQueries.xl(css`
+    font-size: ${fonts.sizes.m};
+  `)}
 `;
 
 const TechnologiesList = styled.section`
@@ -63,6 +83,11 @@ const TechnologiesList = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  margin: ${space.x2} ${space.x05} 0;
+
+  ${mediaQueries.xl(css`
+    margin-top: 0;
+  `)}
 `;
 
 const Technology = styled.span`
@@ -79,6 +104,13 @@ const MoreButton = styled(Button)`
   font-size: ${fonts.sizes.s} !important;
   padding: ${space.x1} ${space.x25} !important;
   min-height: 30px !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  ${mediaQueries.xl(css`
+    position: relative;
+  `)}
 `;
 
 const formatCategories = categories =>
