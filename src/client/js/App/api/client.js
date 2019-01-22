@@ -51,3 +51,27 @@ export function getSideProjects(category, skip, limit) {
     projects
   };
 }
+
+function findProject(projectGroup, projectId) {
+  return projectGroup.find(({ id }) => {
+    const languageKeys = Object.keys(id);
+    // eslint-disable-next-line no-restricted-syntax
+    for (const languageKey of languageKeys) {
+      if (id[languageKey] === projectId) {
+        return true;
+      }
+    }
+
+    return false;
+  });
+}
+
+export function getProjectById(projectId) {
+  let project = findProject(realProjects, projectId);
+  if (project) return project;
+
+  project = findProject(sideProjects, projectId);
+  if (project) return project;
+
+  return null;
+}

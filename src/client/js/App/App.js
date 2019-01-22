@@ -18,13 +18,15 @@ const handleSelectLanguage = language => {
   window.location.reload();
 };
 
+const menuRoutes = routes.filter(route => route.inMenu);
+
 const App = () => (
   <ThemeProvider theme={theme}>
     <Global styles={globalStyles} />
     <languageContext.Provider value={{ language: getCurrentLanguage() }}>
       <Layout>
         <Menu
-          routes={routes}
+          routes={menuRoutes}
           renderLogo={isMenuExpanded => (
             <MenuLogo isMenuExpanded={isMenuExpanded} />
           )}

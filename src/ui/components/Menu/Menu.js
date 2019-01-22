@@ -138,12 +138,12 @@ class Menu extends Component {
                   {expanded ? <CloseMenuIcon /> : <OpenMenuIcon />}
                 </MenuButton>
                 <Navigation>
-                  {routes.map(({ icon, path, label, name }) => (
+                  {routes.map(({ icon, path, label, name, exact }) => (
                     <NavigationItem
                       as={NavLink}
                       key={name}
                       to={path}
-                      exact={path === '/'}
+                      exact={exact || path === '/'}
                       onClick={this.handleNavigationItemClick}
                       activeClassName={localCss`
                       stroke: ${theme.primaryColor} !important;
