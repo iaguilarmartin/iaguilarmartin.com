@@ -7,7 +7,7 @@ const colors = {
   greyBg: '#4a4e50',
   greyBgLines: '#4f5352',
   petrol: '#005a6a',
-  white: '#fff'
+  white: '#f6f6f6'
 };
 
 export default colors;
