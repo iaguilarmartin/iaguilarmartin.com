@@ -29,5 +29,21 @@
   "portfolio_categories_design": "Diseño",
   "portfolio_categories_all": "Todos",
   "portfolio_project_types_real": "Projectos reales",
-  "portfolio_project_types_side": "Otros projectos"
+  "portfolio_project_types_side": "Otros projectos",
+  "project_details_resources_doc_start": "Revisa la",
+  "project_details_resources_doc_text": "documentación",
+  "project_details_resources_doc_end": "para obtener más información acerca de este proyecto",
+  "project_details_resources_marvel_start": "Ver página web con el",
+  "project_details_resources_marvel_text": "prototipo",
+  "project_details_resources_marvel_end": "del proyecto",
+  "project_details_resources_github_start": "Código fuente disponible en",
+  "project_details_resources_github_text": "Github",
+  "project_details_resources_github_end": " ",
+  "project_details_about-section_title": "El proyecto",
+  "project_details_technical-sheet-section_title": "Tecnologias",
+  "project_details_resources-section_title": "Recursos",
+  "project_details_web_button_text": "Ver sitio web",
+  "project_details_google_button_text": "Disponible en Google Play",
+  "project_details_google_button_url": "https://play.google.com/intl/es_es/badges/images/generic/en_badge_web_generic.png",
+  "project_details_apple_button_url": "//linkmaker.itunes.apple.com/assets/shared/badges/es-es/appstore-lrg.svg"
 }
