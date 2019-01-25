@@ -61,6 +61,7 @@ const DescriptionContainer = styled.div`
   width: 100%;
 
   ${mediaQueries.xl(css`
+    margin-top: 0;
     width: 52%;
     padding-left: ${space.x4};
   `)}
@@ -206,10 +207,12 @@ class ProjectDetails extends Component {
           {({ language }) => (
             <>
               <Title>{name[language]}</Title>
-              <Subtitle>
-                {'// '}
-                {subtitle[language]}
-              </Subtitle>
+              {subtitle && (
+                <Subtitle>
+                  {'// '}
+                  {subtitle[language]}
+                </Subtitle>
+              )}
               <ProjectInfo>
                 <ProjectImage src={image} alt={name[language]} />
                 <DescriptionContainer>

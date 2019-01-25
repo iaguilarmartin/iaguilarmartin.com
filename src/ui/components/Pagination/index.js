@@ -1,5 +1,5 @@
 import Pagination from './Pagination';
-import withPagination from './withPagination';
+import withPagination, { PAGE_QUERY_PARAM } from './withPagination';
 
-export { withPagination };
+export { withPagination, PAGE_QUERY_PARAM };
 export default Pagination;

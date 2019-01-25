@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { space } from 'ui/shared/spacing';
 import { mediaQueries } from 'ui/shared/breakpoints';
 import fonts from 'ui/shared/fonts';
-import { withPagination } from 'ui/components/Pagination';
+import { withPagination, PAGE_QUERY_PARAM } from 'ui/components/Pagination';
 import DotsList, { Separator } from 'ui/components/DotsList';
 import TextButton from 'ui/components/TextButton';
 import ButtonGroup from 'ui/components/ButtonGroup';
@@ -16,6 +17,7 @@ import Page from '../../components/Page';
 import LanguageContext from '../../i18n/language-context';
 import { translate } from '../../i18n';
 import { getRealProjects, getSideProjects } from '../../api/client';
+import { getQueryParamValue, navigate } from '../../libs/url-utils';
 
 import Project from './components/Project';
 import projectCategories from './project-categories';
@@ -90,13 +92,15 @@ const Category = styled(TextButton)`
 `;
 
 const ITEMS_PER_PAGE = 6;
+const DEFAULT_PROJECT_TYPE = 'real';
+const PROJECT_TYPE_QUERY_PARAM = 'type';
+const DEFAULT_PROJECT_CATEGORY = 'all';
+const PROJECT_CATEGORY_QUERY_PARAM = 'category';
 
 class Portfolio extends Component {
   state = {
     projects: [],
-    totalProjects: 0,
-    type: 'real',
-    category: 'all'
+    totalProjects: 0
   };
 
   componentDidMount() {
@@ -105,29 +109,65 @@ class Portfolio extends Component {
 
   componentDidUpdate(prevProps) {
     const { page } = this.props;
-    const { page: prevPage } = prevProps;
+    const { page: prevPage, location: prevLocation } = prevProps;
 
-    if (page !== prevPage) {
+    const prevProjectType =
+      getQueryParamValue(prevLocation, PROJECT_TYPE_QUERY_PARAM) ||
+      DEFAULT_PROJECT_TYPE;
+
+    const prevProjectCategory =
+      getQueryParamValue(prevLocation, PROJECT_CATEGORY_QUERY_PARAM) ||
+      DEFAULT_PROJECT_CATEGORY;
+
+    if (
+      page !== prevPage ||
+      this.projectType !== prevProjectType ||
+      this.projectCategory !== prevProjectCategory
+    ) {
       this.requestProjects();
     }
   }
 
+  get projectType() {
+    const { location } = this.props;
+    return (
+      getQueryParamValue(location, PROJECT_TYPE_QUERY_PARAM) ||
+      DEFAULT_PROJECT_TYPE
+    );
+  }
+
+  get projectCategory() {
+    const { location } = this.props;
+    return (
+      getQueryParamValue(location, PROJECT_CATEGORY_QUERY_PARAM) ||
+      DEFAULT_PROJECT_CATEGORY
+    );
+  }
+
   handleSelectCategory = category => {
-    this.setState({ category }, this.requestProjects);
+    const { history, location } = this.props;
+    navigate(location, history, {
+      [PROJECT_CATEGORY_QUERY_PARAM]: category,
+      [PAGE_QUERY_PARAM]: 1
+    });
   };
 
   handleActiveProjectTypeChange = type => {
-    this.setState({ type }, this.requestProjects);
+    const { history, location } = this.props;
+    navigate(location, history, {
+      [PROJECT_TYPE_QUERY_PARAM]: type,
+      [PAGE_QUERY_PARAM]: 1
+    });
   };
 
   requestProjects() {
     const { page } = this.props;
-    const { category, type } = this.state;
 
-    const getProjectsFn = type === 'real' ? getRealProjects : getSideProjects;
+    const getProjectsFn =
+      this.projectType === 'real' ? getRealProjects : getSideProjects;
 
     const { projects, total } = getProjectsFn(
-      category,
+      this.projectCategory,
       (page - 1) * ITEMS_PER_PAGE,
       ITEMS_PER_PAGE
     );
@@ -135,7 +175,7 @@ class Portfolio extends Component {
   }
 
   render() {
-    const { projects, totalProjects, category, type: projectType } = this.state;
+    const { projects, totalProjects } = this.state;
     const { renderPagination } = this.props;
     const { language } = this.context;
     const projectTypesButtons = projectTypes.map(type => ({
@@ -147,7 +187,7 @@ class Portfolio extends Component {
       <PortfolioPage>
         <PageTitle>{translate('portfolio_header_text')}</PageTitle>
         <ProjectTypesList
-          activeButton={projectType}
+          activeButton={this.projectType}
           buttons={projectTypesButtons}
           onActiveChange={this.handleActiveProjectTypeChange}
         />
@@ -155,7 +195,7 @@ class Portfolio extends Component {
           items={projectCategories}
           renderItem={item => (
             <Category
-              isActive={category === item}
+              isActive={this.projectCategory === item}
               onClick={() => this.handleSelectCategory(item)}
             >
               {translate(`portfolio_categories_${item}`)}
@@ -192,4 +232,4 @@ Portfolio.propTypes = {
   renderPagination: PropTypes.func.isRequired
 };
 
-export default withPagination(Portfolio, ITEMS_PER_PAGE);
+export default withRouter(withPagination(Portfolio, ITEMS_PER_PAGE));

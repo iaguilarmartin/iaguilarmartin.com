@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import queryString from 'query-string';
 
-import { scrollToTop } from '../../utils/scroll';
+import {
+  navigate,
+  getQueryParamValue
+} from '../../../client/js/App/libs/url-utils';
 
 import Pagination from './Pagination';
+
+export const PAGE_QUERY_PARAM = 'page';
 
 const getPageFromProps = props => {
   if (!props || !props.location) return 1;
 
-  const strPage = queryString.parse(props.location.search).page;
+  const strPage = getQueryParamValue(props.location, PAGE_QUERY_PARAM);
   const page = parseInt(strPage, 10);
   // eslint-disable-next-line no-restricted-globals, eqeqeq
   return isNaN(page) || page != strPage ? 1 : page;
@@ -36,8 +40,7 @@ const withPagination = (WrappedComponent, itemsPerPage) =>
 
     navigateToPage(page) {
       const { history, location } = this.props;
-      history.push(`${location.pathname}?page=${page}`);
-      scrollToTop();
+      navigate(location, history, { [PAGE_QUERY_PARAM]: page });
     }
 
     renderPagination = (totalItems, generateText) => {

@@ -182,12 +182,12 @@
     },
     "publishedOn": "2016-05-23T23:00:00.000Z",
     "subtitle": {
-      "en": "Windows Phone and Android native mobile apps",
-      "es": "Aplicación movil nativa para dispositivos Windows Phone y Android"
+      "en": "HTML5 & .NET Web Site",
+      "es": "Sitio Web con HTML5 y .NET"
     },
     "description": {
-      "es": "A full web site designed for a local Indoor Football Club where their supporters can review its latest news, scores, schedules, statistics, standings and more. It also includes an administration area to make the web site management easier.\n\nThe front end of this web site is designed using HTML5 and CSS3 with JQuery framework support. However, the backend is built using Microsoft ASP.NET technology. All the information shown is stored in a local MySQL database.",
-      "en": "Sitio Web diseñado para un club local de Futbol-Sala. En él, sus seguidores pueden estar al tanto de las ultimas noticias del club y consultar los últimos resultados, calendarios, clasificaciones y estadísticas. También incluye una zona de administración para hacer mas sencilla la gestión del contenido de la página.\n\nPara el diseño de la interfaz gráfica se ha utilizado HTML5, CSS3 y el framework Javascript JQuery. La comunicación del lado del servidor se ha llevado a cabo gracias a la tecnología ASP.NET de Microsoft. Para almacenar todo la información mostrada en la página se ha usado el sistema de base de datos MySQL."
+      "en": "A full web site designed for a local Indoor Football Club where their supporters can review its latest news, scores, schedules, statistics, standings and more. It also includes an administration area to make the web site management easier.\n\nThe front end of this web site is designed using HTML5 and CSS3 with JQuery framework support. However, the backend is built using Microsoft ASP.NET technology. All the information shown is stored in a local MySQL database.",
+      "es": "Sitio Web diseñado para un club local de Futbol-Sala. En él, sus seguidores pueden estar al tanto de las ultimas noticias del club y consultar los últimos resultados, calendarios, clasificaciones y estadísticas. También incluye una zona de administración para hacer mas sencilla la gestión del contenido de la página.\n\nPara el diseño de la interfaz gráfica se ha utilizado HTML5, CSS3 y el framework Javascript JQuery. La comunicación del lado del servidor se ha llevado a cabo gracias a la tecnología ASP.NET de Microsoft. Para almacenar todo la información mostrada en la página se ha usado el sistema de base de datos MySQL."
     },
     "categories": ["web", "backend"],
     "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/gora_web.png",
@@ -235,8 +235,8 @@
       "es": "Sitio Web ASP.NET"
     },
     "description": {
-      "es": "This is the web site I created many years ago for my family’s business. It was created using ASP.NET technology. I am currently bringing it up to date in my spare time.",
-      "en": "Esta es la página web que creé hace muchos años para el negocio familiar. Está creada usando tecnología ASP.NET. Actualmente, estoy intentando darle un buen lavado de cara en mis ratos libres."
+      "en": "This is the web site I created many years ago for my family’s business. It was created using ASP.NET technology. I am currently bringing it up to date in my spare time.",
+      "es": "Esta es la página web que creé hace muchos años para el negocio familiar. Está creada usando tecnología ASP.NET. Actualmente, estoy intentando darle un buen lavado de cara en mis ratos libres."
     },
     "categories": ["web"],
     "image": "http://iaguilarmartin.com/wp-content/uploads/2016/05/fruteria_web.png",
