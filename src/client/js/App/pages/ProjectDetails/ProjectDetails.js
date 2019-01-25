@@ -47,7 +47,6 @@ const ProjectImage = styled(Image)`
   margin-bottom: ${space.x2};
 
   ${mediaQueries.lg(css`
-    margin-bottom: 0;
     width: 48%;
     height: 48%;
   `)}
