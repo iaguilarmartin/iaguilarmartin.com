@@ -35,12 +35,11 @@ const Subtitle = styled.h3`
 `;
 
 const ProjectInfo = styled.section`
-  position: relative;
   display: flex;
   flex-direction: column;
   margin: ${space.x3} 0 ${space.x5};
 
-  ${mediaQueries.xl(css`
+  ${mediaQueries.md(css`
     flex-direction: row;
     flex-wrap: wrap;
   `)};
@@ -50,7 +49,8 @@ const ProjectImage = styled(Image)`
   width: 100%;
   margin-bottom: ${space.x2};
 
-  ${mediaQueries.lg(css`
+  ${mediaQueries.xl(css`
+    margin-bottom: ${space.x4};
     width: 48%;
     height: 48%;
   `)}
@@ -60,18 +60,10 @@ const DescriptionContainer = styled.div`
   margin: ${space.x3} 0 ${space.x4};
   width: 100%;
 
-  ${mediaQueries.lg(css`
+  ${mediaQueries.xl(css`
     width: 52%;
     padding-left: ${space.x4};
-    margin-top: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
   `)}
-
-  ${mediaQueries.xl(css`
-    position: relative;
-  `)};
 `;
 
 const SectionTitle = styled.header`
@@ -115,17 +107,16 @@ const GooglePlayLink = styled.a`
 `;
 
 const TechnicalSheet = styled.section`
-  ${mediaQueries.lg(css`
+  ${mediaQueries.md(css`
     width: 48%;
   `)}
 `;
 
 const Resources = styled.section`
-  ${mediaQueries.lg(css`
-    width: 48%;
-  `)}
+  margin-top: ${space.x3};
 
-  ${mediaQueries.xl(css`
+  ${mediaQueries.md(css`
+    margin-top: 0;
     width: 52%;
     padding-left: ${space.x4};
   `)}
@@ -139,13 +130,11 @@ const ResourceLink = styled(TextButton)`
   }
 `;
 
-const formatResources = (resources, language) =>
-  Object.keys(resources)
-    .filter(key => !['web', 'AppStore', 'GooglePlay'].includes(key))
-    .map(key => ({
-      id: key,
-      [key]: resources[key][language]
-    }));
+const formatResources = (resources, additionalResourcesKeys, language) =>
+  additionalResourcesKeys.map(key => ({
+    id: key,
+    [key]: resources[key][language]
+  }));
 
 class ProjectDetails extends Component {
   state = {
@@ -207,6 +196,10 @@ class ProjectDetails extends Component {
       technologies
     } = project;
 
+    const additionalResources = Object.keys(resources).filter(
+      key => !['web', 'AppStore', 'GooglePlay'].includes(key)
+    );
+
     return (
       <Page>
         <LanguageContext.Consumer>
@@ -261,17 +254,23 @@ class ProjectDetails extends Component {
                     renderItem={this.renderTechnology}
                   />
                 </TechnicalSheet>
-                <Resources>
-                  <SectionTitle>
-                    {translate('project_details_resources-section_title')}
-                  </SectionTitle>
-                  <DotsList
-                    keyProperty="id"
-                    vertical
-                    items={formatResources(resources, language)}
-                    renderItem={this.renderResource}
-                  />
-                </Resources>
+                {additionalResources.length > 0 && (
+                  <Resources>
+                    <SectionTitle>
+                      {translate('project_details_resources-section_title')}
+                    </SectionTitle>
+                    <DotsList
+                      keyProperty="id"
+                      vertical
+                      items={formatResources(
+                        resources,
+                        additionalResources,
+                        language
+                      )}
+                      renderItem={this.renderResource}
+                    />
+                  </Resources>
+                )}
               </ProjectInfo>
             </>
           )}
