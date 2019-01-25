@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  navigate,
+  reload,
   getQueryParamValue
 } from '../../../client/js/App/libs/url-utils';
 
@@ -40,7 +40,7 @@ const withPagination = (WrappedComponent, itemsPerPage) =>
 
     navigateToPage(page) {
       const { history, location } = this.props;
-      navigate(location, history, { [PAGE_QUERY_PARAM]: page });
+      reload(location, history, { [PAGE_QUERY_PARAM]: page });
     }
 
     renderPagination = (totalItems, generateText) => {

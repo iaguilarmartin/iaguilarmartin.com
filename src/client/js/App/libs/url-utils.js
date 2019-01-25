@@ -6,7 +6,7 @@ export function getQueryParamValue(location, param) {
   return queryString.parse(location.search)[param];
 }
 
-export function navigate(location, history, params) {
+export function reload(location, history, params) {
   const query = {
     ...queryString.parse(location.search),
     ...params

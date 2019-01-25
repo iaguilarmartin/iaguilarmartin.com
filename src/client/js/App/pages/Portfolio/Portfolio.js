@@ -17,7 +17,7 @@ import Page from '../../components/Page';
 import LanguageContext from '../../i18n/language-context';
 import { translate } from '../../i18n';
 import { getRealProjects, getSideProjects } from '../../api/client';
-import { getQueryParamValue, navigate } from '../../libs/url-utils';
+import { getQueryParamValue, reload } from '../../libs/url-utils';
 
 import Project from './components/Project';
 import projectCategories from './project-categories';
@@ -146,7 +146,7 @@ class Portfolio extends Component {
 
   handleSelectCategory = category => {
     const { history, location } = this.props;
-    navigate(location, history, {
+    reload(location, history, {
       [PROJECT_CATEGORY_QUERY_PARAM]: category,
       [PAGE_QUERY_PARAM]: 1
     });
@@ -154,7 +154,7 @@ class Portfolio extends Component {
 
   handleActiveProjectTypeChange = type => {
     const { history, location } = this.props;
-    navigate(location, history, {
+    reload(location, history, {
       [PROJECT_TYPE_QUERY_PARAM]: type,
       [PAGE_QUERY_PARAM]: 1
     });
@@ -229,7 +229,14 @@ Portfolio.contextType = LanguageContext;
 
 Portfolio.propTypes = {
   page: PropTypes.number.isRequired,
-  renderPagination: PropTypes.func.isRequired
+  renderPagination: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    search: PropTypes.string.isRequired,
+    pathname: PropTypes.string.isRequired
+  }).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired
 };
 
 export default withRouter(withPagination(Portfolio, ITEMS_PER_PAGE));
