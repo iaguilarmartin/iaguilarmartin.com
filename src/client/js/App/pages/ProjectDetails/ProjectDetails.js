@@ -15,6 +15,8 @@ import Button from 'ui/components/Button';
 import LanguageContext from '../../i18n/language-context';
 import Page from '../../components/Page';
 import { getProjectById } from '../../api/client';
+import DotsList from 'ui/components/DotsList';
+import TextButton from 'ui/components/TextButton';
 
 const Title = styled.h2`
   color: ${themed.articlesTitleColor};
@@ -32,11 +34,12 @@ const Subtitle = styled.h3`
 `;
 
 const ProjectInfo = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: ${space.x3} 0 ${space.x5};
 
-  ${mediaQueries.lg(css`
+  ${mediaQueries.xl(css`
     flex-direction: row;
     flex-wrap: wrap;
   `)};
@@ -60,7 +63,14 @@ const DescriptionContainer = styled.div`
     width: 52%;
     padding-left: ${space.x4};
     margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   `)}
+
+  ${mediaQueries.xl(css`
+    position: relative;
+  `)};
 `;
 
 const SectionTitle = styled.header`
@@ -112,10 +122,30 @@ const TechnicalSheet = styled.section`
 
 const Resources = styled.section`
   ${mediaQueries.lg(css`
+    width: 48%;
+  `)}
+
+  ${mediaQueries.xl(css`
     width: 52%;
     padding-left: ${space.x4};
   `)}
 `;
+
+const ResourceLink = styled(TextButton)`
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const formatResources = (resources, language) =>
+  Object.keys(resources)
+    .filter(key => !['web', 'AppStore', 'GooglePlay'].includes(key))
+    .map((key, index) => ({
+      id: index,
+      [key]: resources[key][language]
+    }));
 
 class ProjectDetails extends Component {
   state = {
@@ -137,11 +167,59 @@ class ProjectDetails extends Component {
     });
   }
 
+  renderTechnology = item => item;
+
+  renderResource = item => {
+    const resource = { ...item };
+    delete resource.id;
+
+    const [resourceType] = Object.keys(resource);
+    const [resourceURL] = Object.values(resource);
+
+    const getLinkComponent = (url, text) => (
+      <ResourceLink as="a" href={url} traget="_blank">
+        {text}
+      </ResourceLink>
+    );
+
+    switch (resourceType) {
+      case 'doc':
+        return (
+          <span>
+            Review {getLinkComponent(resourceURL, 'documentation')} to get
+            detailed information about the project
+          </span>
+        );
+      case 'marvel':
+        return (
+          <span>
+            View online project {getLinkComponent(resourceURL, 'prototype')}
+          </span>
+        );
+      case 'github':
+        return (
+          <span>
+            Source code is available on $
+            {getLinkComponent(resourceURL, 'Github')}
+          </span>
+        );
+      default:
+        return resourceURL;
+    }
+  };
+
   render() {
     const { project } = this.state;
     if (!project) return null;
 
-    const { name, subtitle, image, description, resources } = project;
+    const {
+      name,
+      subtitle,
+      image,
+      description,
+      resources,
+      technologies
+    } = project;
 
     return (
       <Page>
@@ -184,9 +262,19 @@ class ProjectDetails extends Component {
                 </DescriptionContainer>
                 <TechnicalSheet>
                   <SectionTitle>Technical sheet</SectionTitle>
+                  <DotsList
+                    vertical
+                    items={technologies.map(technology => technology[language])}
+                    renderItem={this.renderTechnology}
+                  />
                 </TechnicalSheet>
                 <Resources>
                   <SectionTitle>Resources</SectionTitle>
+                  <DotsList
+                    vertical
+                    items={formatResources(resources, language)}
+                    renderItem={this.renderResource}
+                  />
                 </Resources>
               </ProjectInfo>
             </>

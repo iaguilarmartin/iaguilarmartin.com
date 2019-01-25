@@ -1,21 +1,40 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { space } from '../../shared/spacing';
 import colors from '../../shared/colors';
 
 import DotIcon from './DotIcon';
 
-const List = styled.ul`
-  display: inline-flex;
-  list-style: none;
-  align-items: center;
-`;
-
 export const Separator = styled.span`
   margin: 0 ${space.x1};
   line-height: 0;
+`;
+
+const List = styled.ul`
+  display: flex;
+  list-style: none;
+  align-items: center;
+
+  ${({ vertical }) =>
+    vertical &&
+    css`
+      align-items: flex-start;
+      flex-direction: column;
+    `};
+`;
+
+const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+
+  ${({ vertical }) =>
+    vertical &&
+    css`
+      margin-bottom: ${space.x1};
+    `};
 `;
 
 const DotsList = ({
@@ -24,17 +43,18 @@ const DotsList = ({
   keyProperty,
   dotColor,
   dotSize,
-  className
+  className,
+  vertical
 }) => (
-  <List className={className}>
+  <List className={className} vertical={vertical ? 1 : 0}>
     {items.map((item, index) => (
       <Fragment key={keyProperty ? item[keyProperty] : item}>
-        {index > 0 && (
-          <Separator>
+        <ListItem vertical={vertical ? 1 : 0}>
+          <Separator hidden={index === 0 && !vertical}>
             <DotIcon size={dotSize} color={dotColor} />
           </Separator>
-        )}
-        <li>{renderItem(item)}</li>
+          {renderItem(item)}
+        </ListItem>
       </Fragment>
     ))}
   </List>
@@ -44,7 +64,8 @@ DotsList.defaultProps = {
   keyProperty: null,
   className: null,
   dotColor: colors.greyLight,
-  dotSize: 5
+  dotSize: 5,
+  vertical: false
 };
 
 DotsList.propTypes = {
@@ -55,6 +76,7 @@ DotsList.propTypes = {
   keyProperty: PropTypes.string,
   className: PropTypes.string,
   dotSize: PropTypes.number,
+  vertical: PropTypes.bool,
   dotColor: PropTypes.string
 };
 
