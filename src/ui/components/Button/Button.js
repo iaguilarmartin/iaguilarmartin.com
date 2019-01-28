@@ -64,7 +64,13 @@ const StyledButton = styled.button`
   position: relative;
   text-decoration: none;
   min-height: 40px;
-  ${({ disabled }) => disabled && 'pointer-events: none'};
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      pointer-events: none;
+    `};
+
   ${getColorsStyle};
 
   span {

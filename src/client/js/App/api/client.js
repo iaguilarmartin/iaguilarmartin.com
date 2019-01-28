@@ -75,3 +75,13 @@ export function getProjectById(projectId) {
 
   return null;
 }
+
+export function sendContactEmail(formData) {
+  return fetch('https://hooks.zapier.com/hooks/catch/4390195/xmtjjp', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  }).then(response => response.json());
+}

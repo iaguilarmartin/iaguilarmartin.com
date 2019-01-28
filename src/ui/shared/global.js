@@ -39,8 +39,13 @@ export default ({ theme }) => css`
   h5,
   h6,
   p,
-  ul {
+  ul,
+  fieldset {
     margin: 0;
     padding: 0;
+  }
+
+  fieldset {
+    border: none;
   }
 `;
