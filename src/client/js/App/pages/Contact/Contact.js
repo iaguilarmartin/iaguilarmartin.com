@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { space } from 'ui/shared/spacing';
+import colors from 'ui/shared/colors';
 import { mediaQueries } from 'ui/shared/breakpoints';
 import Input from 'ui/components/Input';
 import TextArea from 'ui/components/TextArea';
@@ -10,6 +11,7 @@ import Button from 'ui/components/Button';
 
 import Page from '../../components/Page';
 import PageTitle from '../../components/PageTitle';
+import { sendContactEmail } from '../../api/client';
 
 const ContactPage = styled(Page)`
   display: flex;
@@ -42,7 +44,7 @@ const Form = styled.form`
   justify-content: center;
 `;
 
-const FieldSet = styled.fieldset`
+const Label = styled.label`
   width: 50%;
   margin-bottom: ${space.x2};
 
@@ -59,17 +61,62 @@ const SendButton = styled(Button)`
   margin-top: ${space.x25};
 `;
 
-const handleFormSubmit = e => {
-  e.preventDefault();
-};
+const ResultMessage = styled.p`
+  margin-top: ${space.x3};
+  text-align: center;
+  color: ${colors.beige};
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
+  transition: opacity 0.3s ease-out;
+`;
+
+const SUCCESS_SEND_RESULT = 'OK';
 
 class Contact extends Component {
   state = {
     sending: false,
-    error: false
+    sendResult: ''
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.formRef = React.createRef();
+  }
+
+  handleFormSubmit = async e => {
+    e.preventDefault();
+    this.setState({ sending: true });
+
+    const form = this.formRef.current;
+    const values = Array.from(form.elements).reduce((result, element) => {
+      const { name, value } = element;
+      if (name && value) {
+        return {
+          ...result,
+          [name]: value
+        };
+      }
+
+      return result;
+    }, {});
+
+    let sendResult;
+
+    try {
+      const response = await sendContactEmail(values);
+      if (response.status !== 'success') throw new Error('Invalid response');
+      sendResult = SUCCESS_SEND_RESULT;
+    } catch (err) {
+      sendResult = 'Oooppps! Something failed, please try again after a while';
+    }
+
+    form.reset();
+    this.setState({ sending: false, sendResult });
   };
 
   render() {
+    const { sending, sendResult } = this.state;
+
     return (
       <ContactPage>
         <Section>
@@ -78,8 +125,8 @@ class Contact extends Component {
             If you have any doubt about me or if you are interested on hiring me
             please drop me a line using the form below:
           </Paragraph>
-          <Form onSubmit={handleFormSubmit}>
-            <FieldSet>
+          <Form ref={this.formRef} onSubmit={this.handleFormSubmit}>
+            <Label>
               <Input
                 placeholder="Name"
                 name="name"
@@ -89,8 +136,8 @@ class Contact extends Component {
                 autocomplete="name"
                 required
               />
-            </FieldSet>
-            <FieldSet>
+            </Label>
+            <Label>
               <Input
                 placeholder="Email"
                 name="email"
@@ -100,7 +147,7 @@ class Contact extends Component {
                 autocomplete="email"
                 required
               />
-            </FieldSet>
+            </Label>
             <TextArea
               placeholder="Message"
               name="body"
@@ -109,8 +156,15 @@ class Contact extends Component {
               rows="7"
               required
             />
-            <SendButton disabled>Send</SendButton>
+            <SendButton loading={sending}>
+              {sending ? 'Sending' : 'Send'}
+            </SendButton>
           </Form>
+          <ResultMessage visible={sendResult}>
+            {sendResult === SUCCESS_SEND_RESULT
+              ? "Thank you for contacting me. I'll respond to you asap"
+              : sendResult}
+          </ResultMessage>
         </Section>
         <Section>sdfg</Section>
       </ContactPage>

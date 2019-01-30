@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 import { space, border } from 'ui/shared/spacing';
 import { mediaQueries } from 'ui/shared/breakpoints';
 import fonts from 'ui/shared/fonts';
+import colors from 'ui/shared/colors';
+
+import Spinner from '../Spinner';
 
 export const buttonBorderRadius = {
   BOTH: 'both',
@@ -34,22 +37,39 @@ const getBorderRadiusStyle = ({ borders }) => css`
     : 0};
 `;
 
-const getColorsStyle = ({ theme, inverted }) => css`
-  color: ${inverted ? theme.primaryColor : theme.backgroundColor};
-
-  &::before {
-    background-color: ${inverted ? 'transparent' : theme.primaryColor};
-    border: 1px solid ${inverted ? theme.primaryColor : 'transparent'};
+const getColor = ({ theme, disabled, loading }) => {
+  if (disabled || loading) {
+    return colors.greyDisabled;
   }
 
-  &::after {
-    background-color: ${inverted ? theme.primaryColor : 'transparent'};
-    border: 1px solid ${inverted ? 'transparent' : theme.primaryColor};
-  }
+  return theme.primaryColor;
+};
 
-  &:hover {
-    color: ${inverted ? theme.backgroundColor : theme.primaryColor};
-  }
+const getColorsStyle = props => {
+  const { theme, inverted } = props;
+  const color = getColor(props);
+
+  return css`
+    color: ${inverted ? color : theme.backgroundColor};
+
+    &::before {
+      background-color: ${inverted ? 'transparent' : color};
+      border: 1px solid ${inverted ? color : 'transparent'};
+    }
+
+    &::after {
+      background-color: ${inverted ? color : 'transparent'};
+      border: 1px solid ${inverted ? 'transparent' : color};
+    }
+
+    &:hover {
+      color: ${inverted ? theme.backgroundColor : color};
+    }
+  `;
+};
+
+const ButtonSpinner = styled(Spinner)`
+  margin-right: 10px;
 `;
 
 const StyledButton = styled.button`
@@ -65,8 +85,8 @@ const StyledButton = styled.button`
   text-decoration: none;
   min-height: 40px;
 
-  ${({ disabled }) =>
-    disabled &&
+  ${({ disabled, loading }) =>
+    (disabled || loading) &&
     css`
       pointer-events: none;
     `};
@@ -125,6 +145,11 @@ const StyledButton = styled.button`
   }
 `;
 
+const ButtonText = styled.span`
+  display: flex;
+  align-items: center;
+`;
+
 const isExternal = url =>
   url.startsWith('tel:') ||
   url.startsWith('http:') ||
@@ -138,32 +163,36 @@ const Button = ({
   borders,
   inverted,
   url,
+  loading,
   ...htmlProps
-}) =>
-  url ? (
-    <StyledButton
-      as={isExternal(url) ? 'a' : Link}
-      to={url}
-      href={url}
-      className={className}
-      onClick={onClick}
-      borders={borders}
-      inverted={inverted ? 1 : 0}
-      {...htmlProps}
-    >
-      <span>{children}</span>
-    </StyledButton>
-  ) : (
-    <StyledButton
-      borders={borders}
-      className={className}
-      onClick={onClick}
-      inverted={inverted ? 1 : 0}
-      {...htmlProps}
-    >
-      <span>{children}</span>
+}) => {
+  let buttonProps = {
+    borders,
+    className,
+    onClick,
+    loading,
+    inverted,
+    ...htmlProps
+  };
+
+  if (url) {
+    buttonProps = {
+      as: isExternal(url) ? 'a' : Link,
+      to: url,
+      href: url,
+      ...buttonProps
+    };
+  }
+
+  return (
+    <StyledButton {...buttonProps}>
+      <ButtonText>
+        {loading && <ButtonSpinner size={space.x25} />}
+        {children}
+      </ButtonText>
     </StyledButton>
   );
+};
 
 Button.defaultProps = {
   className: null,
@@ -171,6 +200,7 @@ Button.defaultProps = {
   onClick: () => {},
   borders: buttonBorderRadius.BOTH,
   inverted: false,
+  loading: false,
   disabled: false
 };
 
@@ -183,6 +213,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   url: PropTypes.string,
   inverted: PropTypes.bool,
+  loading: PropTypes.bool,
   disabled: PropTypes.bool
 };
 
