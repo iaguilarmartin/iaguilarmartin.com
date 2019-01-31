@@ -12,6 +12,7 @@ import Button from 'ui/components/Button';
 import { mediaQueries } from 'ui/shared/breakpoints';
 
 import { translate } from '../../../i18n';
+import withLink from '../../../components/withLink';
 
 const Article = styled.article`
   width: 100%;
@@ -65,7 +66,7 @@ const Content = styled.p`
   line-height: 1.5;
 `;
 
-const ReadMoreButton = styled(Button)`
+const StyledButton = styled(Button)`
   margin-top: ${space.x2};
   text-transform: uppercase;
   padding: ${space.x1} ${space.x25} !important;
@@ -77,6 +78,8 @@ const ReadMoreButton = styled(Button)`
     align-self: flex-start;
   `)}
 `;
+
+const ReadMoreButton = withLink(StyledButton);
 
 const BlogPost = ({ title, content, url, publicationDate, image }) => (
   <Article>

@@ -14,6 +14,7 @@ import Subtitle from '../../components/Subtitle';
 import Stringify, { side } from '../../components/Stringify';
 import { getRoutePath } from '../../components/Router';
 import { translate } from '../../i18n';
+import withLink from '../../components/withLink';
 
 import HomeLogo from './components/HomeLogo';
 
@@ -47,12 +48,16 @@ const Highlight = styled.span`
   color: ${colors.beige};
 `;
 
-const ViewMoreButton = styled(Button)`
+const StyledButton = styled(Button)`
   margin-top: ${space.x5};
 
   ${mediaQueries.md(css`
     margin-top: ${space.x9};
   `)}
+`;
+
+const SpecialitiesList = styled(DotsList)`
+  display: inline-flex;
 `;
 
 const specialities = [
@@ -72,6 +77,8 @@ const specialities = [
 
 const renderSpeciality = item => <span>{item.name}</span>;
 
+const ViewMoreButton = withLink(StyledButton);
+
 const Home = () => (
   <HomePage hideBackground>
     <HomeLogo />
@@ -86,7 +93,7 @@ const Home = () => (
       </Stringify>
     </H1>
     <Subtitle>
-      <DotsList
+      <SpecialitiesList
         keyProperty="id"
         items={specialities}
         renderItem={renderSpeciality}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -12,6 +12,7 @@ import colors from 'ui/shared/colors';
 import { themed } from 'ui/shared/theme';
 
 import { translate } from '../../../i18n';
+import withLink from '../../../components/withLink';
 
 const ProjectInfo = styled.section`
   display: flex;
@@ -99,7 +100,7 @@ const Technology = styled.span`
   margin: ${space.x05};
 `;
 
-const MoreButton = styled(Button)`
+const StyledButton = styled(Button)`
   text-transform: uppercase;
   font-size: ${fonts.sizes.s} !important;
   padding: ${space.x1} ${space.x25} !important;
@@ -112,6 +113,8 @@ const MoreButton = styled(Button)`
     position: relative;
   `)}
 `;
+
+const MoreButton = withLink(StyledButton);
 
 const formatCategories = categories =>
   categories

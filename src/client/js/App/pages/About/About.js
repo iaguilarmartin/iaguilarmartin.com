@@ -8,6 +8,7 @@ import colors from 'ui/shared/colors';
 import Button from 'ui/components/Button';
 
 import Page from '../../components/Page';
+import withLink from '../../components/withLink';
 import PageTitle from '../../components/PageTitle';
 import { getRoutePath } from '../../components/Router';
 import { translate } from '../../i18n';
@@ -63,13 +64,15 @@ const Photo = styled.div`
 
 const ButtonContainer = styled.div`
   margin: ${space.x3} 0 ${space.x1};
-  width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   ${mediaQueries.md(css`
     margin-top: ${space.x5};
   `)}
 `;
+
+const ContactButton = withLink(Button);
 
 const About = () => (
   <AboutPage>
@@ -81,9 +84,9 @@ const About = () => (
       <p>{translate('about_paragraph_3_text')}</p>
       <p>{translate('about_paragraph_4_text')}</p>
       <ButtonContainer>
-        <Button url={getRoutePath('contact')}>
+        <ContactButton url={getRoutePath('contact')}>
           {translate('about_contact_button_text')}
-        </Button>
+        </ContactButton>
       </ButtonContainer>
     </Description>
   </AboutPage>

@@ -18,6 +18,7 @@ import LanguageContext from '../../i18n/language-context';
 import Page from '../../components/Page';
 import { getProjectById } from '../../api/client';
 import { translate } from '../../i18n';
+import withLink from '../../components/withLink';
 
 const Title = styled.h2`
   color: ${themed.articlesTitleColor};
@@ -87,9 +88,11 @@ const ButtonsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const WebLink = styled(Button)`
+const StyledButton = styled(Button)`
   margin-right: ${space.x15};
 `;
+
+const WebLink = withLink(StyledButton);
 
 const AppStoreLink = styled.a`
   display: inline-block;
@@ -227,7 +230,7 @@ class ProjectDetails extends Component {
                     ))}
                   <ButtonsContainer>
                     {resources.web && (
-                      <WebLink url={resources.web[language]}>
+                      <WebLink url={resources.web[language]} target="_blank">
                         {translate('project_details_web_button_text')}
                       </WebLink>
                     )}

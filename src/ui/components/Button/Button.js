@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { Link } from 'react-router-dom';
 
 import { space, border } from 'ui/shared/spacing';
 import { mediaQueries } from 'ui/shared/breakpoints';
@@ -37,8 +36,8 @@ const getBorderRadiusStyle = ({ borders }) => css`
     : 0};
 `;
 
-const getColor = ({ theme, disabled, loading }) => {
-  if (disabled || loading) {
+const getColor = ({ theme, loading }) => {
+  if (loading) {
     return colors.greyDisabled;
   }
 
@@ -150,53 +149,21 @@ const ButtonText = styled.span`
   align-items: center;
 `;
 
-const isExternal = url =>
-  url.startsWith('tel:') ||
-  url.startsWith('http:') ||
-  url.startsWith('https:') ||
-  url.startsWith('mailto:');
-
-const Button = ({
-  children,
-  className,
-  onClick,
-  borders,
-  inverted,
-  url,
-  loading,
-  ...htmlProps
-}) => {
-  let buttonProps = {
-    borders,
-    className,
-    onClick,
-    loading,
-    inverted,
-    ...htmlProps
-  };
-
-  if (url) {
-    buttonProps = {
-      as: isExternal(url) ? 'a' : Link,
-      to: url,
-      href: url,
-      ...buttonProps
-    };
-  }
-
-  return (
-    <StyledButton {...buttonProps}>
-      <ButtonText>
-        {loading && <ButtonSpinner size={space.x25} />}
-        {children}
-      </ButtonText>
-    </StyledButton>
-  );
-};
+const Button = ({ children, borders, inverted, loading, ...htmlProps }) => (
+  <StyledButton
+    borders={borders}
+    inverted={inverted ? 1 : 0}
+    loading={loading ? 1 : 0}
+    {...htmlProps}
+  >
+    <ButtonText>
+      {loading && <ButtonSpinner size={space.x25} />}
+      {children}
+    </ButtonText>
+  </StyledButton>
+);
 
 Button.defaultProps = {
-  className: null,
-  url: null,
   onClick: () => {},
   borders: buttonBorderRadius.BOTH,
   inverted: false,
@@ -209,9 +176,7 @@ Button.propTypes = {
     Object.keys(buttonBorderRadius).map(key => buttonBorderRadius[key])
   ),
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   onClick: PropTypes.func,
-  url: PropTypes.string,
   inverted: PropTypes.bool,
   loading: PropTypes.bool,
   disabled: PropTypes.bool
