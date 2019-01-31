@@ -13,6 +13,7 @@ import PageTitle from '../../components/PageTitle';
 
 import ContactForm from './components/ContactForm';
 import SocialLinks from './components/SocialLinks';
+import Map from './components/Map';
 
 const ContactPage = styled(Page)`
   display: flex;
@@ -46,6 +47,15 @@ const SectionTitle = styled.h2`
   margin-bottom: ${space.x3};
 `;
 
+const Location = styled.p`
+  margin: ${space.x5} 0 ${space.x2};
+
+  span {
+    color: ${colors.beige};
+    font-size: ${fonts.sizes.l};
+  }
+`;
+
 const Contact = () => (
   <ContactPage>
     <Section>
@@ -57,8 +67,12 @@ const Contact = () => (
       <ContactForm />
     </Section>
     <Section>
-      <SectionTitle>// You can also find me on:</SectionTitle>
+      <SectionTitle>// You can also find me at:</SectionTitle>
       <SocialLinks />
+      <Location>
+        Currently living in: <span>New York, NY, USA</span>
+      </Location>
+      <Map />
     </Section>
   </ContactPage>
 );
