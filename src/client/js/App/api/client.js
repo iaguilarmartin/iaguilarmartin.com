@@ -1,6 +1,7 @@
 import blogPosts from './blog-posts.json';
 import realProjects from './real-projects.json';
 import sideProjects from './side-projects.json';
+import education from './education.json';
 
 export function getBlogPosts(skip, limit) {
   const sortedPosts = blogPosts.sort((post1, post2) => {
@@ -81,4 +82,8 @@ export function sendContactEmail(formData) {
     method: 'POST',
     body: JSON.stringify(formData)
   }).then(response => response.json());
+}
+
+export function getEducation() {
+  return education;
 }

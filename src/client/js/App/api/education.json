@@ -1,0 +1,26 @@
+[
+  {
+    "id": "degree",
+    "title": {
+      "en": "Computer Engineering Degree",
+      "es": "Ingeniero en informática"
+    },
+    "institution": {
+      "en": "Deusto University, Spain",
+      "es": "Universidad de Deusto, España"
+    },
+    "period": "2002-2007"
+  },
+  {
+    "id": "bootcamp",
+    "title": {
+      "en": "Startup Engineering Master Bootcamp",
+      "es": "Startup Engineering Master Bootcamp"
+    },
+    "institution": {
+      "en": "KeepCoding",
+      "es": "KeepCoding"
+    },
+    "period": "2016-2017"
+  }
+]
