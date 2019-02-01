@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -10,6 +9,7 @@ import fonts from 'ui/shared/fonts';
 
 import Page from '../../components/Page';
 import PageTitle from '../../components/PageTitle';
+import { translate } from '../../i18n';
 
 import ContactForm from './components/ContactForm';
 import SocialLinks from './components/SocialLinks';
@@ -19,10 +19,12 @@ const ContactPage = styled(Page)`
   display: flex;
   flex-direction: column;
 
-  ${mediaQueries.xl(css`
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  ${mediaQueries.lg(css`
+    @media screen and (orientation: landscape) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
   `)}
 `;
 
@@ -30,47 +32,66 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
 
-  ${mediaQueries.xl(css`
-    width: 45%;
+  ${mediaQueries.lg(css`
+    @media screen and (orientation: landscape) {
+      width: 45%;
+    }
   `)}
 `;
 
 const Paragraph = styled.p`
-  margin: ${space.x7} 0 ${space.x4};
+  margin: ${space.x4} 0 ${space.x3};
   line-height: 1.5;
+
+  ${mediaQueries.md(css`
+    margin: ${space.x7} 0 ${space.x4};
+  `)}
 `;
 
 const SectionTitle = styled.h2`
   color: ${colors.greyLight};
   font-family: ${fonts.Obli};
-  font-size: ${fonts.sizes.xxl};
-  margin-bottom: ${space.x3};
+  font-size: ${fonts.sizes.xl};
+  margin: ${space.x3} 0 ${space.x2};
+
+  ${mediaQueries.md(css`
+    margin: ${space.x4} 0 ${space.x3};
+    font-size: 2.4rem;
+  `)}
+
+  ${mediaQueries.lg(css`
+    @media screen and (orientation: landscape) {
+      margin-top: 0;
+    }
+  `)}
 `;
 
 const Location = styled.p`
-  margin: ${space.x5} 0 ${space.x2};
+  margin: ${space.x3} 0 ${space.x2};
 
   span {
     color: ${colors.beige};
     font-size: ${fonts.sizes.l};
   }
+
+  ${mediaQueries.md(css`
+    margin-top: ${space.x5};
+  `)}
 `;
 
 const Contact = () => (
   <ContactPage>
     <Section>
-      <PageTitle>Contact me</PageTitle>
-      <Paragraph>
-        If you have any doubt about me or if you are interested on hiring me
-        please drop me a line using the form below:
-      </Paragraph>
+      <PageTitle>{translate('contact_header_text')}</PageTitle>
+      <Paragraph>{translate('contact_form_paragraph_text')}</Paragraph>
       <ContactForm />
     </Section>
     <Section>
-      <SectionTitle>// You can also find me at:</SectionTitle>
+      <SectionTitle>{translate('contact_social_section_header')}</SectionTitle>
       <SocialLinks />
       <Location>
-        Currently living in: <span>New York, NY, USA</span>
+        {translate('contact_map_currently_living_text')}{' '}
+        <span>{translate('contact_map_currentt_address')}</span>
       </Location>
       <Map />
     </Section>

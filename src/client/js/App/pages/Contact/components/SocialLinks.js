@@ -1,6 +1,8 @@
 import React from 'react';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import { mediaQueries } from 'ui/shared/breakpoints';
 import TextButton from 'ui/components/TextButton';
 import { space } from 'ui/shared/spacing';
 
@@ -15,7 +17,17 @@ import GithubIcon from './icons/github';
 const List = styled.ul`
   display: flex;
   list-style: none;
-  flex-direction: column;
+  justify-content: space-around;
+
+  ${mediaQueries.md(css`
+    justify-content: flex-start;
+  `)}
+
+  ${mediaQueries.lg(css`
+    @media screen and (orientation: landscape) {
+      flex-direction: column;
+    }
+  `)}
 `;
 
 const ListItem = styled.li`
@@ -27,9 +39,26 @@ const SocialButton = withLink(styled(TextButton)`
   align-items: center;
   text-decoration: none;
 
-  svg {
-    margin-right: ${space.x2};
+  span {
+    display: none;
   }
+
+  ${mediaQueries.md(css`
+    svg {
+      margin-right: ${space.x4};
+    }
+  `)}
+
+  ${mediaQueries.lg(css`
+    @media screen and (orientation: landscape) {
+      svg {
+        margin-right: ${space.x2};
+      }
+      span {
+        display: block;
+      }
+    }
+  `)}
 `);
 
 const SocialLinks = () => (

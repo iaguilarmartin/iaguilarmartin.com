@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import { mediaQueries } from 'ui/shared/breakpoints';
 import { space } from 'ui/shared/spacing';
 import colors from 'ui/shared/colors';
 import Input from 'ui/components/Input';
 import TextArea from 'ui/components/TextArea';
 import Button from 'ui/components/Button';
 
+import { translate } from '../../../i18n';
 import { sendContactEmail } from '../../../api/client';
+
+const inputsStyle = singleLine => css`
+  width: ${singleLine ? '50%' : '100%'};
+
+  &:first-of-type {
+    padding-right: ${singleLine ? space.x1 : 0};
+  }
+
+  &:last-of-type {
+    padding-left: ${singleLine ? space.x1 : 0};
+  }
+`;
 
 const Form = styled.form`
   display: flex;
@@ -16,16 +31,22 @@ const Form = styled.form`
 `;
 
 const Label = styled.label`
-  width: 50%;
+  ${inputsStyle(false)};
   margin-bottom: ${space.x2};
 
-  &:first-of-type {
-    padding-right: ${space.x1};
-  }
+  ${mediaQueries.md(css`
+    ${inputsStyle(true)};
+  `)}
 
-  &:last-of-type {
-    padding-left: ${space.x1};
-  }
+  ${mediaQueries.lg(css`
+    @media screen and (orientation: landscape) {
+      ${inputsStyle(false)};
+    }
+  `)}
+
+  ${mediaQueries.xl(css`
+    ${inputsStyle(true)};
+  `)}
 `;
 
 const SendButton = styled(Button)`
@@ -78,7 +99,7 @@ class ContactForm extends Component {
       if (response.status !== 'success') throw new Error('Invalid response');
       sendResult = SUCCESS_SEND_RESULT;
     } catch (err) {
-      sendResult = 'Oooppps! Something failed, please try again after a while';
+      sendResult = translate('contact_form_error_text');
     }
 
     form.reset();
@@ -93,7 +114,7 @@ class ContactForm extends Component {
         <Form ref={this.formRef} onSubmit={this.handleFormSubmit}>
           <Label>
             <Input
-              placeholder="Name"
+              placeholder={translate('contact_name_input_placeholder')}
               name="name"
               type="text"
               minlength="1"
@@ -104,7 +125,7 @@ class ContactForm extends Component {
           </Label>
           <Label>
             <Input
-              placeholder="Email"
+              placeholder={translate('contact_email_input_placeholder')}
               name="email"
               type="email"
               minlength="1"
@@ -114,7 +135,7 @@ class ContactForm extends Component {
             />
           </Label>
           <TextArea
-            placeholder="Message"
+            placeholder={translate('contact_message_input_placeholder')}
             name="body"
             minlength="1"
             maxlength="500"
@@ -122,12 +143,14 @@ class ContactForm extends Component {
             required
           />
           <SendButton loading={sending}>
-            {sending ? 'Sending' : 'Send'}
+            {sending
+              ? translate('contact_send_button_loading_text')
+              : translate('contact_send_button_text')}
           </SendButton>
         </Form>
         <ResultMessage visible={sendResult}>
           {sendResult === SUCCESS_SEND_RESULT
-            ? "Thank you for contacting me. I'll respond to you asap"
+            ? translate('contact_form_success_text')
             : sendResult}
         </ResultMessage>
       </>

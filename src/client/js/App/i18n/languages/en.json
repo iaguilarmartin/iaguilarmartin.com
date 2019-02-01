@@ -45,5 +45,17 @@
   "project_details_web_button_text": "Visit website",
   "project_details_google_button_text": "Get it on Google Play",
   "project_details_google_button_url": "https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png",
-  "project_details_apple_button_url": "//linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg"
+  "project_details_apple_button_url": "//linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg",
+  "contact_header_text": "Contact me",
+  "contact_form_paragraph_text": "If you have any doubt about me or if you are interested on hiring me please drop me a line using the form below:",
+  "contact_form_success_text": "Thank you for contacting me. I'll respond to you asap",
+  "contact_form_error_text": "Oooppps! Something failed, please try again after a while",
+  "contact_send_button_text": "Send",
+  "contact_send_button_loading_text": "Sending",
+  "contact_email_input_placeholder": "Email",
+  "contact_name_input_placeholder": "Name",
+  "contact_message_input_placeholder": "Message",
+  "contact_social_section_header": "// You can also find me at:",
+  "contact_map_currently_living_text": "Currently living in:",
+  "contact_map_currentt_address": "New York, NY, USA"
 }
