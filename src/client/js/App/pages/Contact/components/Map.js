@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
+import colors from 'ui/shared/colors';
+
 const MapContainer = styled.div`
   position: relative;
   padding-bottom: 80%;
   height: 0;
   max-width: 100%;
+  box-shadow: 0 2px 4px 0 ${colors.blackMenu};
 
   iframe,
   object,
