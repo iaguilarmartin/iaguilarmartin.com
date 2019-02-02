@@ -41,6 +41,10 @@ const routesConfig = {
     label: translate('menu_routes_portfolio_label'),
     icon: BriefcaseIcon
   },
+  experience: {
+    path: '/resume-and-skills/:experienceId',
+    component: Portfolio
+  },
   resume: {
     path: '/resume-and-skills',
     component: Resume,
@@ -69,8 +73,13 @@ export const defaultRoute =
     Object.keys(routesConfig).find(routeKey => routesConfig[routeKey].isDefault)
   ];
 
-export const getRoutePath = routeName =>
-  routesConfig[routeName] && routesConfig[routeName].path;
+export const getRoutePath = (routeName, params = {}) => {
+  let path = routesConfig[routeName] && routesConfig[routeName].path;
+  Object.keys(params).forEach(key => {
+    path = path.replace(`:${key}`, params[key]);
+  });
+  return path;
+};
 
 const routes = Object.keys(routesConfig).map(routeKey => ({
   name: routeKey,

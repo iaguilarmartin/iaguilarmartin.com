@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="562" height="82" viewBox="0 0 562 82">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#E78BA2" stroke-linecap="round" stroke-width="12" d="M455 6h-37"/>
+        <path stroke="#B9E1E6" stroke-linecap="round" stroke-width="12" d="M476 76H142.926"/>
+        <path stroke="#36B397" stroke-linecap="round" stroke-width="12" d="M507.089 6H464.81"/>
+        <path stroke="#F06D30" stroke-linecap="round" stroke-width="12" d="M309 6H26"/>
+        <g fill="#C4C2BB" font-family="AndaleMono, Andale Mono" font-size="12">
+            <text transform="translate(14 39)">
+                <tspan x="0" y="11">2007</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="114" y="11">2012</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="169" y="11">2013</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="226" y="11">2014</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="281" y="11">2015</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="337" y="11">2016</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="393" y="11">2017</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="449" y="11">2018</tspan>
+            </text>
+            <text transform="translate(14 39)">
+                <tspan x="505" y="11">2019</tspan>
+            </text>
+        </g>
+        <g stroke="#C4C2BB" stroke-linecap="square">
+            <path d="M.5 42.5v-21M112.5 40.5v-15M169.5 40.5v-15M224.5 40.5v-15M281.5 40.5v-15M336.5 40.5v-15M392.5 40.5v-15M449.5 40.5v-15M504.5 40.5v-15M560.5 40.5v-15M57.5 40.5v-15M.51 33.5h56.923"/>
+            <path stroke-dasharray="1,3" d="M57.422 33.5h57.156"/>
+            <path d="M111.413 33.5h449.174"/>
+        </g>
+    </g>
+</svg>

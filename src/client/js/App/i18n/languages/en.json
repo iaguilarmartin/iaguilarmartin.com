@@ -58,5 +58,18 @@
   "contact_social_section_header": "// You can also find me at:",
   "contact_map_currently_living_text": "Currently living in:",
   "contact_map_currentt_address": "New York, NY, USA",
-  "resume_header_text": "Resume and Skills"
+  "resume_header_start_text": "Resume",
+  "resume_header_end_text": "and Skills",
+  "resume_education_section_title": "Education",
+  "resume_experience_section_title": "Work experience",
+  "resume_experience_eptisa_logo_alt": "EPTISA TI company logo",
+  "resume_experience_iam_logo_alt": "My personal logo",
+  "resume_experience_sah_logo_alt": "Spotahome company logo",
+  "resume_experience_minsait_logo_alt": "Minsait company logo",
+  "resume_experience_timeline_alt": "Work experience timeline",
+  "resume_experince_section_click_advice_text": "Click on companies logos to show more info",
+  "resume_skills_section_title": "Technical skills",
+  "resume_skills_bubbles_image_alt": "A bubble diagram showing information about the most recent technical skills I have worked with",
+  "resume_skills_download-resume_button_text": "Download resume",
+  "resume_skills_download-resume_button_url": "http://iaguilarmartin.com/wp-content/uploads/2016/12/iaguilarmartin_cv_en.pdf"
 }

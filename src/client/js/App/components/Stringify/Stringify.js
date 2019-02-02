@@ -16,6 +16,7 @@ export const side = {
 const Content = styled.div`
   font-size: ${fonts.sizes.xxl};
   font-family: ${fonts.AndaleMono};
+  display: flex;
 
   ${mediaQueries.md(css`
     font-size: ${fonts.sizes.xxxxl};
@@ -25,11 +26,13 @@ const Content = styled.div`
 const Bracket = styled.span`
   color: ${colors.petrol};
   visibility: ${({ invisible }) => (invisible ? 'hidden' : 'visible')};
+  align-self: ${({ end }) => (end ? 'flex-end' : 'flex-start')};
 `;
 
 const Accent = styled.span`
   color: ${colors.blueLight};
   visibility: ${({ invisible }) => (invisible ? 'hidden' : 'visible')};
+  align-self: ${({ end }) => (end ? 'flex-end' : 'flex-start')};
 `;
 
 const Stringify = ({ children, className, sides }) => (
@@ -37,8 +40,12 @@ const Stringify = ({ children, className, sides }) => (
     <Bracket invisible={sides === side.END}>{'{'}</Bracket>
     <Accent invisible={sides === side.END}>`</Accent>
     {children}
-    <Accent invisible={sides === side.START}>`</Accent>
-    <Bracket invisible={sides === side.START}>{'}'}</Bracket>
+    <Accent end={1} invisible={sides === side.START}>
+      `
+    </Accent>
+    <Bracket end={1} invisible={sides === side.START}>
+      {'}'}
+    </Bracket>
   </Content>
 );
 

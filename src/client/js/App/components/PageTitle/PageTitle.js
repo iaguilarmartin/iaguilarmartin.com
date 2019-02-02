@@ -5,6 +5,7 @@ import { css } from '@emotion/core';
 
 import fonts from 'ui/shared/fonts';
 import { mediaQueries } from 'ui/shared/breakpoints';
+import { space } from 'ui/shared/spacing';
 import { themed } from 'ui/shared/theme';
 
 import Stringify from '../Stringify';
@@ -14,6 +15,7 @@ const Title = styled.h1`
   font-family: ${fonts.DisolveLight};
   display: inline-block;
   color: ${themed.secondaryColor};
+  transform: translateY(${space.x075});
 
   ${mediaQueries.md(css`
     font-size: ${fonts.sizes.xxxxl};
