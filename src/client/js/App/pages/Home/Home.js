@@ -26,6 +26,10 @@ const HomePage = styled(Page)`
   padding: 0;
 `;
 
+const StyledStringify = styled(Stringify)`
+  display: block;
+`;
+
 const H1 = styled.h1`
   text-align: center;
   margin-bottom: ${space.x2};
@@ -83,14 +87,14 @@ const Home = () => (
   <HomePage hideBackground>
     <HomeLogo />
     <H1>
-      <Stringify sides={side.START}>
+      <StyledStringify sides={side.START}>
         <Title>
           {translate('home_title_welcome_text')} <Highlight>Ivan</Highlight>
         </Title>
-      </Stringify>
-      <Stringify sides={side.END}>
+      </StyledStringify>
+      <StyledStringify sides={side.END}>
         <Title>{translate('home_title_developer_text')}</Title>
-      </Stringify>
+      </StyledStringify>
     </H1>
     <Subtitle>
       <SpecialitiesList

@@ -112,9 +112,12 @@ const TimelineImage = styled(Image)`
 
 const LinkButton = withLink(TextButton);
 
+const getDetailsPath = experienceId =>
+  `${getRoutePath('resume')}/${experienceId}`;
+
 const WorkExperience = () => (
   <Container>
-    <LinkButton url={getRoutePath('experience', { experienceId: 'freelance' })}>
+    <LinkButton url={getDetailsPath('freelance')}>
       <IAMLogoImage
         src={{
           x1: iamLogo,
@@ -140,13 +143,13 @@ const WorkExperience = () => (
       ]}
       alt={translate('resume_experience_timeline_alt')}
     />
-    <LinkButton url={getRoutePath('experience', { experienceId: 'spotahome' })}>
+    <LinkButton url={getDetailsPath('spotahome')}>
       <SAHLogoImage
         src={sahLogo}
         alt={translate('resume_experience_sah_logo_alt')}
       />
     </LinkButton>
-    <LinkButton url={getRoutePath('experience', { experienceId: 'minsait' })}>
+    <LinkButton url={getDetailsPath('minsait')}>
       <MinsaitLogoImage
         src={{
           x1: minsaitLogo,
@@ -156,7 +159,7 @@ const WorkExperience = () => (
         alt={translate('resume_experience_minsait_logo_alt')}
       />
     </LinkButton>
-    <LinkButton url={getRoutePath('experience', { experienceId: 'eptisa' })}>
+    <LinkButton url={getDetailsPath('eptisa')}>
       <EptisaLogoImage
         src={{
           x1: eptisaLogo,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { Route } from 'react-router-dom';
 
 import { space } from 'ui/shared/spacing';
 import { mediaQueries } from 'ui/shared/breakpoints';
@@ -15,6 +16,7 @@ import PageTitle from '../../components/PageTitle';
 import { translate } from '../../i18n';
 import LanguageContext from '../../i18n/language-context';
 import withLink from '../../components/withLink';
+import { getRoutePath } from '../../components/Router';
 import { getEducation as requestEducation } from '../../api/client';
 
 import Education from './components/Education';
@@ -23,6 +25,7 @@ import WorkExperience from './components/WorkExperience';
 import bubbles from './images/bubbles.png';
 import bubbles2x from './images/bubbles@2x.png';
 import bubbles3x from './images/bubbles@3x.png';
+import WorkDetails from './components/WorkDetails';
 
 const TitleSeparator = styled.br`
   ${mediaQueries.sm(css`
@@ -109,59 +112,66 @@ class Resume extends Component {
     const { language } = this.context;
 
     return (
-      <Page>
-        <PageTitle>
-          {translate('resume_header_start_text')} <TitleSeparator />
-          {translate('resume_header_end_text')}
-        </PageTitle>
-        <PageContent>
-          <LeftColumn>
-            <Section>
-              <SectionTitle>
-                {translate('resume_education_section_title')}
-              </SectionTitle>
-              <DotsList
-                vertical
-                items={education}
-                keyProperty="id"
-                renderItem={item => this.renderEducation(item, language)}
-              />
-            </Section>
-            <Section>
-              <SectionTitle>
-                {translate('resume_experience_section_title')}
-              </SectionTitle>
-              <WorkExperience />
-              <Tip>
-                * {translate('resume_experince_section_click_advice_text')}
-              </Tip>
-            </Section>
-          </LeftColumn>
-          <RightColumn>
-            <Section>
-              <SectionTitle>
-                {translate('resume_skills_section_title')}
-              </SectionTitle>
-              <SkillsContainer>
-                <SkillsImage
-                  src={{
-                    x1: bubbles,
-                    x2: bubbles2x,
-                    x3: bubbles3x
-                  }}
-                  alt={translate('resume_skills_bubbles_image_alt')}
+      <>
+        <Page>
+          <PageTitle>
+            {translate('resume_header_start_text')} <TitleSeparator />
+            {translate('resume_header_end_text')}
+          </PageTitle>
+          <PageContent>
+            <LeftColumn>
+              <Section>
+                <SectionTitle>
+                  {translate('resume_education_section_title')}
+                </SectionTitle>
+                <DotsList
+                  vertical
+                  items={education}
+                  keyProperty="id"
+                  renderItem={item => this.renderEducation(item, language)}
                 />
-                <DownloadResumeButton
-                  target="_blank"
-                  url={translate('resume_skills_download-resume_button_url')}
-                >
-                  {translate('resume_skills_download-resume_button_text')}
-                </DownloadResumeButton>
-              </SkillsContainer>
-            </Section>
-          </RightColumn>
-        </PageContent>
-      </Page>
+              </Section>
+              <Section>
+                <SectionTitle>
+                  {translate('resume_experience_section_title')}
+                </SectionTitle>
+                <WorkExperience />
+                <Tip>
+                  * {translate('resume_experince_section_click_advice_text')}
+                </Tip>
+              </Section>
+            </LeftColumn>
+            <RightColumn>
+              <Section>
+                <SectionTitle>
+                  {translate('resume_skills_section_title')}
+                </SectionTitle>
+                <SkillsContainer>
+                  <SkillsImage
+                    src={{
+                      x1: bubbles,
+                      x2: bubbles2x,
+                      x3: bubbles3x
+                    }}
+                    alt={translate('resume_skills_bubbles_image_alt')}
+                  />
+                  <DownloadResumeButton
+                    target="_blank"
+                    url={translate('resume_skills_download-resume_button_url')}
+                  >
+                    {translate('resume_skills_download-resume_button_text')}
+                  </DownloadResumeButton>
+                </SkillsContainer>
+              </Section>
+            </RightColumn>
+          </PageContent>
+        </Page>
+        <Route
+          exact
+          path={`${getRoutePath('resume')}/:experienceId`}
+          component={WorkDetails}
+        />
+      </>
     );
   }
 }
