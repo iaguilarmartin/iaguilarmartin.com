@@ -1,0 +1,140 @@
+[
+  {
+    "id": "eptisa",
+    "companyName": "EPTISA Tecnologías de la información",
+    "position": {
+      "en": "Software Analyst & Developer",
+      "es": "Analista-programdor"
+    },
+    "period": {
+      "from": "2007-06-01T23:00:00.000Z",
+      "to": "2016-04-03T23:00:00.000Z"
+    },
+    "projects": [
+      {
+        "name": {
+          "en": "GIS Web viewer (VYCARIO)",
+          "es": "Visor Cartográfico Interactivo (VYCARIO)"
+        },
+        "period": "2016",
+        "client": "Canal Isabel II Gestión",
+        "description": {
+          "en": "Design and development of an AngularJS responsive GIS Web viewer used everyday by more than two hundred users. An eight months “mobile first” Web project built using Bootstrap framework and taking advantages of some HTML5 strengths like localization API or local storage.",
+          "es": "Diseño y desarrollo de un visor Web responsive usando AngularJS para la visualización de mapas cartográficos y utilizado a diario por más de doscientos usuarios. Gestión de un proyecto de ocho meses cuyo resultado podrá ser explotado desde todo tipo de dispositivo gracias al uso del framework Bootstrap y de algunas de las capacidades de HTML5 como la geolocalización o el almacenamiento local."
+        }
+      },
+      {
+        "name": {
+          "en": "SILCO Android App",
+          "es": "Aplicación Android SILCO"
+        },
+        "period": "2015-2016",
+        "client": "Canal Isabel II Gestión",
+        "description": {
+          "en": "Analysis and development of a critical Android native application to collect the water supply points readings. The app guides the users through the reading routes registering their location and synchronizing the collected data with the server in either online or offline mode.",
+          "es": "Análisis y desarrollo de una aplicación Android nativa y critica para el usuario ya que se encarga de la obtención de las lecturas de los contadores de agua. La aplicación guiaba a los operarios a través de su ruta de lectura registrando en todo momento su localización y sincronizando la información recolectada con el servidor tanto en tiempo real como bajo demanda."
+        }
+      },
+      {
+        "name": {
+          "en": "MC2 Android App",
+          "es": "Aplicación Android MC2"
+        },
+        "period": "2013-2016",
+        "client": "Canal Isabel II Gestión",
+        "description": {
+          "en": "Corrective and evolutive maintenance done to a native Android application in order to provide Canal Isabel II’s brigades with the capacity of managing their daily work orders while they are on the field. Also, backend implemented to provide the app with push notifications.",
+          "es": "Mantenimiento correctivo y evolutivo de una aplicación Android que permite a las brigadas del Canal de Isabel II gestionar sus ordenes de trabajo diarias mientras están en campo. El banckend de esta aplicación proporcionaba entre otras cosas notificaciones PUSH para mantener la aplicación actualizada sobre cualquier cambio que se produjera en las ordenes."
+        }
+      },
+      {
+        "name": {
+          "en": "ASP.NET GIS viewer",
+          "es": "Visor GIS en ASP.NET"
+        },
+        "period": "2008-2009",
+        "client": "Euskaltel",
+        "description": {
+          "en": "Development & Implantation of a GIS Web Viewer consuming ArcGIS Server 9.2 map services using ArcGIS Server for the Microsoft .NET Framework SDK.",
+          "es": "Desarrollo e implantación de un visot Web GIS que consumía servicios de mapa de ArcGIS Server 9.2 usando el SDK de Microsoft .NET Framework."
+        }
+      }
+    ]
+  },
+  {
+    "id": "minsait",
+    "companyName": "Minsait by Indra",
+    "position": {
+      "en": "Consultant",
+      "es": "Consultor"
+    },
+    "period": {
+      "from": "2017-04-30T23:00:00.000Z",
+      "to": "2018-01-30T23:00:00.000Z"
+    },
+    "projects": [
+      {
+        "name": {
+          "en": "GLP deposits management solution",
+          "es": "Aplicación para la gestión de depósito GLP"
+        },
+        "period": "2017-2018",
+        "client": "Naturgas Energía",
+        "description": {
+          "en": "Analysis and development of a new web solution to manage work orders and download made on Naturgas GLP gas deposits. Technologies used to build this solution were AngularJS + Bootstrap for the front side of the project and NodeJS + Express + MySQL for the backend. In order to achieve best performance and an excellent user experience in mobility, the most modern web optimization techniques were used.",
+          "es": "Análisis y desarrollo de una nueva solución web para el gestión de las ordenes de trabajo y las descargas realizadas sobre los depósitos de gas GLP de la compañía Naturgas. Las tecnologías usadas para la construcción de esta solución han sido AngularJS + Bootstrap para la parte front y NodeJS + Express + MySQL para el back. Con el objetivo de conseguir el mejor rendimiento posible y una excelente experiencia de usuario en movilidad se han empleado las técnicas mas modernas de optimización web."
+        }
+      }
+    ]
+  },
+  {
+    "id": "spotahome",
+    "companyName": "Spotahome",
+    "position": {
+      "en": "Front-end Engineer",
+      "es": "Desarrollador Senior Front-end"
+    },
+    "period": {
+      "from": "2018-02-04T23:00:00.000Z",
+      "to": "2019-02-11T23:00:00.000Z"
+    },
+    "projects": [
+      {
+        "name": {
+          "en": "Landlord panel",
+          "es": "Panel de control de propietarios"
+        },
+        "period": "2018-2019",
+        "client": "Spotahome",
+        "description": {
+          "en": "Complete redesign of Spotahome's landlord panel. We created from the scratch a new version of the application using modern technologies like React, Emotion for CSS in JS or GraphQL for data requests. GraphQL server was built over an Express + NodeJS application that aggregated information from several REST APIs.",
+          "es": "Rediseño completo del panel de propietarios de Spotahome. Creamos desde cero una nueva versión de la aplicación utilizando tecnologías modernas como React, Emotion para CSS in JS o GraphQL para obtener los datos. El servidor de GraphQL se construyó sobre una aplicación Express + NodeJS que agregaba información de varias API REST."
+        }
+      },
+      {
+        "name": {
+          "en": "Dreyhub mobile App",
+          "es": "Aplicación movil Dreyhub"
+        },
+        "period": "2018",
+        "client": "Spotahome",
+        "description": {
+          "en": "Development of a mobile web application using React Native. It was preliminar version that consisted on a WebView pointing to app.dreyhub.com web site. The application was published on iOS AppStore and on Google Play.",
+          "es": "Desarrollo de una aplicación móvil usando React Native. Se trataba de una versión preliminar que unicamente contenia un WebView que apuntaba al sitio web app.dreyhub.com. La aplicación se publico tanto en la AppStore de iOS como en Google Play."
+        }
+      },
+      {
+        "name": {
+          "en": "Dreyhub",
+          "es": "Dreyhub"
+        },
+        "period": "2018",
+        "client": "Spotahome",
+        "description": {
+          "en": "Corrective and evolutive maintenance done to a web solution that makes easier for landlords to manage the properties they have available for renting. The application was built using Angular 6 and obtained data from a REST API developed by other members of the team. Among other things, it allows to landlords collecting the monthly rent from tenants using Stripe and attaching documents to each leases. Those documents was saved on an Amazon S3 bucket",
+          "es": "Mantenimiento correctivo y evolutivo de una solución web que facilitaba a los propietarios la gestión de las viviendas que tenian disponibles para alquilar. La aplicación estaba construida usando Angular 6 y obtenia la información de un API REST desarrollada por otros miembros del equipo. Entre otras cosas, esta aplicación permitia a los propuetarios cobrar la renta mensual a los inquilinos a través de Stripe y adjuntar documentos a cada contrato. Estos docuentos eran almacenados en un almacén de Amazon S3."
+        }
+      }
+    ]
+  }
+]

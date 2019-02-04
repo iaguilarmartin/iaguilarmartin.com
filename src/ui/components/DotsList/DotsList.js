@@ -11,6 +11,13 @@ import DotIcon from './DotIcon';
 export const Separator = styled.span`
   margin: 0 ${space.x1};
   line-height: 0;
+
+  ${({ vertical }) =>
+    vertical &&
+    css`
+      align-self: flex-start;
+      margin-top: ${space.x1};
+    `};
 `;
 
 const List = styled.ul`
@@ -50,7 +57,10 @@ const DotsList = ({
     {items.map((item, index) => (
       <Fragment key={keyProperty ? item[keyProperty] : item}>
         <ListItem vertical={vertical ? 1 : 0}>
-          <Separator hidden={index === 0 && !vertical}>
+          <Separator
+            hidden={index === 0 && !vertical}
+            vertical={vertical ? 1 : 0}
+          >
             <DotIcon size={dotSize} color={dotColor} />
           </Separator>
           {renderItem(item)}

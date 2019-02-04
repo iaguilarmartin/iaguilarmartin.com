@@ -1,66 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactModal from 'react-modal';
-import { css, ClassNames } from '@emotion/core';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { withRouter } from 'react-router';
 
 import colors from 'ui/shared/colors';
+import fonts from 'ui/shared/fonts';
+import { space } from 'ui/shared/spacing';
+import Modal from 'ui/components/Modal';
 
 import { getRoutePath } from '../../../components/Router';
 
-const overlayStyle = css`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(21, 21, 21, 0.8);
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+const SectionTitle = styled.header`
+  font-family: ${fonts.AndaleMono};
+  font-size: ${fonts.sizes.l};
+  color: ${colors.greyLight};
+  text-transform: uppercase;
+  margin-bottom: ${space.x2};
 `;
-
-const modalStyle = css`
-  background-color: ${colors.greyBgLines};
-  width: 90%;
-  max-width: 625px;
-  outline: none;
-`;
-
-ReactModal.setAppElement('#root');
-
-const disableScroll = () => {
-  document.body.style.overflow = 'hidden';
-};
-
-const enableScroll = () => {
-  document.body.style.overflow = 'initial';
-};
 
 const WorkDetails = ({ history }) => (
-  <ClassNames>
-    {({ css: innerCss }) => (
-      <ReactModal
-        className={innerCss`${modalStyle}`}
-        overlayClassName={innerCss`${overlayStyle}`}
-        onAfterOpen={disableScroll}
-        isOpen
-      >
-        Pruebas
-        <button
-          type="button"
-          onClick={() => {
-            enableScroll();
-            history.push(getRoutePath('resume'));
-          }}
-        >
-          Close
-        </button>
-      </ReactModal>
-    )}
-  </ClassNames>
+  <Modal
+    title="Prueba"
+    isOpen
+    onClose={() => history.push(getRoutePath('resume'))}
+  >
+    asdfa
+    <SectionTitle>Featured projects</SectionTitle>
+  </Modal>
 );
 
 WorkDetails.propTypes = {
