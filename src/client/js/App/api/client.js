@@ -2,6 +2,7 @@ import blogPosts from './blog-posts.json';
 import realProjects from './real-projects.json';
 import sideProjects from './side-projects.json';
 import education from './education.json';
+import works from './works.json';
 
 export function getBlogPosts(skip, limit) {
   const sortedPosts = blogPosts.sort((post1, post2) => {
@@ -75,6 +76,10 @@ export function getProjectById(projectId) {
   if (project) return project;
 
   return null;
+}
+
+export function getWorkById(workId) {
+  return works.find(w => w.id === workId);
 }
 
 export function sendContactEmail(formData) {

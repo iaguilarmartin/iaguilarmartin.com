@@ -31,6 +31,8 @@ const modalStyle = css`
   width: 90%;
   max-width: 625px;
   outline: none;
+  max-height: 90%;
+  overflow: auto;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 `;
 

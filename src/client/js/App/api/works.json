@@ -2,6 +2,11 @@
   {
     "id": "eptisa",
     "companyName": "EPTISA Tecnologías de la información",
+    "companyLogo": {
+      "x1": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350735/iaguilarmartin.com/eptisa_logo.png",
+      "x2": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/eptisa_logo_2x.png",
+      "x3": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/eptisa_logo_3x.png"
+    },
     "position": {
       "en": "Software Analyst & Developer",
       "es": "Analista-programdor"
@@ -12,6 +17,7 @@
     },
     "projects": [
       {
+        "id": "vycario",
         "name": {
           "en": "GIS Web viewer (VYCARIO)",
           "es": "Visor Cartográfico Interactivo (VYCARIO)"
@@ -24,9 +30,10 @@
         }
       },
       {
+        "id": "silco",
         "name": {
-          "en": "SILCO Android App",
-          "es": "Aplicación Android SILCO"
+          "en": "Android work orders management app (SILCO)",
+          "es": "Aplicación Android para lectura de contadores de agua (SILCO)"
         },
         "period": "2015-2016",
         "client": "Canal Isabel II Gestión",
@@ -36,9 +43,10 @@
         }
       },
       {
+        "id": "mc2",
         "name": {
-          "en": "MC2 Android App",
-          "es": "Aplicación Android MC2"
+          "en": "Android water counters reader app (MC2)",
+          "es": "Aplicación Android para la gestión de órdenes de trabajo (MC2)"
         },
         "period": "2013-2016",
         "client": "Canal Isabel II Gestión",
@@ -48,6 +56,7 @@
         }
       },
       {
+        "id": "euskaltel-viewer",
         "name": {
           "en": "ASP.NET GIS viewer",
           "es": "Visor GIS en ASP.NET"
@@ -64,6 +73,11 @@
   {
     "id": "minsait",
     "companyName": "Minsait by Indra",
+    "companyLogo": {
+      "x1": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/LOGO_MINSAIT.png",
+      "x2": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/LOGO_MINSAIT_2x.png",
+      "x3": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/LOGO_MINSAIT_3x.png"
+    },
     "position": {
       "en": "Consultant",
       "es": "Consultor"
@@ -74,6 +88,7 @@
     },
     "projects": [
       {
+        "id": "glps",
         "name": {
           "en": "GLP deposits management solution",
           "es": "Aplicación para la gestión de depósito GLP"
@@ -90,6 +105,11 @@
   {
     "id": "spotahome",
     "companyName": "Spotahome",
+    "companyLogo": {
+      "x1": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350765/iaguilarmartin.com/SAH_logo.png",
+      "x2": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/SAH_logo_2x.png",
+      "x3": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/SAH_logo_3x.png"
+    },
     "position": {
       "en": "Front-end Engineer",
       "es": "Desarrollador Senior Front-end"
@@ -100,6 +120,7 @@
     },
     "projects": [
       {
+        "id": "landlord-panel",
         "name": {
           "en": "Landlord panel",
           "es": "Panel de control de propietarios"
@@ -112,6 +133,7 @@
         }
       },
       {
+        "id": "dreyhub-app",
         "name": {
           "en": "Dreyhub mobile App",
           "es": "Aplicación movil Dreyhub"
@@ -124,6 +146,7 @@
         }
       },
       {
+        "id": "dreyhub",
         "name": {
           "en": "Dreyhub",
           "es": "Dreyhub"
@@ -133,6 +156,77 @@
         "description": {
           "en": "Corrective and evolutive maintenance done to a web solution that makes easier for landlords to manage the properties they have available for renting. The application was built using Angular 6 and obtained data from a REST API developed by other members of the team. Among other things, it allows to landlords collecting the monthly rent from tenants using Stripe and attaching documents to each leases. Those documents was saved on an Amazon S3 bucket",
           "es": "Mantenimiento correctivo y evolutivo de una solución web que facilitaba a los propietarios la gestión de las viviendas que tenian disponibles para alquilar. La aplicación estaba construida usando Angular 6 y obtenia la información de un API REST desarrollada por otros miembros del equipo. Entre otras cosas, esta aplicación permitia a los propuetarios cobrar la renta mensual a los inquilinos a través de Stripe y adjuntar documentos a cada contrato. Estos docuentos eran almacenados en un almacén de Amazon S3."
+        }
+      }
+    ]
+  },
+  {
+    "id": "freelance",
+    "companyName": "Freelance",
+    "companyLogo": {
+      "x1": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350735/iaguilarmartin.com/logo-72-claro.png",
+      "x2": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/logo-72-claro_2x.png",
+      "x3": "https://res.cloudinary.com/dr4a6933v/image/upload/v1549350736/iaguilarmartin.com/logo-72-claro_3x.png"
+    },
+    "position": {
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack"
+    },
+    "period": {
+      "from": "2012-02-04T23:00:00.000Z",
+      "to": "2018-07-11T23:00:00.000Z"
+    },
+    "projects": [
+      {
+        "id": "ana-dedal",
+        "name": {
+          "en": "Solution for managing a sewing academy",
+          "es": "Solución para gestión de academia de costura"
+        },
+        "period": "2016-2017",
+        "client": "Ana Dedal",
+        "description": {
+          "en": "Development of an iOS native application for iPhone and iPad that allows printing receipts on Epson point-of-sale printers. Those receipts were generated inside a private web solution also built by me using Angular2 on the front-end side and NodeJS plus MongoDB on back-end. All the solution is deployed within an Amazon Web Services EC2 instance.",
+          "es": "Desarrollo de una aplicación nativa para dispositivos iPhone y iPad que permite imprimir tickets en impresoras de punto de venta de la marca Epson. Esos tickets son generados desde una solución web privada también creada por mí y compuesta por un front-end construido en Angular2 y un back-end que proporciona un API REST creado con la combinación de NodeJS, Express y MongoDB. Toda la solución se encuentra desplegada en una instancia EC2 de Amazon Web Services."
+        }
+      },
+      {
+        "id": "gora",
+        "name": {
+          "en": "HTML5 Futsal team Web Site",
+          "es": "Sitio Web en HTML5 para un equipo de Futbol-Sala"
+        },
+        "period": "2014-2017",
+        "client": "GORA FS",
+        "description": {
+          "en": "Develope of a complete website for a professional Futsal team where its followers can be aware of the latest news of the club, results, rankings, statistics and much more. The frontend is built using the JQuery framework while Microsoft's ASP.NET technology is used on the server side. All information displayed on the Web is stored in a MySQL database.",
+          "es": "Construcción de un sitio Web completo para una equipo profesional de Futbol Sala donde sus seguidores pueden estar al tanto de las ultimas noticias del club, resultados, clasificaciones, estadísticas y mucho más. El frontend está diseñado usando el framework JQuery mientras que del lado del servidor se utiliza la tecnología ASP.NET de Microsoft. Toda la información mostrada en la Web se encuentra almacenada en una base de datos MySQL."
+        }
+      },
+      {
+        "id": "landatxueta",
+        "name": {
+          "en": "Innovative website using jQuery",
+          "es": "Innovadora página web usando jQuery"
+        },
+        "period": "2012-2013",
+        "client": "Restaurante Landatxueta ",
+        "description": {
+          "en": "Design and implementation of a modern website developed using the JQuery Javascript framework. No server-side development was done, however, it includes some innovative features such as 360 degree views of the dining rooms and the entrance of the restaurant or a wedding menu section where you can consult the menu as if it were a book.",
+          "es": "Diseño e implantación de un moderno sitio web desarrollado usando el framework Javascript JQuery. No se hizo ningún desarrollo del lado del servidor, sin embargo, incluye algunas características innovadoras como vistas de 360 grados de los comedores y la entrada del restaurante o una sección de menú de bodas donde se puede consultar la carta como si de un libro se tratara."
+        }
+      },
+      {
+        "id": "guia-deportes-tv",
+        "name": {
+          "en": "Guia Deportes TV application",
+          "es": "Aplicación Guia Deportes TV"
+        },
+        "period": "2012",
+        "client": "Iniasyv",
+        "description": {
+          "en": "Creation of an App for the Android and Windows Phone platforms called GuiaDeportesTV for consultating sports broadcasts schedules. It allowed filtering events and notifying users the beggining of the events trough reminders among many other things. Finally, it was eliminated from the marketplaces due to lack of time to provide a good service to the users.",
+          "es": "Creación de una aplicación para las plataformas Android y Windows Phone llamada GuiaDeportesTV para consultar los horarios de las transmisiones deportivas. Permitía entre otras muchas cosas, filtrar eventos y notificar a los usuarios el inicio de los eventos a través de recordatorios. Finalmente, se eliminó de las tiendas de aplicaciones debido a la falta de tiempo para ofrecer un buen servicio a los usuarios."
         }
       }
     ]
