@@ -4,6 +4,7 @@ import ReactModal from 'react-modal';
 import { css, ClassNames } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import { mediaQueries } from 'ui/shared/breakpoints';
 import colors from 'ui/shared/colors';
 import { space } from 'ui/shared/spacing';
 import fonts from 'ui/shared/fonts';
@@ -23,7 +24,12 @@ const overlayStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  overflow: auto;
+  padding: ${space.x4} 0;
+
+  ${mediaQueries.md(css`
+    padding: ${space.x9} 0;
+  `)}
 `;
 
 const modalStyle = css`
@@ -31,8 +37,6 @@ const modalStyle = css`
   width: 90%;
   max-width: 625px;
   outline: none;
-  max-height: 90%;
-  overflow: auto;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 `;
 
@@ -45,6 +49,10 @@ const Header = styled.header`
   text-transform: uppercase;
   font-family: ${fonts.ArchivoBlack};
   font-size: ${fonts.sizes.l};
+`;
+
+const CloseButton = styled(TextButton)`
+  margin-left: ${space.x2};
 `;
 
 const Content = styled.article`
@@ -72,7 +80,7 @@ const WorkDetails = ({ children, title, onClose, isOpen }) => (
       >
         <Header>
           {title}
-          <TextButton
+          <CloseButton
             color={colors.greyLight}
             onClick={() => {
               enableScroll();
@@ -80,7 +88,7 @@ const WorkDetails = ({ children, title, onClose, isOpen }) => (
             }}
           >
             <CloseIcon />
-          </TextButton>
+          </CloseButton>
         </Header>
         <Content>{children}</Content>
       </ReactModal>

@@ -17,9 +17,17 @@ import withLink from '../../../components/withLink';
 const ProjectInfo = styled.section`
   display: flex;
   flex-direction: column;
-  margin: ${space.x2} ${space.x1};
+  margin: ${space.x2} 0;
   transition: opacity 0.3s ease-out;
   position: relative;
+  padding-bottom: ${space.x25};
+  border-bottom: 1px solid ${colors.greyBgLines};
+
+  ${mediaQueries.md(css`
+    margin: ${space.x2} ${space.x1};
+    padding: 0;
+    border: none;
+  `)}
 
   ${mediaQueries.xl(css`
     align-items: center;
@@ -56,7 +64,7 @@ const Title = styled.h2`
   font-size: ${fonts.sizes.m};
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-right: 80px;
+  margin-right: 100px;
   margin-bottom: ${space.x05};
 
   ${mediaQueries.xl(css`

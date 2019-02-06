@@ -71,5 +71,9 @@
   "resume_skills_section_title": "Technical skills",
   "resume_skills_bubbles_image_alt": "A bubble diagram showing information about the most recent technical skills I have worked with",
   "resume_skills_download-resume_button_text": "Download resume",
-  "resume_skills_download-resume_button_url": "http://iaguilarmartin.com/wp-content/uploads/2016/12/iaguilarmartin_cv_en.pdf"
+  "resume_skills_download-resume_button_url": "http://iaguilarmartin.com/wp-content/uploads/2016/12/iaguilarmartin_cv_en.pdf",
+  "work_position_text": "Position",
+  "work_period_text": "Period",
+  "work_featured_projects_text": "Featured projects",
+  "work_company_logo_alt": "{0}'s logo"
 }
