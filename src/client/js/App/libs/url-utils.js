@@ -14,3 +14,8 @@ export function reload(location, history, params) {
   history.push(`${location.pathname}?${queryString.stringify(query)}`);
   scrollToTop();
 }
+
+export function formatURLFromLocation(location, language) {
+  const base = language ? `/${language}` : '';
+  return `${base}${location.pathname}${location.hash}${location.search}`;
+}

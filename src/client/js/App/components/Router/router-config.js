@@ -21,6 +21,7 @@ const routesConfig = {
     inMenu: true,
     icon: HomeIcon,
     label: translate('menu_routes_home_label'),
+    exact: true,
     isDefault: true
   },
   about: {
@@ -28,18 +29,21 @@ const routesConfig = {
     component: About,
     inMenu: true,
     label: translate('menu_routes_about_label'),
-    icon: NameplateIcon
+    icon: NameplateIcon,
+    exact: true
   },
   project: {
     path: '/portfolio/:projectId',
-    component: ProjectDetails
+    component: ProjectDetails,
+    exact: true
   },
   portfolio: {
     path: '/portfolio',
     component: Portfolio,
     inMenu: true,
     label: translate('menu_routes_portfolio_label'),
-    icon: BriefcaseIcon
+    icon: BriefcaseIcon,
+    exact: true
   },
   resume: {
     path: '/resume-and-skills',
@@ -53,14 +57,16 @@ const routesConfig = {
     component: Blog,
     inMenu: true,
     label: translate('menu_routes_blog_label'),
-    icon: NewspaperIcon
+    icon: NewspaperIcon,
+    exact: true
   },
   contact: {
     path: '/contact',
     component: Contact,
     inMenu: true,
     label: translate('menu_routes_contact_label'),
-    icon: EnvelopeIcon
+    icon: EnvelopeIcon,
+    exact: true
   }
 };
 
