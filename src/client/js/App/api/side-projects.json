@@ -313,5 +313,70 @@
         "es": "http://nodepop.iaguilarmartin.com/"
       }
     }
+  },
+  {
+    "id": {
+      "en": "sick-fits",
+      "es": "sick-fits-2"
+    },
+    "name": {
+      "en": "Sick-Fits",
+      "es": "Sick-Fits"
+    },
+    "publishedOn": "2018-11-18T23:00:00.000Z",
+    "subtitle": {
+      "en": "Full web marketplace solution",
+      "es": "Sitio web completo de compra-venta de productos"
+    },
+    "description": {
+      "en": "A complete web app where users are able to sell and buy products. It keeps a history of previous orders and items added to shopping cart. Checkout process is implemented using an Stripe’s React component. Of course, this app allows searching for products in the catalog and has a complete users management section where you can edit the permissions of each rol.\n\nAt a technical level it has been implemented using the top most popular technologies like Apollo for the GraphQL part, Next.js for server side rendering, Styled Components or Jest + Enzyme for unit testing among others.\n\nIf you are interested on reviewing the source code of this app navigate to project’s repository on Github.",
+      "es": "Una completa aplicación web donde los usuarios pueden comprar y vender productos. Mantiene un historial de los elementos añadidos al carro de la compra y también de los pedidos realizados anteriormente. El proceso de pago se ha implementado con un componente de React integrado con el API de Stripe. Por supuesto, esta aplicación te permite buscar productos dentro del catálogo y tiene un completo sistema de gestión de usuarios donde se pueden editar los permisos de cada rol.\n\nA nivel técnico ha sido implementado usando las tecnologías más modernas como Apollo para la parte de GraphQL, Next.js para incluir Server Side Rendering, Styled Components o Jest + Enzyme para tests unitarios, ademas de otras.\n\nSi estas interesado en echar un vistazo a la aplicación visita el repositorio del proyecto publicado en Github."
+    },
+    "categories": ["web", "backend"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2019/02/Sickfits.png",
+    "technologies": [
+      {
+        "en": "React",
+        "es": "React"
+      },
+      {
+        "en": "Styled Components",
+        "es": "Styled Components"
+      },
+      {
+        "en": "GraphQL",
+        "es": "GraphQL"
+      },
+      {
+        "en": "Jest",
+        "es": "Jest"
+      },
+      {
+        "en": "Next.js",
+        "es": "Next.js"
+      },
+      {
+        "en": "Prisma",
+        "es": "Prisma"
+      },
+      {
+        "en": "Docker",
+        "es": "Docker"
+      },
+      {
+        "en": "NodeJS",
+        "es": "NodeJS"
+      }
+    ],
+    "resources": {
+      "web": {
+        "en": "https://iam-sickfits-next-react-prod.herokuapp.com/",
+        "es": "https://iam-sickfits-next-react-prod.herokuapp.com/"
+      },
+      "github": {
+        "en": "https://github.com/iaguilarmartin/sick-fits",
+        "es": "https://github.com/iaguilarmartin/sick-fits"
+      }
+    }
   }
 ]

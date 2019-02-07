@@ -139,7 +139,7 @@
       "en": "Guia Deportes TV App",
       "es": "Aplicación Guia Deportes TV"
     },
-    "publishedOn": "2016-05-23T23:00:00.000Z",
+    "publishedOn": "2014-05-23T23:00:00.000Z",
     "subtitle": {
       "en": "Windows Phone and Android native mobile apps",
       "es": "Aplicación movil nativa para dispositivos Windows Phone y Android"
@@ -229,7 +229,7 @@
       "en": "Fruteria Aguimar",
       "es": "Fruteria Aguimar"
     },
-    "publishedOn": "2016-05-25T23:00:00.000Z",
+    "publishedOn": "2014-05-25T23:00:00.000Z",
     "subtitle": {
       "en": "ASP.NET Web site",
       "es": "Sitio Web ASP.NET"
@@ -264,5 +264,94 @@
         "es": "http://www.fruteriaaguimar.com/"
       }
     }
+  },
+  {
+    "id": {
+      "en": "purchases-diary",
+      "es": "diario-de-pedidos"
+    },
+    "name": {
+      "en": "Purchases diary",
+      "es": "Diario de pedidos"
+    },
+    "publishedOn": "2018-12-21T23:00:00.000Z",
+    "subtitle": {
+      "en": "React Native app",
+      "es": "Aplicación en React Native"
+    },
+    "description": {
+      "en": "A mobile application developed using React Native that allow users to keep a record of all the orders done along the year. Each order is formed by a list of products with its corresponding quantity and in different statues. There could be pending products or purchased products. In the second case the app allows you to indicate more details about the purchase like provider or price.\n\nAt architecture level it is a cloud based app where all users data is stored in a Firebase realtime database. This allows seeing the same information on every device.\n\nBy the moment this application is only available on the AppStore. Use the following link to download it:",
+      "es": "Aplicación móvil desarrollada usando React Native que permite a los usuarios mantener un registro de todos los pedidos realizados a lo largo del año. Cada pedido cuenta con una lista de productos junto con su correspondiente cantidad. Cada uno de estos productos puede estar en estado pendiente o comprado/recibido. En este caso, la aplicación permite registrar información de la compra como cual ha sido el proveedor o el precio al que se ha comprado dicho producto.\n\nA nivel de arquitectura se trata de una aplicación basada en la nube donde toda la información de los usuarios se encuentra almacenada en una base de datos a tiempo real. Esto permite ver la misma información desde cualquier dispositivo.\n\nEn estos momentos la aplicación solo está disponible en el AppStore. Puedes usar el siguiente enlace para descargarla:"
+    },
+    "categories": ["mobile"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2019/02/diario-de-pedidos.png",
+    "technologies": [
+      {
+        "en": "React Native",
+        "es": "React Native"
+      },
+      {
+        "en": "Firebase",
+        "es": "Firebase"
+      },
+      {
+        "en": "Redux",
+        "es": "Redux"
+      },
+      {
+        "en": "Sagas",
+        "es": "Sagas"
+      }
+    ],
+    "resources": {
+      "AppStore": {
+        "en": "https://itunes.apple.com/es/app/diario-de-pedidos/id1405536817?mt=8",
+        "es": "https://itunes.apple.com/es/app/diario-de-pedidos/id1405536817?mt=8"
+      }
+    }
+  },
+  {
+    "id": {
+      "en": "sewing-academy-management-website",
+      "es": "web-de-gestion-de-academia-de-costura"
+    },
+    "name": {
+      "en": "Sewing academy management website",
+      "es": "Web de gestión de academia de costura"
+    },
+    "publishedOn": "2017-01-25T23:00:00.000Z",
+    "subtitle": {
+      "en": "AngujarJS Web site + NodeJS backend",
+      "es": "Sitio Web AngularJS + backend en NodeJS"
+    },
+    "description": {
+      "en": "A real project developed on demand for AnaDedal company. A complete website implemented using MEAN stack. It allows to academy administrators to register students, products, purchases and of course schedule lessons and subscribe students to them. The main section of this application is the calendar view that shows the information of upcoming lessons.\n\nThanks to Bootstrap it is a fully responsive website so it can be used on any device. As you can imagine as this is a private solution I can not provide a link to review the application but if you are interested in personalised product similar to this just contact me.",
+      "es": "Un proyecto real desarrollado baja demando para la empresa AnaDedal. Se trata de un completo sitio web desarrollado usando el stack MEAN. Permite a los administradores de la academia dar de alta alumnos, artículos o registrar pagos. Por supuesto, también permite crear clases e inscribir a los alumnos en ellas. La sección principal de la aplicación es la vista de calendario que muestra la información de las clases más inmediatas.\n\nGracias al uso del framework Bootstrap a la hora de crear la interfaz gráfica este sitio web puede ser visitado usando cualquier dispositivo ya que se adapta a cualquier tamaño de pantalla. Al tratarse de una aplicación privada no puedo proporcionar el enlace para que pueda ser visitando pero si estáis interesados en desarrollar algo similar para vuestro negocio no dudéis en poneros en contacto conmigo."
+    },
+    "categories": ["web", "backend"],
+    "image": "http://iaguilarmartin.com/wp-content/uploads/2019/02/anaDedal-2.png",
+    "technologies": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "NodeJS",
+        "es": "NodeJS"
+      },
+      {
+        "en": "Express",
+        "es": "Express"
+      },
+      {
+        "en": "MongoDB",
+        "es": "MongoDB"
+      },
+      {
+        "en": "Bootstrap",
+        "es": "Bootstrap"
+      }
+    ],
+    "resources": {}
   }
 ]
