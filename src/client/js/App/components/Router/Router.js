@@ -51,9 +51,9 @@ class AppRouter extends Component {
         ))}
         <Route
           render={({ location }) => {
-            const legacyURL = `http://iaguilarmartin.com${location.pathname}${
-              location.hash
-            }${location.search}`;
+            const legacyURL = `http://legacy.iaguilarmartin.com${
+              location.pathname
+            }${location.hash}${location.search}`;
             window.location = legacyURL;
             return null;
           }}

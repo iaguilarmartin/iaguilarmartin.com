@@ -18,7 +18,7 @@
       "es": "Este es el primer proyecto que creé usando ReactJS. Principalmente, se trata de una versión reducida de la página Web de Twitter. Si quieres probar esta aplicación es necesario que tengas una cuenta de GitHub porque es la única forma que hay actualmente de iniciar sesión en ella.\n\nUna vez dentro de la página, los usuarios se encuentran con el clásico timeline de Twitter. En ella se podrá publicar nuevos tweets, hacer retweet de los ya existentes, contestar al resto de usuario o marcar un tweet como favorito.\n\nToda la información que maneja la aplicación está almacenada en una base de datos en tiempo real de Firebase. De este modo, cuando un usuario publique un nuevo tweet o interactue con alguno de los ya existentes la interfaz del resto de usuarios se actualizará de manera automática sin necesidad de tener que refrescar la página.\n\nComo siempre si estás interesado en ver el código fuente de este proyecto lo tienes disponible en mi cuenta de GitHub."
     },
     "categories": ["web"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/12/reacttr.png",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2017/12/reacttr.png",
     "technologies": [
       {
         "en": "ReactJS",
@@ -63,7 +63,7 @@
       "es": "Se trata de un servidor de teselas de mapa construido usando Mapnik y NodeJS. Este sencillo servidor es el resultado de un reto que tuve que desarrollar para poder optar a un puesto de trabajo como desarrollador back-end en Carto.\n\nDesafortunadamente no pude conseguir el puesto pero me quedé satisfecho con el resultado de la prueba y por eso he decidido incluirlo en mi portfolio.\n\nEste servidor lleva incorporadas pruebas unitarias y está completamente documentado por medio de jsdoc. Visita mi perfil de GitHub para descargar el código fuente del servidor."
     },
     "categories": ["backend"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/11/tile.png",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2017/11/tile.png",
     "technologies": [
       {
         "en": "NodeJS",
@@ -112,7 +112,7 @@
       "es": "Aplicación Web construida con ReactJS + Redux + Materialize donde los usuarios pueden escribir posts dentro de las categorías que hay predefinidas, dejar comentarios y votar, así como también escribir y editar los posts o comentarios que hayan hecho previamente.\n\nReadable obtiene y almacena la información de los posts en servidor muy sencillo construido usando NodeJS y como su interfaz de usuario es responsiva, esta web puede ser visitada desde cualquier tipo de dispositivo.\n\nSi está interesado/a en ver el código fuente de esta aplicación lo puedes consultar en mi cuenta de GitHub. Este proyecto es el resultado de mi segunda practica del React Nanodegree Program de Udacity."
     },
     "categories": ["web"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/11/readable.png",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2017/11/readable.png",
     "technologies": [
       {
         "en": "ReactJS",
@@ -157,7 +157,7 @@
       "es": "Tomador de comandas es una aplicación Android muy sencilla. Se trata de una app de demostración para hacerse una idea de como podría ser una solución completa de gestión de comandas para un restaurante. Esta aplicación te permite configurar el número de mesas disponibles, navegar entre los diferentes platos del menú, añadir dichos platos a una mesa incluyendo las sugerencias de los clientes sobre la preparación del plato en cocina. Y además, cuando los comensales están listos para abandonar el restaurante se puede generar el ticket dejando así la mesa libre para futuros clientes.\n\nNo se trata de una aplicación comercial o de uso real y por tanto, su código fuente se encuentra disponible en mi perfil de Github para que cualquiera que esté interesado pueda ver como esta implementada y que capacidades el SDK de Android utiliza.\n\nPara intalar está app en su dispositivo Android pulse el siguiente botón:"
     },
     "categories": ["mobile"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/12/commandspicker.png",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/12/commandspicker.png",
     "technologies": [
       {
         "en": "Android SDK",
@@ -190,7 +190,7 @@
       "es": "Demostración de diseño de aplicación móvil creado con Sketch. Es una replica de algunas de las pantallas que se pueden encontrar en una de las aplicaciones de compra-venta más importantes de España. Cuyo nombre es Wallapop.\n\nEcha un vistazo a mi repositorio de Github y descarga el fichero .sketch que incluye. En él podras comprobar que todos y cada uno de los elementos que este diseño contiene ha sido creado por mi. Tambien se incluyen en él, todos los assets necesarios para aplicar este diseño a una aplicación móvil, independientemente de si es para dispositivos Android o iOS.\n\nSi quieres ver como se comportaría este diseño en la vida real visita el prototipo que he creado usando Marvel.\n\nPara revisar todos los detalles del diseño pulsa en el siguiente botón. Esta Web ha sido creada usando la funcionalidad “Spec Export” incluida en el Sketch Measure plugin."
     },
     "categories": ["design"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/12/wallapop_design.png",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/12/wallapop_design.png",
     "technologies": [
       {
         "en": "Sketch",
@@ -239,7 +239,7 @@
       "es": "Whatapop es una versión muy reducida de lo que sería una Web de compra-venta de productos online. Algo parecido a Wallapop (de ahí el nombre..). Esta Web la creé durante el KeepCoding Startup Engineering Master Bootcamp y está desarrollada usando el framework JavaScript de AngularJS, HTML5 y CSS3.\n\nSi quieres echar un vistazo al código fuente de la página, accede a mi perfil de GitHub.\n\nTambién se puede ver la Web funcionando en la siguiente URL:"
     },
     "categories": ["web"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/07/whatapop_preview-1.jpg",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/07/whatapop_preview-1.jpg",
     "technologies": [
       {
         "en": "AngujarJS",
@@ -280,7 +280,7 @@
       "es": "Esto es un proyecto NodeJS desarrollado durante el KeepCoding Startup Engineering Master Bootcamp. Su finalidad es proporcionar a los desarrolladores de front-end un API para construir un sitio web o una aplicación móvil estilo Wallapop. Por supuesto esta no es una solución completamente terminada pero permite hacer algunas acciones muy comunes como: gestionar el registro y autenticación de usuarios, realizar búsquedas de anuncios, obtener imágenes estáticas, etc.\n\nSi quieres echar un vistazo al código fuente del API, lo tienes disponible en GitHub. Si por el contrario, prefieres testear por ti mismo el API accede directamente a la documentación y prueba los métodos explicados ahí. El API se encuentra desplegado en una instancia Ubuntu de Amazon EC2 que yo mismo gestiono."
     },
     "categories": ["backend"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/06/Nodepop.jpg",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/06/Nodepop.jpg",
     "technologies": [
       {
         "en": "NodeJS",
@@ -333,7 +333,7 @@
       "es": "Una completa aplicación web donde los usuarios pueden comprar y vender productos. Mantiene un historial de los elementos añadidos al carro de la compra y también de los pedidos realizados anteriormente. El proceso de pago se ha implementado con un componente de React integrado con el API de Stripe. Por supuesto, esta aplicación te permite buscar productos dentro del catálogo y tiene un completo sistema de gestión de usuarios donde se pueden editar los permisos de cada rol.\n\nA nivel técnico ha sido implementado usando las tecnologías más modernas como Apollo para la parte de GraphQL, Next.js para incluir Server Side Rendering, Styled Components o Jest + Enzyme para tests unitarios, ademas de otras.\n\nSi estas interesado en echar un vistazo a la aplicación visita el repositorio del proyecto publicado en Github."
     },
     "categories": ["web", "backend"],
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2019/02/Sickfits.png",
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2019/02/Sickfits.png",
     "technologies": [
       {
         "en": "React",

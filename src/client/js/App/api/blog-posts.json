@@ -10,11 +10,11 @@
       "es": "Todo backend que se precie debe tener implementado algún tipo de autenticación para evitar que cualquier persona puede realizar peticiones sobre el, y más, si dicho backend cuenta con endpoints que realicen modificaciones sobre los datos con…"
     },
     "url": {
-      "en": "http://iaguilarmartin.com/blog/how-to-implement-basic-http-auth-on-nodejs-express-backend/",
-      "es": "http://iaguilarmartin.com/es/blog/como-implementar-autenticacion-basica-en-un-backend-contruido-con-nodejs-y-express/"
+      "en": "http://legacy.iaguilarmartin.com/blog/how-to-implement-basic-http-auth-on-nodejs-express-backend/",
+      "es": "http://legacy.iaguilarmartin.com/es/blog/como-implementar-autenticacion-basica-en-un-backend-contruido-con-nodejs-y-express/"
     },
     "publishedOn": "2017-02-27T23:00:00.000Z",
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2017/02/express_and_nodejs.png"
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2017/02/express_and_nodejs.png"
   },
   {
     "id": "show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs",
@@ -27,11 +27,11 @@
       "es": "Seguramente, mientras desarrollabais un sitio Web, os habéis encontrado con la necesidad de hacer llamadas a un API propia o de terceros que requería de autenticación para poder usarla. Existen varios tipos de autenticación pero…"
     },
     "url": {
-      "en": "http://iaguilarmartin.com/blog/show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs/",
-      "es": "http://iaguilarmartin.com/es/blog/mostrar-ventana-de-login-del-explorador-al-llamar-a-un-api-con-autenticacion-basica-usando-angularjs/"
+      "en": "http://legacy.iaguilarmartin.com/blog/show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs/",
+      "es": "http://legacy.iaguilarmartin.com/es/blog/mostrar-ventana-de-login-del-explorador-al-llamar-a-un-api-con-autenticacion-basica-usando-angularjs/"
     },
     "publishedOn": "2016-10-23T14:25:00.000Z",
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/11/SecurityAngularJS.png"
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/11/SecurityAngularJS.png"
   },
   {
     "id": "uploading-file-with-a-multipartform-data-request-using-angularjs",
@@ -44,8 +44,8 @@
       "es": "En este post voy a explicar como subir ficheros a un servidor usando peticiones multipart/form-data con AngularJS. La semana pasada, mientras intentaba implementar una funcionalidad para poder visualizar ficheros CSV en el visor GIS que estoy…"
     },
     "url": {
-      "en": "http://iaguilarmartin.com/blog/uploading-file-with-a-multipartform-data-request-using-angularjs/",
-      "es": "http://iaguilarmartin.com/es/blog/creando-peticiones-de-tipo-multipartform-data-usando-angularjs/"
+      "en": "http://legacy.iaguilarmartin.com/blog/uploading-file-with-a-multipartform-data-request-using-angularjs/",
+      "es": "http://legacy.iaguilarmartin.com/es/blog/creando-peticiones-de-tipo-multipartform-data-usando-angularjs/"
     },
     "publishedOn": "2016-07-08T10:00:00.000Z"
   },
@@ -60,10 +60,10 @@
       "es": "En este post voy a explicar como implementar una directiva de AngularJS que muestre mensajes de alerta dentro de uno de los controladores de tu web. Los mensajes de alerta o información se están convirtiendo…"
     },
     "url": {
-      "en": "http://iaguilarmartin.com/blog/alertmessage_angularjs_bootstrap/",
-      "es": "http://iaguilarmartin.com/es/blog/mostrar-mensajes-de-alerta-usando-angularjs-y-bootstrap/"
+      "en": "http://legacy.iaguilarmartin.com/blog/alertmessage_angularjs_bootstrap/",
+      "es": "http://legacy.iaguilarmartin.com/es/blog/mostrar-mensajes-de-alerta-usando-angularjs-y-bootstrap/"
     },
     "publishedOn": "2016-05-17T21:05:00.000Z",
-    "image": "http://iaguilarmartin.com/wp-content/uploads/2016/06/alertMessage.png"
+    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/06/alertMessage.png"
   }
 ]
