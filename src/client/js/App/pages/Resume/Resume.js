@@ -156,6 +156,7 @@ class Resume extends Component {
                     alt={translate('resume_skills_bubbles_image_alt')}
                   />
                   <DownloadResumeButton
+                    external
                     target="_blank"
                     url={translate('resume_skills_download-resume_button_url')}
                   >

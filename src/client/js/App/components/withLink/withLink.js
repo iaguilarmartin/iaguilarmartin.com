@@ -9,17 +9,22 @@ const isExternal = url =>
   url.startsWith('mailto:');
 
 const withLink = WrappedComponent => {
-  const Component = ({ url, ...otherProps }) => (
+  const Component = ({ url, external, ...otherProps }) => (
     <WrappedComponent
-      as={isExternal(url) ? 'a' : Link}
+      as={external || isExternal(url) ? 'a' : Link}
       to={url}
       href={url}
       {...otherProps}
     />
   );
 
+  Component.defaultProps = {
+    external: false
+  };
+
   Component.propTypes = {
-    url: PropTypes.string.isRequired
+    url: PropTypes.string.isRequired,
+    external: PropTypes.bool
   };
 
   return Component;

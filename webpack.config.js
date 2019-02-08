@@ -2,6 +2,7 @@ const path = require('path');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -15,7 +16,8 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: 'src/client/index.html'
-    })
+    }),
+    new CopyWebpackPlugin([{ from: 'src/client/assets', to: 'assets' }])
   ],
   output: {
     filename: '[name].bundle.js',

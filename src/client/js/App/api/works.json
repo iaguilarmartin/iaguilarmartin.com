@@ -96,8 +96,8 @@
         "period": "2017-2018",
         "client": "Naturgas Energía",
         "description": {
-          "en": "Analysis and development of a new web solution to manage work orders and download made on Naturgas GLP gas deposits. Technologies used to build this solution were AngularJS + Bootstrap for the front side of the project and NodeJS + Express + MySQL for the backend. In order to achieve best performance and an excellent user experience in mobility, the most modern web optimization techniques were used.",
-          "es": "Análisis y desarrollo de una nueva solución web para el gestión de las ordenes de trabajo y las descargas realizadas sobre los depósitos de gas GLP de la compañía Naturgas. Las tecnologías usadas para la construcción de esta solución han sido AngularJS + Bootstrap para la parte front y NodeJS + Express + MySQL para el back. Con el objetivo de conseguir el mejor rendimiento posible y una excelente experiencia de usuario en movilidad se han empleado las técnicas mas modernas de optimización web."
+          "en": "Building of a web solution to manage all the operations related with LPG deposits owned by Naturgas like downloads, consumes, failures... Technologies used to develop this application were AngularJS + Bootstrap for the front side of the project and NodeJS + Express + MySQL for the backend. In order to achieve best performance and an excellent user experience in mobility a native Android application was also created embedding this solution inside a WebView. This allowed us to cache server requests, store information locally until network connection was restored and also take photos of deposits status while maintenance operations.",
+          "es": "Construcción de una solución web para gestionar todas las operaciones relacionadas con los depósitos de GLP de Naturgas como descargas, consumos, fallos... Las tecnologías usadas para desarrollar esta aplicación fueron AngularJS + Bootstrap para la parte front y NodeJS + Express + MySQL para el backend. Con el fin de conseguir el mejor rendimiento y una excelente experiencia de usuario en movilidad se creo una aplicación nativa Android que embebía esta solución dentro de un WebView. Esto nos permitió cachear las peticiones al servidor, almacenar información en local hasta que la conexión de red fuera estable y también capturar fotos del estado de los depósitos durante las tareas de mantenimiento."
         }
       }
     ]
@@ -129,7 +129,7 @@
         "client": "Spotahome",
         "description": {
           "en": "Complete redesign of Spotahome's landlord panel. We created from the scratch a new version of the application using modern technologies like React, Emotion for CSS in JS or GraphQL for data requests. GraphQL server was built over an Express + NodeJS application that aggregated information from several REST APIs.",
-          "es": "Rediseño completo del panel de propietarios de Spotahome. Creamos desde cero una nueva versión de la aplicación utilizando tecnologías modernas como React, Emotion para CSS in JS o GraphQL para obtener los datos. El servidor de GraphQL se construyó sobre una aplicación Express + NodeJS que agregaba información de varias API REST."
+          "es": "Rediseño completo del panel de propietarios de Spotahome. Creamos desde cero una nueva versión de la aplicación usando las más modernas tecnologías en el desarrollo web como React 16.7, Storybooks, Emotion para CSS-in-JS o GraphQL para las peticiones de datos. El servidor de GraphQL fue construido sobre un back-end de NodeJS + Express que agrupaba información de diferentes fuentes de datos. Todo finalizado en menos de 3 meses con un resultado increíble que impresionó a la compañía."
         }
       },
       {
