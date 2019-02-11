@@ -28,6 +28,30 @@
       sizes="16x16"
       href="/assets/favicon-16x16.png"
     />
+    <script>
+      var host = window.location.hostname;
+      if (host !== 'localhost') {
+        window.ga =
+          window.ga ||
+          function() {
+            (ga.q = ga.q || []).push(arguments);
+          };
+        ga.l = +new Date();
+        ga('create', 'UA-81837421-1', 'auto');
+
+        ga('require', 'eventTracker');
+        ga('require', 'impressionTracker');
+        ga('require', 'mediaQueryTracker');
+        ga('require', 'outboundFormTracker');
+        ga('require', 'outboundLinkTracker');
+        ga('require', 'pageVisibilityTracker');
+        ga('require', 'urlChangeTracker');
+
+        ga('send', 'pageview');
+      }
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script async src="/assets/autotrack.js"></script>
   </head>
   <body>
     <div id="root"></div>
