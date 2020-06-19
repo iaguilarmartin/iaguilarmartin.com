@@ -123,7 +123,11 @@ class WorkDetails extends Component {
   formatPeriod = (period, language) => {
     const dateFormat = 'MMMM YYYY';
     const from = format(new Date(period.from), dateFormat, language);
-    const to = format(new Date(period.to), dateFormat, language);
+
+    let to = translate('work_present_period');
+    if (period.to) {
+      to = format(new Date(period.to), dateFormat, language);
+    }
 
     return `${from} - ${to}`;
   };

@@ -23,6 +23,9 @@ import eptisaLogo3x from './images/eptisa-logo@3x.png';
 import iamLogo from './images/iaguilarmartin-logo.png';
 import iamLogo2x from './images/iaguilarmartin-logo@2x.png';
 import iamLogo3x from './images/iaguilarmartin-logo@3x.png';
+import casebookLogo from './images/casebook-logo.png';
+import casebookLogo2x from './images/casebook-logo@2x.png';
+import casebookLogo3x from './images/casebook-logo@3x.png';
 
 const Container = styled.div`
   position: relative;
@@ -44,15 +47,29 @@ const Container = styled.div`
 
 const SAHLogoImage = styled(Image)`
   position: absolute;
-  bottom: 48px;
-  transform: scale(0.65) translate(-${space.x3});
+  bottom: 88px;
+  transform: scale(0.65) translate(11.4rem);
 
   ${mediaQueries.md(css`
-    transform: scale(0.9) translate(-11.5rem, -5.5rem);
+    transform: scale(0.9) translate(51.5rem, -1rem);
   `)}
 
   ${mediaQueries.xl(css`
-    transform: none;
+    transform: translate(19rem, 0);
+  `)}
+`;
+
+const CasebookLogoImage = styled(Image)`
+  position: absolute;
+  bottom: 38px;
+  transform: scale(0.65) translate(10.4rem);
+
+  ${mediaQueries.md(css`
+    transform: scale(0.9) translate(55.5rem, 8rem);
+  `)}
+
+  ${mediaQueries.xl(css`
+    transform: translate(19rem, 0);
   `)}
 `;
 
@@ -74,17 +91,17 @@ const IAMLogoImage = styled(Image)`
 
 const MinsaitLogoImage = styled(Image)`
   position: absolute;
-  bottom: 84px;
+  bottom: 124px;
   width: 64px;
   height: 22px;
-  transform: scale(0.9) translate(0.4rem);
+  transform: scale(0.9) translate(10.4rem);
 
   ${mediaQueries.md(css`
-    transform: translate(-17.8rem, -1.2rem);
+    transform: translate(38.5rem, 2.8rem);
   `)}
 
   ${mediaQueries.xl(css`
-    transform: none;
+    transform: translate(19rem, 0);
   `)}
 `;
 
@@ -93,14 +110,14 @@ const EptisaLogoImage = styled(Image)`
   top: 20px;
   height: 41px;
   width: 104px;
-  transform: scale(0.8) translate(-0.4rem);
+  transform: scale(0.8) translate(10.9rem);
 
   ${mediaQueries.md(css`
-    transform: translate(-45rem, -7rem);
+    transform: translate(15rem, -7rem);
   `)}
 
   ${mediaQueries.xl(css`
-    transform: none;
+    transform: translate(19rem, 0);
   `)}
 `;
 
@@ -127,22 +144,16 @@ const WorkExperience = () => (
         alt={translate('resume_experience_iam_logo_alt')}
       />
     </LinkButton>
-    <TimelineImage
-      src={[
-        {
-          srcSet: timeline
-        },
-        {
-          srcSet: timeline,
-          mediaQuery: breakpoints.xl
-        },
-        {
-          srcSet: timelineLandscape,
-          mediaQuery: breakpoints.md
-        }
-      ]}
-      alt={translate('resume_experience_timeline_alt')}
-    />
+    <LinkButton url={getDetailsPath('casebook')}>
+      <CasebookLogoImage
+        src={{
+          x1: casebookLogo,
+          x2: casebookLogo2x,
+          x3: casebookLogo3x
+        }}
+        alt={translate('resume_experience_casebook_logo_alt')}
+      />
+    </LinkButton>
     <LinkButton url={getDetailsPath('spotahome')}>
       <SAHLogoImage
         src={sahLogo}
@@ -169,6 +180,22 @@ const WorkExperience = () => (
         alt={translate('resume_experience_eptisa_logo_alt')}
       />
     </LinkButton>
+    <TimelineImage
+      src={[
+        {
+          srcSet: timeline
+        },
+        {
+          srcSet: timeline,
+          mediaQuery: breakpoints.xl
+        },
+        {
+          srcSet: timelineLandscape,
+          mediaQuery: breakpoints.md
+        }
+      ]}
+      alt={translate('resume_experience_timeline_alt')}
+    />
   </Container>
 );
 

@@ -230,5 +230,36 @@
         }
       }
     ]
+  },
+  {
+    "id": "casebook",
+    "companyName": "Casebook PBC",
+    "companyLogo": {
+      "x1": "https://res.cloudinary.com/dr4a6933v/image/upload/v1592605915/casebook-logo_dxr3jo.png",
+      "x2": "https://res.cloudinary.com/dr4a6933v/image/upload/v1592605915/casebook-logo_2x_ohkxjo.png",
+      "x3": "https://res.cloudinary.com/dr4a6933v/image/upload/v1592605915/casebook-logo_3x_i2jpgd.png"
+    },
+    "position": {
+      "en": "Senior Software Engineer",
+      "es": "Senior Software Engineer"
+    },
+    "period": {
+      "from": "2019-03-11T23:00:00.000Z"
+    },
+    "projects": [
+      {
+        "id": "casebook-platform",
+        "name": {
+          "en": "Casebook Platform",
+          "es": "Casebook Platform"
+        },
+        "period": "2019-2020",
+        "client": "Casebook PBC",
+        "description": {
+          "en": "Lead React and GraphQL developer of a Web platform to manage human services. As first Front-End developer who joined the company to build the platform I was in charge of designing and building the architecture of the Front-End side. At Casebook PBC I have the responsibility of supervising other developers work and to provide to them tools needed in order to maximize company's productivity. Always in direct communication with company's CTO, I have contributed to promote coding best practices, to create an appropriate testing strategy and to help on new developers hiring process among other things. Technology stack used at Casebook PBC is: React, Typescript, NodeJS, ExpressJS, GraphQL, Webpack, Jest and Cypress.",
+          "es": "Lead React/GraphQL developer de una plataform Web para la gestion de sercicios sociales. Como primer Front-End developer de la nueva plataforma fuí el encargado de diseñar y desarrollar por completo toda la arquitectura de la parte Web y GraphQL de la plataforma. Lead developer responsable de supervisar el trabajo del resto de desarrolladores Front-End y de proporcionarles las herramientas necesarias para maximizar la productividad de la empresa. Siempre en comunicación directa con el CTO de la empresa, he ayudado a la implantación de buenas practicas de desarrollo en la empresa, a la creación de una estrategia de testing y la contratación de otros developers entre otras cosas. El stack tecnológico con el que he trabajado en Casebook PBC es: React, Typescript, NodeJS, ExpressJS, GraphQL, Webpack, Jest y Cypress."
+        }
+      }
+    ]
   }
 ]

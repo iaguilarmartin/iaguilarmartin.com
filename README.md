@@ -14,12 +14,12 @@ list of all the improvements I intend to make:
 ### Code quality improvements
 
 - Implement Unit Tests.
-- Implemente integration tests using **Cypress**.
+- Implement integration tests using **Cypress**.
 - Show work experience timeline in a more dynamic way without using an image,
 - Algorithm to display skills bubbles instead of using an static image.
 - Write projects descriptions in Markdown format.
 
-### Arquitecture improvements
+### Architecture improvements
 
 - Create a NodeJS + Express server.
 - Improve i18n routes taking into consideration users language.
@@ -32,7 +32,7 @@ list of all the improvements I intend to make:
 
 - Upload images to Cloudinary and optimize them.
 - Create a PWA and cache some information using service workers.
-- Apply performance improvements by analysing critical rendering path.
+- Apply performance improvements by analyzing critical rendering path.
 
 ### New section
 
@@ -44,12 +44,12 @@ list of all the improvements I intend to make:
 
 ### User experience improvements
 
-- Improve website accesibility.
-- Animation when selecting porfolio categories.
+- Improve website accessibility.
+- Animation when selecting portfolio categories.
 - Animate page transitions.
 - Improve animation show when mouse moves over a project inside portfolio
   section.
 - Animate home page.
 - Create responsive background image.
 - Animate when changing menu's logo image.
-- Delay in changing the X by the hamburguer icon when closing the menu.
+- Delay in changing the X by the hamburger icon when closing the menu.

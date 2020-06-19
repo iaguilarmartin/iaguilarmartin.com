@@ -1,42 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="562" height="82" viewBox="0 0 562 82">
-    <g fill="none" fill-rule="evenodd">
-        <path stroke="#E78BA2" stroke-linecap="round" stroke-width="12" d="M455 6h-37"/>
-        <path stroke="#B9E1E6" stroke-linecap="round" stroke-width="12" d="M476 76H142.926"/>
-        <path stroke="#36B397" stroke-linecap="round" stroke-width="12" d="M507.089 6H464.81"/>
-        <path stroke="#F06D30" stroke-linecap="round" stroke-width="12" d="M309 6H26"/>
-        <g fill="#C4C2BB" font-family="AndaleMono, Andale Mono" font-size="12">
-            <text transform="translate(14 39)">
-                <tspan x="0" y="11">2007</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="114" y="11">2012</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="169" y="11">2013</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="226" y="11">2014</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="281" y="11">2015</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="337" y="11">2016</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="393" y="11">2017</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="449" y="11">2018</tspan>
-            </text>
-            <text transform="translate(14 39)">
-                <tspan x="505" y="11">2019</tspan>
-            </text>
-        </g>
-        <g stroke="#C4C2BB" stroke-linecap="square">
-            <path d="M.5 42.5v-21M112.5 40.5v-15M169.5 40.5v-15M224.5 40.5v-15M281.5 40.5v-15M336.5 40.5v-15M392.5 40.5v-15M449.5 40.5v-15M504.5 40.5v-15M560.5 40.5v-15M57.5 40.5v-15M.51 33.5h56.923"/>
-            <path stroke-dasharray="1,3" d="M57.422 33.5h57.156"/>
-            <path d="M111.413 33.5h449.174"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="619px" height="82px" viewBox="0 0 619 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Work experience</title>
+    <g id="Design---Resume" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Resume---Tablet-Portrait" transform="translate(-108.000000, -480.000000)">
+            <g id="Experience" transform="translate(106.000000, 355.000000)">
+                <g id="Work-experience" transform="translate(0.000000, 129.000000)">
+                    <line x1="457" y1="2" x2="420" y2="2" id="Indra-line" stroke="#E78BA2" stroke-width="12" stroke-linecap="round"></line>
+                    <line x1="478" y1="72" x2="144.926435" y2="72" id="Freelance-line" stroke="#B9E1E6" stroke-width="12" stroke-linecap="round"></line>
+                    <line x1="509.08903" y1="2" x2="466.810354" y2="2" id="SAH-line" stroke="#36B397" stroke-width="12" stroke-linecap="round"></line>
+                    <line x1="311" y1="2" x2="28" y2="2" id="Eptisa-line" stroke="#F06D30" stroke-width="12" stroke-linecap="round"></line>
+                    <g id="years" transform="translate(16.000000, 35.000000)" fill="#C4C2BB" font-family="AndaleMono, Andale Mono" font-size="12" font-weight="normal">
+                        <text id="2007">
+                            <tspan x="0" y="11">2007</tspan>
+                        </text>
+                        <text id="2012">
+                            <tspan x="114" y="11">2012</tspan>
+                        </text>
+                        <text id="2013">
+                            <tspan x="169" y="11">2013</tspan>
+                        </text>
+                        <text id="2014">
+                            <tspan x="226" y="11">2014</tspan>
+                        </text>
+                        <text id="2015">
+                            <tspan x="281" y="11">2015</tspan>
+                        </text>
+                        <text id="2016">
+                            <tspan x="337" y="11">2016</tspan>
+                        </text>
+                        <text id="2017">
+                            <tspan x="393" y="11">2017</tspan>
+                        </text>
+                        <text id="2018">
+                            <tspan x="449" y="11">2018</tspan>
+                        </text>
+                        <text id="2019">
+                            <tspan x="505" y="11">2019</tspan>
+                        </text>
+                        <text id="2020">
+                            <tspan x="563" y="11">2020</tspan>
+                        </text>
+                    </g>
+                    <g id="Timeline" transform="translate(311.000000, 28.000000) rotate(-90.000000) translate(-311.000000, -28.000000) translate(300.500000, -282.500000)" stroke="#C4C2BB" stroke-linecap="square">
+                        <line x1="0" y1="2" x2="21" y2="2" id="Line-10"></line>
+                        <line x1="2" y1="114" x2="17" y2="114" id="Line-10-Copy-2"></line>
+                        <line x1="2" y1="171" x2="17" y2="171" id="Line-10-Copy-4"></line>
+                        <line x1="2" y1="226" x2="17" y2="226" id="Line-10-Copy-5"></line>
+                        <line x1="2" y1="283" x2="17" y2="283" id="Line-10-Copy-6"></line>
+                        <line x1="2" y1="338" x2="17" y2="338" id="Line-10-Copy-7"></line>
+                        <line x1="2" y1="394" x2="17" y2="394" id="Line-10-Copy-8"></line>
+                        <line x1="2" y1="451" x2="17" y2="451" id="Line-10-Copy-9"></line>
+                        <line x1="2" y1="506" x2="17" y2="506" id="Line-10-Copy-10"></line>
+                        <line x1="2" y1="562" x2="17" y2="562" id="Line-10-Copy-11"></line>
+                        <line x1="2" y1="59" x2="17" y2="59" id="Line-10-Copy-3"></line>
+                        <line x1="9" y1="2.00955333" x2="9" y2="58.9326359" id="Line-9"></line>
+                        <line x1="9" y1="58.921875" x2="9" y2="116.078125" id="Line-11" stroke-dasharray="1,3"></line>
+                        <line x1="9" y1="112.912955" x2="9" y2="619.242955" id="Line-12"></line>
+                        <line x1="1" y1="619" x2="16" y2="619" id="Line-10-Copy-12"></line>
+                    </g>
+                    <line x1="595" y1="72" x2="520.810354" y2="72" id="SAH-line" stroke="#E30B5C" stroke-width="12" stroke-linecap="round"></line>
+                </g>
+            </g>
         </g>
     </g>
 </svg>

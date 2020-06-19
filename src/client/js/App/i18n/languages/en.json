@@ -63,6 +63,7 @@
   "resume_education_section_title": "Education",
   "resume_experience_section_title": "Work experience",
   "resume_experience_eptisa_logo_alt": "EPTISA TI company logo",
+  "resume_experience_casebook_logo_alt": "Casebook PBC company logo",
   "resume_experience_iam_logo_alt": "My personal logo",
   "resume_experience_sah_logo_alt": "Spotahome company logo",
   "resume_experience_minsait_logo_alt": "Minsait company logo",
@@ -73,6 +74,7 @@
   "resume_skills_download-resume_button_text": "Download resume",
   "resume_skills_download-resume_button_url": "/assets/iaguilarmartin_cv_en_v3.pdf",
   "work_position_text": "Position",
+  "work_present_period": "present",
   "work_period_text": "Period",
   "work_featured_projects_text": "Featured projects",
   "work_company_logo_alt": "{0}'s logo"
