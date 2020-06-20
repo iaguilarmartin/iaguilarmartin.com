@@ -178,6 +178,19 @@
     },
     "projects": [
       {
+        "id": "orders-diary",
+        "name": {
+          "en": "Orders diary REST API and mobile app",
+          "es": "REST API y applicación movil para gestión de pedidos"
+        },
+        "period": "2016-2017",
+        "client": "iaguilarmartin",
+        "description": {
+          "en": "Design and development of a REST API following Domain Driven Design (DDD) principles and based on hexagonal arquitecture. API was built using NodeJS + Express on TypeScript language to achieve the perfect balance between Object Oriented and Functional programing. Application data is stored in a MongoDB cluster. API is deployed in AWS using Amazon Container Service (ECS). This services is consumed by a React-Native iOS application published on the App Store also developed by me.",
+          "es": "Diseño y desarrollo de un API REST surgiendo los principios DDD y utilizando una arquitectura hexagonal. El API fue creada con NodeJS + Express usando el lenguaje TypeScript para conseguir el perfecto equilibrio entre la programación orientada a objetos y funcional. Los datos de la aplicación se almacenan en un cluster de MongoDB. El API se encuentra publicada en AWS usando el servicio elástico de contenedores de Amazon (ECS). Este servicio es consumido por una aplicación iOS publicada en la App Store también construida por mi utilizando React Native."
+        }
+      },
+      {
         "id": "ana-dedal",
         "name": {
           "en": "Solution for managing a sewing academy",
@@ -210,7 +223,7 @@
           "es": "Innovadora página web usando jQuery"
         },
         "period": "2012-2013",
-        "client": "Restaurante Landatxueta ",
+        "client": "Restaurante Landatxueta",
         "description": {
           "en": "Design and implementation of a modern website developed using the JQuery Javascript framework. No server-side development was done, however, it includes some innovative features such as 360 degree views of the dining rooms and the entrance of the restaurant or a wedding menu section where you can consult the menu as if it were a book.",
           "es": "Diseño e implantación de un moderno sitio web desarrollado usando el framework Javascript JQuery. No se hizo ningún desarrollo del lado del servidor, sin embargo, incluye algunas características innovadoras como vistas de 360 grados de los comedores y la entrada del restaurante o una sección de menú de bodas donde se puede consultar la carta como si de un libro se tratara."
