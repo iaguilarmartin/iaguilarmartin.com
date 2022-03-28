@@ -28,25 +28,33 @@ const bordersFromIndex = (index, length) => {
   return buttonBorderRadius.NONE;
 };
 
-const ButtonGroup = ({ activeButton, buttons, className, onActiveChange }) => (
-  <div className={className}>
-    {buttons.map(({ name, text }, index) => (
-      <StyledButton
-        key={name}
-        inverted={activeButton !== name}
-        disabled={activeButton === name}
-        onClick={() => onActiveChange(name)}
-        borders={bordersFromIndex(index, buttons.length)}
-      >
-        {text}
-      </StyledButton>
-    ))}
-  </div>
-);
+const ButtonGroup = ({
+  activeButton,
+  buttons,
+  className,
+  onActiveChange,
+  hidden
+}) =>
+  hidden ? null : (
+    <div className={className}>
+      {buttons.map(({ name, text }, index) => (
+        <StyledButton
+          key={name}
+          inverted={activeButton !== name}
+          disabled={activeButton === name}
+          onClick={() => onActiveChange(name)}
+          borders={bordersFromIndex(index, buttons.length)}
+        >
+          {text}
+        </StyledButton>
+      ))}
+    </div>
+  );
 
 ButtonGroup.defaultProps = {
   className: null,
-  onActiveChange: () => {}
+  onActiveChange: () => {},
+  hidden: false
 };
 
 ButtonGroup.propTypes = {
@@ -58,7 +66,8 @@ ButtonGroup.propTypes = {
     })
   ).isRequired,
   className: PropTypes.string,
-  onActiveChange: PropTypes.func
+  onActiveChange: PropTypes.func,
+  hidden: PropTypes.bool
 };
 
 export default ButtonGroup;

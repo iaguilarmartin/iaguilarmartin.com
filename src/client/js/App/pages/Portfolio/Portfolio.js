@@ -189,6 +189,7 @@ class Portfolio extends Component {
         <ProjectTypesList
           activeButton={this.projectType}
           buttons={projectTypesButtons}
+          hidden
           onActiveChange={this.handleActiveProjectTypeChange}
         />
         <CategoriesList

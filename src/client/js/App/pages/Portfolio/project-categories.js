@@ -1,3 +1,3 @@
-const categories = ['all', 'web', 'backend', 'mobile', 'design'];
+const categories = ['all', 'web', 'backend', 'mobile'];
 
 export default categories;
