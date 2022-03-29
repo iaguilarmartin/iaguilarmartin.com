@@ -14,7 +14,7 @@
       "es": "http://legacy.iaguilarmartin.com/es/blog/como-implementar-autenticacion-basica-en-un-backend-contruido-con-nodejs-y-express/"
     },
     "publishedOn": "2017-02-27T23:00:00.000Z",
-    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2017/02/express_and_nodejs.png"
+    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/express_and_nodejs.png"
   },
   {
     "id": "show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs",
@@ -31,7 +31,7 @@
       "es": "http://legacy.iaguilarmartin.com/es/blog/mostrar-ventana-de-login-del-explorador-al-llamar-a-un-api-con-autenticacion-basica-usando-angularjs/"
     },
     "publishedOn": "2016-10-23T14:25:00.000Z",
-    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/11/SecurityAngularJS.png"
+    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/SecurityAngularJS.png"
   },
   {
     "id": "uploading-file-with-a-multipartform-data-request-using-angularjs",
@@ -64,6 +64,6 @@
       "es": "http://legacy.iaguilarmartin.com/es/blog/mostrar-mensajes-de-alerta-usando-angularjs-y-bootstrap/"
     },
     "publishedOn": "2016-05-17T21:05:00.000Z",
-    "image": "http://legacy.iaguilarmartin.com/wp-content/uploads/2016/06/alertMessage.png"
+    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/alertMessage.png"
   }
 ]

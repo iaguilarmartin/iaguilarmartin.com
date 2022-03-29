@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "webpack-dev-server --open",
     "build": "webpack",
-    "deploy": "npm run build && aws s3 sync ./dist s3://iaguilarmartin.com",
     "lint": "eslint .",
     "prettier": "prettier \"**/*.+(js|json|md)\"",
     "format": "npm run prettier -- --write",

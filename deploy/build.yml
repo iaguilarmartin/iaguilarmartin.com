@@ -12,6 +12,11 @@ phases:
     commands:
       - 'echo Building website...'
       - 'npm run build'
+  post_build:
+    commands:
+      - 'echo Invalidating cloudfront cache...'
+      - 'aws cloudfront create-invalidation --distribution-id=E31I1PQ1ZL3MQD
+        --paths "/*"'
 artifacts:
   files:
     - 'dist/**/*'
