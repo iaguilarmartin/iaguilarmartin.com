@@ -3,6 +3,7 @@ import About from '../../pages/About';
 import Portfolio from '../../pages/Portfolio';
 import Resume from '../../pages/Resume';
 import Blog from '../../pages/Blog';
+import BlogPost from '../../pages/BlogPost';
 import Contact from '../../pages/Contact';
 import ProjectDetails from '../../pages/ProjectDetails';
 import { translate } from '../../i18n';
@@ -51,6 +52,11 @@ const routesConfig = {
     inMenu: true,
     label: translate('menu_routes_resume_label'),
     icon: LaptopIcon
+  },
+  blogPost: {
+    path: '/blog/:postId',
+    component: BlogPost,
+    exact: true
   },
   blog: {
     path: '/blog',

@@ -83,8 +83,8 @@ class Blog extends Component {
       <BlogPage>
         <PageTitle>{translate('blog_header_text')}</PageTitle>
         <Posts>
-          {posts.map(({ id, title, content, publishedOn, image, url }) => (
-            <BlogPostWrapper key={id}>
+          {posts.map(({ id, title, content, publishedOn, image }) => (
+            <BlogPostWrapper key={id[language]}>
               <BlogPost
                 title={title[language]}
                 content={content[language]}
@@ -94,7 +94,7 @@ class Blog extends Component {
                   language
                 )}
                 image={image}
-                url={url[language]}
+                url={`blog/${id[language]}`}
               />
             </BlogPostWrapper>
           ))}

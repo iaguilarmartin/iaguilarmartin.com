@@ -18,6 +18,14 @@ export function getBlogPosts(skip, limit) {
   };
 }
 
+export function findBlogPost(id) {
+  return (
+    blogPosts.find(post =>
+      Object.keys(post.id).some(language => post.id[language] === id)
+    ) || null
+  );
+}
+
 export function getRealProjects(category, skip, limit) {
   const filteredProjects = realProjects.filter(
     project => category === 'all' || project.categories.includes(category)

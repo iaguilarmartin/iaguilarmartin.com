@@ -49,15 +49,7 @@ class AppRouter extends Component {
         {routes.map(({ name, component, path, exact }) => (
           <Route key={name} path={path} exact={exact} component={component} />
         ))}
-        <Route
-          render={({ location }) => {
-            const legacyURL = `http://legacy.iaguilarmartin.com${
-              location.pathname
-            }${location.hash}${location.search}`;
-            window.location = legacyURL;
-            return null;
-          }}
-        />
+        <Route render={() => <Redirect to="/home" />} />
       </Switch>
     );
   }

@@ -1,6 +1,9 @@
 [
   {
-    "id": "how-to-implement-basic-http-auth-on-nodejs-express-backend",
+    "id": {
+      "en": "how-to-implement-basic-http-auth-on-nodejs-express-backend",
+      "es": "como-implementar-autenticacion-basica-en-un-backend-contruido-con-nodejs-y-express"
+    },
     "title": {
       "en": "How to implement basic HTTP auth on NodeJS & Express backend",
       "es": "Como implementar autenticación básica en un backend contruido con NodeJS y Express"
@@ -9,15 +12,66 @@
       "en": "In order to avoid that anyone can perform requests to your backend it is necessary to implement some type of authentication. It is a must if your backend contains endpoints where data is updated as…",
       "es": "Todo backend que se precie debe tener implementado algún tipo de autenticación para evitar que cualquier persona puede realizar peticiones sobre el, y más, si dicho backend cuenta con endpoints que realicen modificaciones sobre los datos con…"
     },
-    "url": {
-      "en": "http://legacy.iaguilarmartin.com/blog/how-to-implement-basic-http-auth-on-nodejs-express-backend/",
-      "es": "http://legacy.iaguilarmartin.com/es/blog/como-implementar-autenticacion-basica-en-un-backend-contruido-con-nodejs-y-express/"
-    },
     "publishedOn": "2017-02-27T23:00:00.000Z",
-    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/express_and_nodejs.png"
+    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/express_and_nodejs.png",
+    "categories": [
+      {
+        "en": "Backend",
+        "es": "Backend"
+      },
+      {
+        "en": "NodeJS",
+        "es": "NodeJS"
+      }
+    ],
+    "tags": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "API Key",
+        "es": "API Key"
+      },
+      {
+        "en": "Basic HTTP Auth",
+        "es": "Autenticación HTTP básica"
+      },
+      {
+        "en": "Credentials",
+        "es": "Credenciales"
+      },
+      {
+        "en": "Endpoint",
+        "es": "Endpoint"
+      },
+      {
+        "en": "ExpressJS",
+        "es": "ExpressJS"
+      },
+      {
+        "en": "JWT",
+        "es": "JWT"
+      },
+      {
+        "en": "NodeJS",
+        "es": "NodeJS"
+      },
+      {
+        "en": "Password",
+        "es": "Contraseña"
+      },
+      {
+        "en": "User",
+        "es": "Usuario"
+      }
+    ]
   },
   {
-    "id": "show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs",
+    "id": {
+      "en": "show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs",
+      "es": "mostrar-ventana-de-login-del-explorador-al-llamar-a-un-api-con-autenticacion-basica-usando-angularjs"
+    },
     "title": {
       "en": "Show browser’s login dialog when performing requests to an API with Basic Authentication enabled using AngularJS",
       "es": "Mostrar ventana de login del explorador al llamar a un API con autenticación básica usando AngularJS"
@@ -26,15 +80,54 @@
       "en": "It is very common when developing a Web site to come up with the requirement of requesting some information to an API that required any type of authentication to be used. Nowadays, we have several ways of…",
       "es": "Seguramente, mientras desarrollabais un sitio Web, os habéis encontrado con la necesidad de hacer llamadas a un API propia o de terceros que requería de autenticación para poder usarla. Existen varios tipos de autenticación pero…"
     },
-    "url": {
-      "en": "http://legacy.iaguilarmartin.com/blog/show-browsers-login-dialog-when-performing-requests-to-an-api-with-basic-authentication-enabled-using-angularjs/",
-      "es": "http://legacy.iaguilarmartin.com/es/blog/mostrar-ventana-de-login-del-explorador-al-llamar-a-un-api-con-autenticacion-basica-usando-angularjs/"
-    },
     "publishedOn": "2016-10-23T14:25:00.000Z",
-    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/SecurityAngularJS.png"
+    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/SecurityAngularJS.png",
+    "categories": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "Web",
+        "es": "Web"
+      }
+    ],
+    "tags": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "API",
+        "es": "API"
+      },
+      {
+        "en": "Basic HTTP Auth",
+        "es": "Autenticación HTTP básica"
+      },
+      {
+        "en": "$httpProvider",
+        "es": "$httpProvider"
+      },
+      {
+        "en": "401 Unauthorized,",
+        "es": "401 Unauthorized"
+      },
+      {
+        "en": "Base64",
+        "es": "Base64"
+      },
+      {
+        "en": "HTTPS",
+        "es": "HTTPS"
+      }
+    ]
   },
   {
-    "id": "uploading-file-with-a-multipartform-data-request-using-angularjs",
+    "id": {
+      "en": "uploading-file-with-a-multipartform-data-request-using-angularjs",
+      "es": "creando-peticiones-de-tipo-multipartform-data-usando-angularjs"
+    },
     "title": {
       "en": "Uploading files with a multipart/form-data request using AngularJS",
       "es": "Creando peticiones de tipo multipart/form-data usando AngularJS"
@@ -43,14 +136,41 @@
       "en": "In this post I pretend to explain how to upload a file to a server using a multipart/form-data request in AngularJS. Last week, while I was trying to implement a functionality to load a CSV file into a GIS…",
       "es": "En este post voy a explicar como subir ficheros a un servidor usando peticiones multipart/form-data con AngularJS. La semana pasada, mientras intentaba implementar una funcionalidad para poder visualizar ficheros CSV en el visor GIS que estoy…"
     },
-    "url": {
-      "en": "http://legacy.iaguilarmartin.com/blog/uploading-file-with-a-multipartform-data-request-using-angularjs/",
-      "es": "http://legacy.iaguilarmartin.com/es/blog/creando-peticiones-de-tipo-multipartform-data-usando-angularjs/"
-    },
-    "publishedOn": "2016-07-08T10:00:00.000Z"
+    "publishedOn": "2016-07-08T10:00:00.000Z",
+    "categories": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "Web",
+        "es": "Web"
+      }
+    ],
+    "tags": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "CSV File",
+        "es": "Fichero CSV"
+      },
+      {
+        "en": "Multipart Form",
+        "es": "Multipart Form"
+      },
+      {
+        "en": "Upload file",
+        "es": "Subir fichero"
+      }
+    ]
   },
   {
-    "id": "alertmessage_angularjs_bootstrap",
+    "id": {
+      "en": "alertmessage_angularjs_bootstrap",
+      "es": "mostrar-mensajes-de-alerta-usando-angularjs-y-bootstrap"
+    },
     "title": {
       "en": "Displaying alert messages with AngularJS & Bootstrap",
       "es": "Mostrar mensajes de alerta usando AngularJS y Bootstrap"
@@ -59,11 +179,31 @@
       "en": "In this post I am going to explain how to implement an AngularJS directive to display alert messages inside one of your website containers. Alert messages are becoming in a very popular way of giving…",
       "es": "En este post voy a explicar como implementar una directiva de AngularJS que muestre mensajes de alerta dentro de uno de los controladores de tu web. Los mensajes de alerta o información se están convirtiendo…"
     },
-    "url": {
-      "en": "http://legacy.iaguilarmartin.com/blog/alertmessage_angularjs_bootstrap/",
-      "es": "http://legacy.iaguilarmartin.com/es/blog/mostrar-mensajes-de-alerta-usando-angularjs-y-bootstrap/"
-    },
     "publishedOn": "2016-05-17T21:05:00.000Z",
-    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/alertMessage.png"
+    "image": "https://res.cloudinary.com/dr4a6933v/image/upload/v1648565183/iaguilarmartin.com/alertMessage.png",
+    "categories": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "Web",
+        "es": "Web"
+      }
+    ],
+    "tags": [
+      {
+        "en": "AngularJS",
+        "es": "AngularJS"
+      },
+      {
+        "en": "Alert message",
+        "es": "Mensaje de advertencia"
+      },
+      {
+        "en": "Bootstrap",
+        "es": "Bootstrap"
+      }
+    ]
   }
 ]

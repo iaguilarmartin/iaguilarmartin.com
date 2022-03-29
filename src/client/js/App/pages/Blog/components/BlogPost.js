@@ -89,7 +89,7 @@ const BlogPost = ({ title, content, url, publicationDate, image }) => (
       <Container>
         <PublicationDate>{publicationDate}</PublicationDate>
         <Content>{content}</Content>
-        <ReadMoreButton url={url} target="_blank">
+        <ReadMoreButton url={url}>
           {translate('blog_more_button_text')}
         </ReadMoreButton>
       </Container>
