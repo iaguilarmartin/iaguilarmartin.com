@@ -20,6 +20,7 @@
   "blog_header_text": "Blog",
   "blog_more_button_text": "Read more",
   "blog_pagination_text": "Page {0} of {1}",
+  "blog_published_on_text": "Published on: {0}",
   "portfolio_header_text": "Portfolio",
   "portfolio_more_button_text": "More",
   "portfolio_pagination_text": "Page {0} of {1}",

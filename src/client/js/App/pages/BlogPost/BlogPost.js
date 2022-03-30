@@ -1,78 +1,30 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { ClassNames, css } from '@emotion/core';
 import { withRouter } from 'react-router';
-import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { space, border } from 'ui/shared/spacing';
-import theme from 'ui/shared/theme';
 import fonts from 'ui/shared/fonts';
 import colors from 'ui/shared/colors';
-import TextButton from 'ui/components/TextButton';
 
+import { format } from '../../libs/dates';
 import PageTitle from '../../components/PageTitle';
 import Page from '../../components/Page';
 import LanguageContext from '../../i18n/language-context';
 import { translate } from '../../i18n';
 import { findBlogPost } from '../../api/client';
-import withLink from '../../components/withLink';
+import MarkdownRenderer from '../../components/MarkdownRenderer';
 
 const BlogPostPage = styled(Page)`
   display: flex;
   flex-direction: column;
 `;
 
-const PostLink = withLink(styled(TextButton)`
-  text-decoration: none;
-`);
-
-const blogStyle = css`
-  h2 {
-    color: ${theme.articlesTitleColor};
-    font-family: ${theme.articlesTitleFontFamily};
-    font-size: ${fonts.sizes.xxxl};
-    letter-spacing: 0.5px;
-    margin: ${space.x4} 0;
-  }
-
-  h3 {
-    font-family: ${fonts.AndaleMono};
-    font-size: ${fonts.sizes.xl};
-    color: ${colors.greyLight};
-    text-transform: uppercase;
-    margin: ${space.x3} 0;
-  }
-
-  h4 {
-    color: ${colors.beige};
-    font-size: ${fonts.sizes.l};
-    font-family: ${fonts.ArchivoBlack};
-    margin: ${space.x25} 0;
-  }
-
-  p {
-    line-height: 1.5;
-    font-size: ${fonts.sizes.l};
-    margin-bottom: ${space.x2};
-  }
-
-  strong {
-    color: ${colors.beige};
-  }
-
-  code {
-    color: ${colors.codeText};
-    background-color: ${colors.codeBackground};
-  }
-
-  img {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-  }
+const PostDate = styled.h3`
+  color: ${colors.greyLight};
+  font-family: ${fonts.Obli};
+  font-size: ${fonts.sizes.l};
+  letter-spacing: 1px;
 `;
 
 const TagList = styled.section`
@@ -146,50 +98,18 @@ class BlogPost extends Component {
     return (
       <BlogPostPage>
         <PageTitle>{translate('blog_header_text')}</PageTitle>
-        <ClassNames>
-          {({ css: innerCss }) => (
-            <ReactMarkdown
-              className={innerCss`${blogStyle}`}
-              components={{
-                h1: 'h2',
-                h2: 'h3',
-                h3: 'h4',
-                h4: 'h5',
-                h5: 'h6',
-                h6: 'h7',
-                a: ({ href, children }) => (
-                  <PostLink blankOnExternal url={href}>
-                    {children}
-                  </PostLink>
-                ),
-                code({ node, inline, className, children, ...props }) {
-                  const match = /language-(\w+)/.exec(className || '');
-                  return !inline && match ? (
-                    <SyntaxHighlighter
-                      style={a11yDark}
-                      language={match[1]}
-                      PreTag="div"
-                      {...props}
-                    >
-                      {String(children).replace(/\n$/, '')}
-                    </SyntaxHighlighter>
-                  ) : (
-                    <code className={className} {...props}>
-                      {children}
-                    </code>
-                  );
-                }
-              }}
-            >
-              {content}
-            </ReactMarkdown>
-          )}
-        </ClassNames>
+        <MarkdownRenderer content={content} />
         <TagList>
           {post.tags.map(tag => (
             <Tag key={tag[language]}>{tag[language]}</Tag>
           ))}
         </TagList>
+        <PostDate>
+          {`// ${translate(
+            'blog_published_on_text',
+            format(new Date(post.publishedOn), 'D MMMM YYYY', language)
+          )}`}
+        </PostDate>
       </BlogPostPage>
     );
   }
