@@ -47,8 +47,8 @@
         "es": "https://itunes.apple.com/es/app/receiptprinter-impresi%C3%B3n-de-tickets-sencilla/id1186014752?mt=8"
       },
       "doc": {
-        "en": "http://legacy.iaguilarmartin.com/receiptprinter/",
-        "es": "http://legacy.iaguilarmartin.com/es/receiptprinter-es/"
+        "en": "/receiptprinter",
+        "es": "/receiptprinter-es/"
       }
     }
   },
