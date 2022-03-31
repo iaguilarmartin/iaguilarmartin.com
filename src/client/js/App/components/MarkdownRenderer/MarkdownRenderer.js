@@ -42,10 +42,16 @@ const blogStyle = css`
     margin: ${space.x25} 0;
   }
 
-  p {
+  ul,
+  p,
+  ol {
     line-height: 1.5;
     font-size: ${fonts.sizes.l};
     margin-bottom: ${space.x2};
+  }
+
+  ul {
+    padding-left: ${space.x5};
   }
 
   strong {

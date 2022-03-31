@@ -78,5 +78,6 @@
   "work_present_period": "present",
   "work_period_text": "Period",
   "work_featured_projects_text": "Featured projects",
-  "work_company_logo_alt": "{0}'s logo"
+  "work_company_logo_alt": "{0}'s logo",
+  "receipt_printer_header_text": "ReceiptPrinter"
 }

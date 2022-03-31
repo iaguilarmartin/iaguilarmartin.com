@@ -15,7 +15,23 @@ export function reload(location, history, params) {
   scrollToTop();
 }
 
+const equivalentLanguagePaths = [
+  {
+    en: '/receiptprinter',
+    es: '/receiptprinter-es'
+  }
+];
+
 export function formatURLFromLocation(location, language) {
   const base = language ? `/${language}` : '';
-  return `${base}${location.pathname}${location.hash}${location.search}`;
+  const equivalentPath = equivalentLanguagePaths.find(equivalentLanguagePath =>
+    Object.keys(equivalentLanguagePath).some(
+      lang =>
+        lang !== language && equivalentLanguagePath[lang] === location.pathname
+    )
+  );
+  const pathname = equivalentPath
+    ? equivalentPath[language]
+    : location.pathname;
+  return `${base}${pathname}${location.hash}${location.search}`;
 }

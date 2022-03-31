@@ -44,6 +44,10 @@ module.exports = {
             options: {}
           }
         ]
+      },
+      {
+        test: /\.md$/,
+        use: 'raw-loader'
       }
     ]
   }

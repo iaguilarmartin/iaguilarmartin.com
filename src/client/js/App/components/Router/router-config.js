@@ -8,6 +8,8 @@ import Contact from '../../pages/Contact';
 import ProjectDetails from '../../pages/ProjectDetails';
 import { translate } from '../../i18n';
 
+import ReceiptPrinter from '../../pages/ReceiptPrinter';
+
 import HomeIcon from './icons/Home';
 import BriefcaseIcon from './icons/Briefcase';
 import NameplateIcon from './icons/Nameplate';
@@ -72,6 +74,16 @@ const routesConfig = {
     inMenu: true,
     label: translate('menu_routes_contact_label'),
     icon: EnvelopeIcon,
+    exact: true
+  },
+  receiptprinter: {
+    path: '/receiptprinter',
+    component: ReceiptPrinter,
+    exact: true
+  },
+  receiptprinterES: {
+    path: '/receiptprinter-es',
+    component: ReceiptPrinter,
     exact: true
   }
 };
